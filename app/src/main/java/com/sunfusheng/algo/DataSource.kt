@@ -4,17 +4,13 @@ import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
 import java.io.File
 import java.io.Serializable
 
-/**
- * @author sunfusheng
- * @since 2020-02-21
- */
+
 data class AlgoItem(
     val category: Pair<String, String>,
     val className: String? = null,
     val subject: String? = null,
     val hardLevel: Int = 1
 ) : Serializable {
-
     fun getFilePath(): String {
         return "Algo/" + category.first + File.separator + className + ".java"
     }
@@ -22,6 +18,8 @@ data class AlgoItem(
 
 
 val StackQueue = "StackQueue" to "栈和队列"
+val LinkedList = "LinkedList" to "链表"
+val BinaryTree = "BinaryTree" to "二叉树"
 
 
 fun getDataSource(): ArrayList<ArrayList<AlgoItem>> {
