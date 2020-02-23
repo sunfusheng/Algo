@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.sunfusheng.codeviewer.CodeHtmlGenerator
 import com.sunfusheng.codeviewer.CodeViewUtil
 import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 /**
  * @author sunfusheng
@@ -28,7 +32,18 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         mAlgoItem = intent.getSerializableExtra(PARAM_KEY) as AlgoItem
+
+        initActionBar(mAlgoItem.subject!!, true)
+
         loadSampleCode()
+    }
+
+    fun initActionBar(title: String, showHomeAsUp: Boolean) {
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.title = title
+            actionBar.setDisplayHomeAsUpEnabled(showHomeAsUp)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -40,6 +55,9 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+            }
             R.id.item_night_mode -> {
                 isNightMode = !isNightMode
                 item.isChecked = isNightMode
@@ -56,19 +74,25 @@ class DetailActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    // 加载Assets下的示例代码
     private fun loadSampleCode() {
-        if (mSourceCode == null) {
-            mSourceCode = CodeViewUtil.getStringFromAssetsFile(
-                applicationContext,
-                mAlgoItem.getFilePath()
-            )
+        GlobalScope.launch(Dispatchers.Main) {
+            vCodeView.loadCodeHtml(asyncLoadCodeFile())
         }
-        val sourceCodeHtml = CodeHtmlGenerator.generate(
-            mAlgoItem.getFilePath(),
-            mSourceCode,
-            isNightMode,
-            showLineNums
-        )
-        vCodeView.loadCodeHtml(sourceCodeHtml)
+    }
+
+    private suspend fun asyncLoadCodeFile(): String? {
+        return GlobalScope.async(Dispatchers.Default) {
+            val filePath = mAlgoItem.getFilePath()
+            if (mSourceCode == null) {
+                mSourceCode = CodeViewUtil.getStringFromAssetsFile(applicationContext, filePath)
+            }
+            return@async CodeHtmlGenerator.generate(
+                filePath,
+                mSourceCode,
+                isNightMode,
+                showLineNums
+            )
+        }.await()
     }
 }
