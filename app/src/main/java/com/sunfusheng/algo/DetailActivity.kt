@@ -38,10 +38,11 @@ class DetailActivity : AppCompatActivity() {
         loadSampleCode()
     }
 
-    fun initActionBar(title: String, showHomeAsUp: Boolean) {
+    private fun initActionBar(title: String, showHomeAsUp: Boolean) {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.title = title
+            actionBar.subtitle = mAlgoItem.getHardLevel()
             actionBar.setDisplayHomeAsUpEnabled(showHomeAsUp)
         }
     }

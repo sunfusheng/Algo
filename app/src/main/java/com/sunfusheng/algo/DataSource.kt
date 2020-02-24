@@ -14,6 +14,17 @@ data class AlgoItem(
     fun getFilePath(): String {
         return "Algo/" + category.first + File.separator + className + ".java"
     }
+
+    fun getHardLevel(): String {
+        var level = hardLevel;
+        if (hardLevel < 1) level = 1
+        if (hardLevel > 4) level = 4
+        val sb = StringBuilder("难度：")
+        for (i in 1..4) {
+            sb.append(if (i <= level) "★" else "☆")
+        }
+        return sb.toString()
+    }
 }
 
 
