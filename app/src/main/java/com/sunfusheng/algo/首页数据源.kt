@@ -1,6 +1,7 @@
 package com.sunfusheng.algo
 
 import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
+import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
 import java.io.File
 import java.io.Serializable
@@ -53,7 +54,6 @@ private fun getStackQueueDataSource(): ArrayList<AlgoItem> {
             hardLevel = 2
         )
     )
-
     return list
 }
 
@@ -64,10 +64,17 @@ private fun getLinkedListDataSource(): ArrayList<AlgoItem> {
         AlgoItem(
             category = LinkedList,
             className = ReverseLinkedList::class.simpleName,
-            subject = "反转单向链表和双向链",
+            subject = "反转单向链表和双向链表",
             hardLevel = 1
         )
     )
-
+    list.add(
+        AlgoItem(
+            category = LinkedList,
+            className = ReversePartLinkedList::class.simpleName,
+            subject = "反转部分单向链表",
+            hardLevel = 1
+        )
+    )
     return list
 }
