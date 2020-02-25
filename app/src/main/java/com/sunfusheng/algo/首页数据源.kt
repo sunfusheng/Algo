@@ -1,5 +1,6 @@
 package com.sunfusheng.algo
 
+import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
 import java.io.File
 import java.io.Serializable
@@ -16,7 +17,7 @@ data class AlgoItem(
     }
 
     fun getHardLevel(): String {
-        var level = hardLevel;
+        var level = hardLevel
         if (hardLevel < 1) level = 1
         if (hardLevel > 4) level = 4
         val sb = StringBuilder("难度：")
@@ -36,6 +37,7 @@ val BinaryTree = "BinaryTree" to "二叉树"
 fun getDataSource(): ArrayList<ArrayList<AlgoItem>> {
     val lists = ArrayList<ArrayList<AlgoItem>>()
     lists.add(getStackQueueDataSource())
+    lists.add(getLinkedListDataSource())
     return lists
 }
 
@@ -51,5 +53,21 @@ private fun getStackQueueDataSource(): ArrayList<AlgoItem> {
             hardLevel = 2
         )
     )
+
+    return list
+}
+
+private fun getLinkedListDataSource(): ArrayList<AlgoItem> {
+    val list = ArrayList<AlgoItem>()
+    list.add(AlgoItem(LinkedList))
+    list.add(
+        AlgoItem(
+            category = LinkedList,
+            className = ReverseLinkedList::class.simpleName,
+            subject = "反转单向链表和双向链",
+            hardLevel = 1
+        )
+    )
+
     return list
 }

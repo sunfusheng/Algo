@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val groupAdapter = StickyGroupAdapter(this, getDataSource())
         vRecyclerView.adapter = groupAdapter
 
-        groupAdapter.setOnItemClickListener { adapter, item, groupPosition, childPosition ->
+        groupAdapter.setOnItemClickListener { _, item, _, _ ->
             if (item.className != null) {
                 val intent = Intent(this, DetailActivity::class.java)
                 intent.putExtra(DetailActivity.PARAM_KEY, item)

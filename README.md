@@ -10,6 +10,10 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
 
 [生成窗口最大值数组](/app/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
 
+### 链表
+
+[反转单向链表和双向链](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseLinkedList.java)
+
 <br/>
 
 ### 扫一扫[Fir.im](https://fir.im/Algo)二维码下载APK体验
