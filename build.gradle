@@ -5,8 +5,8 @@ buildscript {
         compile_sdk_version = 29
         min_sdk_version = 19
         target_sdk_version = 29
-        version_code = 2
-        version_name = '1.0.1'
+        version_code = 3
+        version_name = '1.0.2'
     }
 
     repositories {
@@ -16,7 +16,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:3.6.0'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:' + kotlin_version
         classpath 'org.jetbrains.kotlin:kotlin-android-extensions:' + kotlin_version
     }
