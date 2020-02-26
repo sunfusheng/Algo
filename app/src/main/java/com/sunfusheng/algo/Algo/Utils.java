@@ -109,4 +109,46 @@ public class Utils {
         }
         System.out.println(sb);
     }
+
+    // 构造环形的单向链表
+    public static Node createCircleLinkedList(int... values) {
+        if (values == null || values.length == 0) {
+            return null;
+        }
+
+        Node head = null;
+        Node pre = null;
+        Node next = null;
+        for (int value : values) {
+            if (head == null) {
+                head = new Node(value);
+                pre = head;
+            } else {
+                next = new Node(value);
+                pre.next = next;
+                pre = next;
+            }
+        }
+        pre.next = head;
+        return head;
+    }
+
+    // 打印单向链表
+    public static void printCircleLinkedList(Node head, int times) {
+        if (head == null || times < 1) {
+            System.out.println("null");
+            return;
+        }
+
+        Node node = head;
+        StringBuilder sb = new StringBuilder();
+        while (times != 0) {
+            sb.append(node.value).append(" -> ");
+            node = node.next;
+            if (node == head) {
+                times--;
+            }
+        }
+        System.out.println(sb);
+    }
 }

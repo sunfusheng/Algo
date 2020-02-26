@@ -1,5 +1,6 @@
 package com.sunfusheng.algo
 
+import com.sunfusheng.algo.Algo.LinkedList.Josephus
 import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
 import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
@@ -73,6 +74,14 @@ private fun getLinkedListDataSource(): ArrayList<AlgoItem> {
             category = LinkedList,
             className = ReversePartLinkedList::class.simpleName,
             subject = "反转部分单向链表",
+            hardLevel = 1
+        )
+    )
+    list.add(
+        AlgoItem(
+            category = LinkedList,
+            className = Josephus::class.simpleName,
+            subject = "环形单链表的约瑟夫问题",
             hardLevel = 1
         )
     )
