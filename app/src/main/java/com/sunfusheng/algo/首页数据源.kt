@@ -4,6 +4,7 @@ import com.sunfusheng.algo.Algo.LinkedList.Josephus
 import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
 import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
+import com.sunfusheng.algo.Algo.StackQueue.MinStack
 import java.io.File
 import java.io.Serializable
 
@@ -47,6 +48,14 @@ fun getDataSource(): ArrayList<ArrayList<AlgoItem>> {
 private fun getStackQueueDataSource(): ArrayList<AlgoItem> {
     val list = ArrayList<AlgoItem>()
     list.add(AlgoItem(StackQueue))
+    list.add(
+        AlgoItem(
+            category = StackQueue,
+            className = MinStack::class.simpleName,
+            subject = "设计一个有getMin功能的栈",
+            hardLevel = 1
+        )
+    )
     list.add(
         AlgoItem(
             category = StackQueue,

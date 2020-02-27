@@ -8,13 +8,14 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
 
 ### 栈和队列
 
-[生成窗口最大值数组](/app/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
+[设计一个有getMin功能的栈](/app/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MinStack.java)<br/>
+[生成窗口最大值数组](/app/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)<br/>
 
 ### 链表
 
 [反转单向链表和双向链](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseLinkedList.java)<br/>
 [反转部分单向链表](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)<br/>
-[环形单链表的约瑟夫问题](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)
+[环形单链表的约瑟夫问题](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)<br/>
 
 <br/>
 

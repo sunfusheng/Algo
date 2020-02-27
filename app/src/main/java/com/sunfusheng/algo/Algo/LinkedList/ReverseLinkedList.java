@@ -3,20 +3,19 @@ package com.sunfusheng.algo.Algo.LinkedList;
 import com.sunfusheng.algo.Algo.Utils;
 
 /**
+ * 【题目】
+ * 分别实现反转单向链表和双向链表的函数
+ *
  * @author sunfusheng
  * @since 2020-02-25
  */
 public class ReverseLinkedList {
-    /**
-     * 【题目】
-     * 分别实现反转单向链表和双向链表的函数
-     */
 
+    // 反转单向链表
     public static Node reverse(Node head) {
         Node pre = null;
-        Node next = null;
         while (head != null) {
-            next = head.next;
+            Node next = head.next;
             head.next = pre;
             pre = head;
             head = next;
@@ -24,11 +23,11 @@ public class ReverseLinkedList {
         return pre;
     }
 
+    // 反转双向链表
     public static DoubleNode reverseDouble(DoubleNode head) {
         DoubleNode pre = null;
-        DoubleNode next = null;
         while (head != null) {
-            next = head.next;
+            DoubleNode next = head.next;
             head.next = pre;
             head.last = next;
             pre = head;
