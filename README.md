@@ -19,7 +19,7 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
 
 <br/>
 
-### 扫一扫[Fir.im](https://fir.im/Algo)二维码下载APK体验
+### 扫一扫[Fir.im](http://d.alphaqr.com/Algo)二维码下载APK体验
 
 <img src="/resources/fir.im.png" style="width: 30%;" alt="s">
 

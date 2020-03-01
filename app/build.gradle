@@ -55,7 +55,7 @@ android {
 
             applicationVariants.all { variant ->
                 variant.outputs.all {
-                    outputFileName = "Algo.apk"
+                    outputFileName = 'Algo-' + version_name + '.apk'
                 }
             }
         }
