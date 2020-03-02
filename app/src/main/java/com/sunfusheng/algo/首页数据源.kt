@@ -5,6 +5,7 @@ import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
 import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
 import com.sunfusheng.algo.Algo.StackQueue.MinStack
+import com.sunfusheng.algo.Algo.StackQueue.TwoStacksQueue
 import java.io.File
 import java.io.Serializable
 
@@ -53,6 +54,14 @@ private fun getStackQueueDataSource(): ArrayList<AlgoItem> {
             category = StackQueue,
             className = MinStack::class.simpleName,
             subject = "设计一个有getMin功能的栈",
+            hardLevel = 1
+        )
+    )
+    list.add(
+        AlgoItem(
+            category = StackQueue,
+            className = TwoStacksQueue::class.simpleName,
+            subject = "用两个栈实现队列",
             hardLevel = 1
         )
     )
