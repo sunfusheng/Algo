@@ -1,6 +1,7 @@
 package com.sunfusheng.algo
 
 import com.sunfusheng.algo.Algo.LinkedList.Josephus
+import com.sunfusheng.algo.Algo.LinkedList.PrintCommonPart
 import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
 import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
@@ -79,6 +80,14 @@ private fun getStackQueueDataSource(): ArrayList<AlgoItem> {
 private fun getLinkedListDataSource(): ArrayList<AlgoItem> {
     val list = ArrayList<AlgoItem>()
     list.add(AlgoItem(LinkedList))
+    list.add(
+        AlgoItem(
+            category = LinkedList,
+            className = PrintCommonPart::class.simpleName,
+            subject = "打印两个有序链表的公共部分",
+            hardLevel = 1
+        )
+    )
     list.add(
         AlgoItem(
             category = LinkedList,
