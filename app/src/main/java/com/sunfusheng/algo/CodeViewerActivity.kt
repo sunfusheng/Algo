@@ -16,12 +16,12 @@ import kotlinx.coroutines.launch
  * @author sunfusheng
  * @since 2020-02-22
  */
-class DetailActivity : AppCompatActivity() {
+class CodeViewerActivity : AppCompatActivity() {
     companion object {
         const val PARAM_KEY = "algo-item"
     }
 
-    private lateinit var mAlgoItem: AlgoItem
+    private lateinit var mAlgo: AlgoItem
     private var mSourceCode: String? = null
 
     private var isNightMode: Boolean = true
@@ -31,9 +31,9 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        mAlgoItem = intent.getSerializableExtra(PARAM_KEY) as AlgoItem
+        mAlgo = intent.getSerializableExtra(PARAM_KEY) as AlgoItem
 
-        initActionBar(mAlgoItem.subject!!, true)
+        initActionBar(mAlgo.subject!!, true)
 
         loadSampleCode()
     }
@@ -42,7 +42,7 @@ class DetailActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.title = title
-            actionBar.subtitle = mAlgoItem.getHardLevel()
+            actionBar.subtitle = mAlgo.getHardLevel()
             actionBar.setDisplayHomeAsUpEnabled(showHomeAsUp)
         }
     }
@@ -84,7 +84,7 @@ class DetailActivity : AppCompatActivity() {
 
     private suspend fun asyncLoadCodeFile(): String? {
         return GlobalScope.async(Dispatchers.Default) {
-            val filePath = mAlgoItem.getFilePath()
+            val filePath = mAlgo.getFilePath()
             if (mSourceCode == null) {
                 mSourceCode = CodeViewUtil.getStringFromAssetsFile(applicationContext, filePath)
             }

@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
     private fun loadDataSource() {
         vRecyclerView.layoutManager = LinearLayoutManager(this)
         vRecyclerView.addItemDecoration(StickyHeaderDecoration())
-        val groupAdapter = StickyGroupAdapter(this, getDataSource())
+        val groupAdapter = StickyGroupAdapter(this, lists)
         vRecyclerView.adapter = groupAdapter
 
         groupAdapter.setOnItemClickListener { _, item, _, _ ->
             if (item.className != null) {
-                val intent = Intent(this, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.PARAM_KEY, item)
+                val intent = Intent(this, CodeViewerActivity::class.java)
+                intent.putExtra(CodeViewerActivity.PARAM_KEY, item)
                 startActivity(intent)
             }
         }
@@ -62,7 +62,7 @@ class StickyGroupAdapter(context: Context, groups: List<List<AlgoItem>>) :
         groupPosition: Int
     ) {
 
-        holder.setText(R.id.vHeader, item.category.second)
+        holder.setText(R.id.vHeader, item.chapter.second)
     }
 
     override fun onBindChildViewHolder(

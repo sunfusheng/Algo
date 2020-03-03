@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DetailActivity" />
+        <activity android:name=".CodeViewerActivity" />
     </application>
 
 </manifest>
