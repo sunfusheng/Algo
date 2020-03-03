@@ -9,7 +9,7 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
   * [用两个栈实现队列](/app/src/main/java/com/sunfusheng/algo/Algo/StackQueue/TwoStacksQueue.java)
   * [生成窗口最大值数组](/app/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
 
-* 链表问题
+* 第二章 链表问题
   * [打印两个有序链表的公共部分](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/PrintCommonPart.java)
   * [反转单向链表和双向链](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseLinkedList.java)
   * [反转部分单向链表](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)
