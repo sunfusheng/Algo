@@ -15,9 +15,13 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
   * [反转部分单向链表](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)
   * [环形单链表的约瑟夫问题](/app/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)
 
+<br/>
+
 ### 扫一扫[Fir.im](http://d.alphaqr.com/Algo)二维码下载APK体验
 
 <img src="/resources/fir.im.png" style="width: 30%;" alt="s">
+
+<br/>
 
 ### 关于作者
 
