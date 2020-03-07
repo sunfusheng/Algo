@@ -1,9 +1,6 @@
 package com.sunfusheng.algo
 
-import com.sunfusheng.algo.Algo.LinkedList.Josephus
-import com.sunfusheng.algo.Algo.LinkedList.PrintCommonPart
-import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
-import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
+import com.sunfusheng.algo.Algo.LinkedList.*
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
 import com.sunfusheng.algo.Algo.StackQueue.MinStack
 import com.sunfusheng.algo.Algo.StackQueue.TwoStacksQueue
@@ -116,6 +113,11 @@ val lists = dataSource {
         item {
             className = PrintCommonPart::class.simpleName
             subject = "打印两个有序链表的公共部分"
+            hardLevel = 1
+        }
+        item {
+            className = RemoveLastKthNode::class.simpleName
+            subject = "删除单链表和双链表倒数第K个节点"
             hardLevel = 1
         }
         item {
