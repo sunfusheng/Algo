@@ -3,6 +3,7 @@ package com.sunfusheng.algo
 import com.sunfusheng.algo.Algo.LinkedList.*
 import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
 import com.sunfusheng.algo.Algo.StackQueue.MinStack
+import com.sunfusheng.algo.Algo.StackQueue.RecursionReverseStack
 import com.sunfusheng.algo.Algo.StackQueue.TwoStacksQueue
 import java.io.File
 import java.io.Serializable
@@ -101,6 +102,11 @@ val lists = dataSource {
             className = TwoStacksQueue::class.simpleName
             subject = "用两个栈实现队列"
             hardLevel = 1
+        }
+        item {
+            className = RecursionReverseStack::class.simpleName
+            subject = "如何仅用递归函数和栈操作逆序一个栈"
+            hardLevel = 2
         }
         item {
             className = MaxWindow::class.simpleName
