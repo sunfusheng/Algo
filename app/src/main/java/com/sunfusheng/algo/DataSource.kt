@@ -1,10 +1,7 @@
 package com.sunfusheng.algo
 
 import com.sunfusheng.algo.Algo.LinkedList.*
-import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
-import com.sunfusheng.algo.Algo.StackQueue.MinStack
-import com.sunfusheng.algo.Algo.StackQueue.RecursionReverseStack
-import com.sunfusheng.algo.Algo.StackQueue.TwoStacksQueue
+import com.sunfusheng.algo.Algo.StackQueue.*
 import java.io.File
 import java.io.Serializable
 
@@ -107,6 +104,11 @@ val lists = dataSource {
             className = RecursionReverseStack::class.simpleName
             subject = "如何仅用递归函数和栈操作逆序一个栈"
             hardLevel = 2
+        }
+        item {
+            className = CatDogQueue::class.simpleName
+            subject = "猫狗队列"
+            hardLevel = 1
         }
         item {
             className = MaxWindow::class.simpleName
