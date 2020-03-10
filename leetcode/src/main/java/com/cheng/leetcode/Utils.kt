@@ -17,3 +17,13 @@ fun IntArray.format() : String {
     buf.append("]")
     return buf.toString()
 }
+
+class Utils {
+
+    companion object {
+        @JvmStatic
+        fun log(s: String) {
+            println(s)
+        }
+    }
+}

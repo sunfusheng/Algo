@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         groupAdapter.setOnItemClickListener { _, item, _, _ ->
             if (item.className != null) {
                 val intent = Intent(this, CodeViewerActivity::class.java)
-                intent.putExtra(CodeViewerActivity.PARAM_KEY, Utils.toItem(item))
+                intent.putExtra(CodeViewerActivity.PARAM_KEY, Utils.toJavaItem(item))
                 startActivity(intent)
             }
         }

@@ -1,4 +1,4 @@
-package com.cheng.leetcode.LeetCode.Array
+package com.cheng.leetcode.easy
 
 import com.cheng.leetcode.format
 import java.lang.IllegalArgumentException
@@ -20,7 +20,7 @@ import java.lang.IllegalArgumentException
  * @author liwangcheng
  * @date 2020/3/10.
  */
-class TwoSum {
+class TwoSumTest {
 
     val nums = intArrayOf(2, 7, 11, 15)
 
@@ -92,7 +92,7 @@ class TwoSum {
 }
 
 fun main() {
-    val twoSum = TwoSum()
+    val twoSum = TwoSumTest()
     twoSum.run {
         println("nums = [2, 7, 11, 15]")
         println("solution1(13) - ${solution1(nums, 13).format()}")

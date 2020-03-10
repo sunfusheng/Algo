@@ -153,7 +153,7 @@ public class Utils {
         System.out.println(sb);
     }
 
-    public static AlgoItem toItem(com.cheng.leetcode.AlgoItem item) {
-        return new AlgoItem("LeetCode/", item.getChapter(), item.getClassName(), item.getSubject(), item.hardLevel(), ".kt");
+    public static AlgoItem toJavaItem(com.cheng.leetcode.AlgoItem item) {
+        return new AlgoItem("LeetCode/", item.getChapter(), item.getClassName(), item.getSubject(), item.hardLevel(), ".java");
     }
 }
