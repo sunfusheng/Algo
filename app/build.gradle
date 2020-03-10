@@ -78,4 +78,5 @@ dependencies {
     implementation 'com.sunfusheng:FirUpdater:1.3.0'
     implementation 'com.sunfusheng:GroupRecyclerViewAdapter:1.2.0'
     implementation 'com.sunfusheng:CodeViewer:1.2.0'
+    implementation project(path: ':leetcode')
 }

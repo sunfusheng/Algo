@@ -3,6 +3,7 @@ package com.sunfusheng.algo.Algo;
 
 import com.sunfusheng.algo.Algo.LinkedList.DoubleNode;
 import com.sunfusheng.algo.Algo.LinkedList.Node;
+import com.sunfusheng.algo.AlgoItem;
 
 /**
  * @author sunfusheng
@@ -150,5 +151,9 @@ public class Utils {
             }
         }
         System.out.println(sb);
+    }
+
+    public static AlgoItem toItem(com.cheng.leetcode.AlgoItem item) {
+        return new AlgoItem("LeetCode/", item.getChapter(), item.getClassName(), item.getSubject(), item.hardLevel(), ".kt");
     }
 }

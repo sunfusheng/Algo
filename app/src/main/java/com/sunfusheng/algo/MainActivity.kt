@@ -5,20 +5,48 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.cheng.leetcode.LeetCodeAdapter
+import com.cheng.leetcode.leetCodeList
+import com.google.android.material.tabs.TabLayout
 import com.sunfusheng.FirUpdater
 import com.sunfusheng.GroupViewHolder
 import com.sunfusheng.HeaderGroupRecyclerViewAdapter
 import com.sunfusheng.StickyHeaderDecoration
+import com.sunfusheng.algo.Algo.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val ALGO: Int = 0
+        const val LEET_CODE: Int = 1
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initView()
         checkUpdate()
-        loadDataSource()
+        loadAlgoDataSource()
+    }
+
+    private fun initView() {
+        vTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabReselected(tab: TabLayout.Tab?) = Unit
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) = Unit
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                if (tab?.position == ALGO) {
+                    loadAlgoDataSource()
+                } else {
+                    loadLeetCode()
+                }
+            }
+        })
+        vRecyclerView.layoutManager = LinearLayoutManager(this)
+        vRecyclerView.addItemDecoration(StickyHeaderDecoration())
     }
 
     private fun checkUpdate() {
@@ -28,9 +56,7 @@ class MainActivity : AppCompatActivity() {
             .checkVersion()
     }
 
-    private fun loadDataSource() {
-        vRecyclerView.layoutManager = LinearLayoutManager(this)
-        vRecyclerView.addItemDecoration(StickyHeaderDecoration())
+    private fun loadAlgoDataSource() {
         val groupAdapter = StickyGroupAdapter(this, lists)
         vRecyclerView.adapter = groupAdapter
 
@@ -38,6 +64,19 @@ class MainActivity : AppCompatActivity() {
             if (item.className != null) {
                 val intent = Intent(this, CodeViewerActivity::class.java)
                 intent.putExtra(CodeViewerActivity.PARAM_KEY, item)
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun loadLeetCode() {
+        val groupAdapter = LeetCodeAdapter(this, leetCodeList)
+        vRecyclerView.adapter = groupAdapter
+
+        groupAdapter.setOnItemClickListener { _, item, _, _ ->
+            if (item.className != null) {
+                val intent = Intent(this, CodeViewerActivity::class.java)
+                intent.putExtra(CodeViewerActivity.PARAM_KEY, Utils.toItem(item))
                 startActivity(intent)
             }
         }

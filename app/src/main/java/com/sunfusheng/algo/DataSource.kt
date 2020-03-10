@@ -12,13 +12,15 @@ import java.io.Serializable
 
 @ChapterDslMarker
 open class AlgoItem(
+    open var rootPath: String = "Algo/",
     open var chapter: Pair<String, String>,
     open var className: String? = null,
     open var subject: String? = null,
-    open var hardLevel: Int = 1
+    open var hardLevel: Int = 1,
+    open var suffix: String = ".java"
 ) : Serializable {
     fun getFilePath(): String {
-        return "Algo/" + chapter.first + File.separator + className + ".java"
+        return rootPath + chapter.first + File.separator + className + suffix
     }
 
     fun getHardLevel(): String {
@@ -46,9 +48,9 @@ abstract class ChapterDataSource() {
 
     protected fun <T : ChapterDataSource> addItem(chapter: T, init: AlgoItem.() -> Unit) {
         if (chapter.list.isEmpty()) {
-            chapter.list.add(AlgoItem(getChapter()))
+            chapter.list.add(AlgoItem(chapter = getChapter()))
         }
-        chapter.list.add(AlgoItem(getChapter()).apply(init))
+        chapter.list.add(AlgoItem(chapter = getChapter()).apply(init))
     }
 
     protected abstract fun getChapter(): Pair<String, String>
