@@ -111,6 +111,11 @@ val lists = dataSource {
             hardLevel = 1
         }
         item {
+            className = SortStackByStack::class.simpleName
+            subject = "用一个栈实现另一个栈的排序"
+            hardLevel = 1
+        }
+        item {
             className = MaxWindow::class.simpleName
             subject = "生成窗口最大值数组"
             hardLevel = 2
