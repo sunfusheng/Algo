@@ -1,6 +1,7 @@
 package com.cheng.leetcode
 
 import com.cheng.leetcode.LeetCode.Array.TwoSum
+import com.cheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import java.io.File
 import java.io.Serializable
 
@@ -58,12 +59,22 @@ open class ArrayChapter : ChapterDataSource() {
     fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
+open class LinkedListChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "LinkedList" to "链表"
+
+    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
+}
+
 @DataSourceDslMarker
 open class DataSource {
     open val lists = ArrayList<ArrayList<AlgoItem>>()
 
     fun arrayChapter(init: ArrayChapter.() -> Unit) {
         lists.add(ArrayChapter().apply(init).list)
+    }
+
+    fun linkedListChapter(init: LinkedListChapter.() -> Unit) {
+        lists.add(LinkedListChapter().apply(init).list)
     }
 
 }
@@ -78,6 +89,14 @@ val leetCodeList = dataSource {
             className = TwoSum::class.simpleName
             subject = "两数之和"
             hardLevel = 1
+        }
+    }
+
+    linkedListChapter {
+        item {
+            className = AddTwoNumbers::class.simpleName
+            subject = "两数相加"
+            hardLevel = 2
         }
     }
 }

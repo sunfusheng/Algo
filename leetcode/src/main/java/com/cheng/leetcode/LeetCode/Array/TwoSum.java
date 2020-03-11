@@ -1,7 +1,5 @@
 package com.cheng.leetcode.LeetCode.Array;
 
-import android.icu.text.UFormat;
-
 import com.cheng.leetcode.Utils;
 import com.cheng.leetcode.UtilsKt;
 
@@ -95,10 +93,10 @@ public class TwoSum {
 
     public static void main(String[] args) {
         TwoSum twoSum = new TwoSum();
-        Utils.log("nums = [2, 7, 11, 15]");
-        Utils.log("solution1(13) - " + UtilsKt.format(twoSum.solution1(twoSum.nums, 13)));
-        Utils.log("solution2(9) - " + UtilsKt.format(twoSum.solution2(twoSum.nums, 9)));
-        Utils.log("solution3(17) - " + UtilsKt.format(twoSum.solution3(twoSum.nums, 17)));
+        Utils.logln("nums = [2, 7, 11, 15]");
+        Utils.logln("solution1(13) - " + UtilsKt.format(twoSum.solution1(twoSum.nums, 13)));
+        Utils.logln("solution2(9) - " + UtilsKt.format(twoSum.solution2(twoSum.nums, 9)));
+        Utils.logln("solution3(17) - " + UtilsKt.format(twoSum.solution3(twoSum.nums, 17)));
     }
 
 }

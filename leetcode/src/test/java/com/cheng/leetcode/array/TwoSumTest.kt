@@ -1,4 +1,4 @@
-package com.cheng.leetcode.easy
+package com.cheng.leetcode.array
 
 import com.cheng.leetcode.format
 import java.lang.IllegalArgumentException

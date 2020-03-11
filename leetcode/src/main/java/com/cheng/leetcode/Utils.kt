@@ -23,6 +23,11 @@ class Utils {
     companion object {
         @JvmStatic
         fun log(s: String) {
+            print(s)
+        }
+
+        @JvmStatic
+        fun logln(s: String) {
             println(s)
         }
     }
