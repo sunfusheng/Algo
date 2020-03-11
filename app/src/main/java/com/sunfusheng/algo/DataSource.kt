@@ -1,12 +1,7 @@
 package com.sunfusheng.algo
 
-import com.sunfusheng.algo.Algo.LinkedList.Josephus
-import com.sunfusheng.algo.Algo.LinkedList.PrintCommonPart
-import com.sunfusheng.algo.Algo.LinkedList.ReverseLinkedList
-import com.sunfusheng.algo.Algo.LinkedList.ReversePartLinkedList
-import com.sunfusheng.algo.Algo.StackQueue.MaxWindow
-import com.sunfusheng.algo.Algo.StackQueue.MinStack
-import com.sunfusheng.algo.Algo.StackQueue.TwoStacksQueue
+import com.sunfusheng.algo.Algo.LinkedList.*
+import com.sunfusheng.algo.Algo.StackQueue.*
 import java.io.File
 import java.io.Serializable
 
@@ -108,6 +103,21 @@ val lists = dataSource {
             hardLevel = 1
         }
         item {
+            className = RecursionReverseStack::class.simpleName
+            subject = "如何仅用递归函数和栈操作逆序一个栈"
+            hardLevel = 2
+        }
+        item {
+            className = CatDogQueue::class.simpleName
+            subject = "猫狗队列"
+            hardLevel = 1
+        }
+        item {
+            className = SortStackByStack::class.simpleName
+            subject = "用一个栈实现另一个栈的排序"
+            hardLevel = 1
+        }
+        item {
             className = MaxWindow::class.simpleName
             subject = "生成窗口最大值数组"
             hardLevel = 2
@@ -118,6 +128,11 @@ val lists = dataSource {
         item {
             className = PrintCommonPart::class.simpleName
             subject = "打印两个有序链表的公共部分"
+            hardLevel = 1
+        }
+        item {
+            className = RemoveLastKthNode::class.simpleName
+            subject = "删除单链表和双链表倒数第K个节点"
             hardLevel = 1
         }
         item {
