@@ -1,4 +1,4 @@
-package com.sunfusheng.algo
+package com.sunfusheng.algo.app
 
 import android.os.Bundle
 import android.util.SparseArray
@@ -10,11 +10,15 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.android.material.tabs.TabLayoutMediator.TabConfigurationStrategy
 import com.sunfusheng.FirUpdater
+import com.sunfusheng.algo.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val TAB_NAMES = intArrayOf(R.string.tab_algo, R.string.tab_leetcode)
+    private val TAB_NAMES = intArrayOf(
+        R.string.tab_algo,
+        R.string.tab_leetcode
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +37,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragments() {
         val fragments = SparseArray<Fragment>()
-        fragments.put(ALGO, AlgoFragment.getInstance(ALGO))
-        fragments.put(LEET_CODE, AlgoFragment.getInstance(LEET_CODE))
+        fragments.put(
+            ALGO,
+            AlgoFragment.getInstance(
+                ALGO
+            )
+        )
+        fragments.put(
+            LEET_CODE,
+            AlgoFragment.getInstance(
+                LEET_CODE
+            )
+        )
 
         val adapter = FragmentViewPager2Adapter(this)
         adapter.fragments = fragments

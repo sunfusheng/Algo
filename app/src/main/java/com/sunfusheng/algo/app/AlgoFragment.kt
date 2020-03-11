@@ -1,4 +1,4 @@
-package com.sunfusheng.algo
+package com.sunfusheng.algo.app
 
 import android.content.Context
 import android.content.Intent
@@ -13,6 +13,8 @@ import com.wangcheng.leetcode.leetCodeDataSource
 import com.sunfusheng.GroupViewHolder
 import com.sunfusheng.HeaderGroupRecyclerViewAdapter
 import com.sunfusheng.StickyHeaderDecoration
+import com.sunfusheng.algo.R
+import com.sunfusheng.algo.algoDataSource
 import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.CodeViewerActivity
 import kotlinx.android.synthetic.main.fragment_algo.*
@@ -60,7 +62,10 @@ class AlgoFragment : Fragment() {
         vRecyclerView.layoutManager = LinearLayoutManager(context)
         vRecyclerView.addItemDecoration(StickyHeaderDecoration())
         val groupAdapter =
-            StickyGroupAdapter(context, if (mFrom == ALGO) algoDataSource else leetCodeDataSource)
+            StickyGroupAdapter(
+                context,
+                if (mFrom == ALGO) algoDataSource else leetCodeDataSource
+            )
         vRecyclerView.adapter = groupAdapter
 
         groupAdapter.setOnItemClickListener { _, item, _, _ ->
