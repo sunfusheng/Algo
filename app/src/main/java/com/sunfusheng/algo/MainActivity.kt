@@ -1,52 +1,27 @@
 package com.sunfusheng.algo
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
+import android.util.SparseArray
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.cheng.leetcode.LeetCodeAdapter
-import com.cheng.leetcode.leetCodeList
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import com.google.android.material.tabs.TabLayoutMediator.TabConfigurationStrategy
 import com.sunfusheng.FirUpdater
-import com.sunfusheng.GroupViewHolder
-import com.sunfusheng.HeaderGroupRecyclerViewAdapter
-import com.sunfusheng.StickyHeaderDecoration
-import com.sunfusheng.algo.Algo.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        const val ALGO: Int = 0
-        const val LEET_CODE: Int = 1
-    }
+    private val TAB_NAMES = intArrayOf(R.string.tab_algo, R.string.tab_leetcode)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initView()
         checkUpdate()
-        loadAlgoDataSource()
-    }
-
-    private fun initView() {
-        vTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabReselected(tab: TabLayout.Tab?) = Unit
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) = Unit
-
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                if (tab?.position == ALGO) {
-                    loadAlgoDataSource()
-                } else {
-                    loadLeetCode()
-                }
-            }
-        })
-        vRecyclerView.layoutManager = LinearLayoutManager(this)
-        vRecyclerView.addItemDecoration(StickyHeaderDecoration())
+        loadFragments()
     }
 
     private fun checkUpdate() {
@@ -56,61 +31,34 @@ class MainActivity : AppCompatActivity() {
             .checkVersion()
     }
 
-    private fun loadAlgoDataSource() {
-        val groupAdapter = StickyGroupAdapter(this, lists)
-        vRecyclerView.adapter = groupAdapter
+    private fun loadFragments() {
+        val fragments = SparseArray<Fragment>()
+        fragments.put(ALGO, AlgoFragment.getInstance(ALGO))
+        fragments.put(LEET_CODE, AlgoFragment.getInstance(LEET_CODE))
 
-        groupAdapter.setOnItemClickListener { _, item, _, _ ->
-            if (item.className != null) {
-                val intent = Intent(this, CodeViewerActivity::class.java)
-                intent.putExtra(CodeViewerActivity.PARAM_KEY, item)
-                startActivity(intent)
+        val adapter = FragmentViewPager2Adapter(this)
+        adapter.fragments = fragments
+        vViewPager.adapter = adapter
+        TabLayoutMediator(vTabLayout, vViewPager,
+            TabConfigurationStrategy { tab: TabLayout.Tab, position: Int ->
+                tab.setText(
+                    TAB_NAMES[position]
+                )
             }
-        }
-    }
-
-    private fun loadLeetCode() {
-        val groupAdapter = LeetCodeAdapter(this, leetCodeList)
-        vRecyclerView.adapter = groupAdapter
-
-        groupAdapter.setOnItemClickListener { _, item, _, _ ->
-            if (item.className != null) {
-                val intent = Intent(this, CodeViewerActivity::class.java)
-                intent.putExtra(CodeViewerActivity.PARAM_KEY, Utils.toJavaItem(item))
-                startActivity(intent)
-            }
-        }
+        ).attach()
     }
 }
 
+class FragmentViewPager2Adapter(fragmentActivity: FragmentActivity) :
+    FragmentStateAdapter(fragmentActivity) {
 
-class StickyGroupAdapter(context: Context, groups: List<List<AlgoItem>>) :
-    HeaderGroupRecyclerViewAdapter<AlgoItem>(context, groups) {
+    lateinit var fragments: SparseArray<Fragment>
 
-    override fun getHeaderLayoutId(viewType: Int): Int {
-        return R.layout.layout_group_header
+    override fun createFragment(position: Int): Fragment {
+        return fragments[position]
     }
 
-    override fun getChildLayoutId(viewType: Int): Int {
-        return R.layout.layout_group_child
-    }
-
-    override fun onBindHeaderViewHolder(
-        holder: GroupViewHolder,
-        item: AlgoItem,
-        groupPosition: Int
-    ) {
-
-        holder.setText(R.id.vHeader, item.chapter.second)
-    }
-
-    override fun onBindChildViewHolder(
-        holder: GroupViewHolder,
-        item: AlgoItem,
-        groupPosition: Int,
-        childPosition: Int
-    ) {
-        holder.setText(R.id.vChild, item.subject)
-        holder.setVisible(R.id.vDivider, !isGroupLastItem(groupPosition, childPosition))
+    override fun getItemCount(): Int {
+        return fragments.size()
     }
 }

@@ -13,4 +13,9 @@
 
     <color name="divider1">#ebebeb</color>
     <color name="divider2">#d6d6d6</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF5722</color>
+
 </resources>
