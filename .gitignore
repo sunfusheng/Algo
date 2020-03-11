@@ -7,5 +7,5 @@
 /captures
 .externalNativeBuild
 .cxx
-/app/src/main/assets/Algo
-/leetcode/src/main/assets/LeetCode
+/module-algo/src/main/assets/Algo
+/module-leetcode/src/main/assets/LeetCode

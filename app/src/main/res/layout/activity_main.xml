@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_common"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/vTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_height="35dp"
+        android:background="@color/white"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/colorAccent"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextColor="@color/font2">
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tab_algo" />
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tab_leetcode" />
-    </com.google.android.material.tabs.TabLayout>
+        app:tabPaddingStart="16dp"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/colorPrimary_50" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/vRecyclerView"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

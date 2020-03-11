@@ -1,2 +1,4 @@
-include ':leetcode',
+include ':module-common',
+        ':module-algo',
+        ':module-leetcode',
         ':app'
