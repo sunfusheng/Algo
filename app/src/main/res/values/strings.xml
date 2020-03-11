@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Algo</string>
+    <string name="app_name">Algorithm</string>
     <string name="tab_algo">Algo</string>
     <string name="tab_leetcode">LeetCode</string>
 </resources>

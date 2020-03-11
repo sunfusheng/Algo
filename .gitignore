@@ -8,3 +8,4 @@
 .externalNativeBuild
 .cxx
 /app/src/main/assets/Algo
+/leetcode/src/main/assets/LeetCode

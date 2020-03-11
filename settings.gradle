@@ -1,2 +1,2 @@
-include ':app'
-include ':leetcode'
+include ':leetcode',
+        ':app'

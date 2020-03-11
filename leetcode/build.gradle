@@ -21,8 +21,6 @@ android {
         targetSdkVersion target_sdk_version
         versionCode version_code
         versionName version_name
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {
@@ -36,7 +34,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -54,8 +51,4 @@ dependencies {
 
     implementation 'com.sunfusheng:GroupRecyclerViewAdapter:1.2.0'
     implementation 'com.sunfusheng:CodeViewer:1.2.0'
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
