@@ -5,6 +5,7 @@ import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
+import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
 
 @ChapterDslMarker
 @DataSourceDslMarker
@@ -33,6 +34,12 @@ open class LinkedListChapter : ChapterDataSource() {
     fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
+open class StringChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "String" to "字符串"
+
+    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
+}
+
 @DataSourceDslMarker
 open class DataSource {
     open val lists = ArrayList<ArrayList<AlgoItem>>()
@@ -43,6 +50,10 @@ open class DataSource {
 
     fun linkedListChapter(init: LinkedListChapter.() -> Unit) {
         lists.add(LinkedListChapter().apply(init).list)
+    }
+
+    fun stringChapter(init: StringChapter.() -> Unit) {
+        lists.add(StringChapter().apply(init).list)
     }
 
 }
@@ -64,6 +75,14 @@ val leetCodeDataSource = dataSource {
         item {
             className = AddTwoNumbers::class.simpleName
             subject = "两数相加"
+            hardLevel = 2
+        }
+    }
+
+    stringChapter {
+        item {
+            className = LengthOfLongestSubstring::class.simpleName
+            subject = "无重复字符的最长子串"
             hardLevel = 2
         }
     }

@@ -21,6 +21,19 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
 
 <br/>
 
+# LeetCode
+
+* 数组
+  * [两数之和](/module-algo/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
+
+* 链表
+  * [两数相加](/module-algo/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
+
+* 字符串
+  * [无重复字符的最长子串](/module-algo/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
+
+<br/>
+
 ### 扫一扫[Fir.im](http://d.alphaqr.com/Algo)二维码下载APK体验
 
 <img src="/resources/fir.im.png" style="width: 30%;" alt="s">
