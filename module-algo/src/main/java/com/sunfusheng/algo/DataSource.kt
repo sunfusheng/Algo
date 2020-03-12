@@ -106,6 +106,11 @@ val algoDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = RemoveMidNode::class.simpleName
+            subject = "删除链表的中间节点和a/b处的节点"
+            hardLevel = 1
+        }
+        item {
             className = ReverseLinkedList::class.simpleName
             subject = "反转单向链表和双向链表"
             hardLevel = 1
