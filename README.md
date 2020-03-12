@@ -24,13 +24,13 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
 # LeetCode
 
 * 数组
-  * [两数之和](/module-algo/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
+  * [两数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
 
 * 链表
-  * [两数相加](/module-algo/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
+  * [两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
 
 * 字符串
-  * [无重复字符的最长子串](/module-algo/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
+  * [无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
 
 <br/>
 
