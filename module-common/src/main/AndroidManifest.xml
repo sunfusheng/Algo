@@ -2,7 +2,8 @@
     package="com.sunfusheng.algo.common">
 
     <application>
-        <activity android:name=".CodeViewerActivity" />
+        <activity
+            android:name=".CodeViewerActivity"
+            android:theme="@style/CodeViewerTheme" />
     </application>
-
 </manifest>

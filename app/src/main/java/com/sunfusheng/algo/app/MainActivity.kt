@@ -2,6 +2,9 @@ package com.sunfusheng.algo.app
 
 import android.os.Bundle
 import android.util.SparseArray
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -23,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(vToolbar)
+        title = ""
 
         checkUpdate()
         loadFragments()
@@ -37,36 +42,34 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragments() {
         val fragments = SparseArray<Fragment>()
-        fragments.put(
-            ALGO,
-            AlgoFragment.getInstance(
-                ALGO
-            )
-        )
-        fragments.put(
-            LEET_CODE,
-            AlgoFragment.getInstance(
-                LEET_CODE
-            )
-        )
+        fragments.put(ALGO, AlgoFragment.getInstance(ALGO))
+        fragments.put(LEET_CODE, AlgoFragment.getInstance(LEET_CODE))
 
-        val adapter = FragmentViewPager2Adapter(this)
-        adapter.fragments = fragments
+        val adapter = FragmentViewPager2Adapter(this, fragments)
         vViewPager.adapter = adapter
         TabLayoutMediator(vTabLayout, vViewPager,
             TabConfigurationStrategy { tab: TabLayout.Tab, position: Int ->
-                tab.setText(
-                    TAB_NAMES[position]
-                )
+                tab.setText(TAB_NAMES[position])
             }
         ).attach()
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.action_about) {
+            Toast.makeText(this, "todo", Toast.LENGTH_SHORT).show()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
 
-class FragmentViewPager2Adapter(fragmentActivity: FragmentActivity) :
-    FragmentStateAdapter(fragmentActivity) {
-
-    lateinit var fragments: SparseArray<Fragment>
+class FragmentViewPager2Adapter(activity: FragmentActivity, val fragments: SparseArray<Fragment>) :
+    FragmentStateAdapter(activity) {
 
     override fun createFragment(position: Int): Fragment {
         return fragments[position]
