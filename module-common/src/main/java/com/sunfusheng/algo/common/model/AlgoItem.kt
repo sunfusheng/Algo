@@ -18,13 +18,13 @@ annotation class DataSourceDslMarker
 annotation class ChapterDslMarker
 
 @ChapterDslMarker
-open class AlgoItem(
-    open var rootPath: String = ALGO_ROOT_PATH,
-    open var chapter: Pair<String, String>,
-    open var className: String? = null,
-    open var subject: String? = null,
-    open var hardLevel: Int = 1,
-    open var suffix: String = ".java"
+data class AlgoItem(
+    var rootPath: String = ALGO_ROOT_PATH,
+    var chapter: Pair<String, String>,
+    var className: String? = null,
+    var subject: String? = null,
+    var hardLevel: Int = 1,
+    var suffix: String = ".java"
 ) : Serializable {
     fun getFilePath(): String {
         return rootPath + chapter.first + File.separator + className + suffix

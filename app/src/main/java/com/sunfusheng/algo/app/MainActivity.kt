@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragments() {
         val fragments = SparseArray<Fragment>()
-        fragments.put(ALGO, AlgoFragment.getInstance(ALGO))
-        fragments.put(LEET_CODE, AlgoFragment.getInstance(LEET_CODE))
+        fragments.put(0, AlgoFragment.getInstance(FromAlgo))
+        fragments.put(1, AlgoFragment.getInstance(FromLeetCode))
 
         val adapter = FragmentViewPager2Adapter(this, fragments)
         vViewPager.adapter = adapter

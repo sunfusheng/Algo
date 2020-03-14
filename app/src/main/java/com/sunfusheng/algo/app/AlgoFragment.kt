@@ -1,7 +1,6 @@
 package com.sunfusheng.algo.app
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.wangcheng.leetcode.leetCodeDataSource
 import com.sunfusheng.GroupViewHolder
 import com.sunfusheng.HeaderGroupRecyclerViewAdapter
 import com.sunfusheng.StickyHeaderDecoration
@@ -17,31 +15,34 @@ import com.sunfusheng.algo.R
 import com.sunfusheng.algo.algoDataSource
 import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.CodeViewerActivity
+import com.wangcheng.leetcode.leetCodeDataSource
 import kotlinx.android.synthetic.main.fragment_algo.*
+import java.io.Serializable
 
 /**
  * @author sunfusheng
  * @since 2020/3/11
  */
 
-const val ALGO = 0
-const val LEET_CODE = 1
+sealed class AlgoSource : Serializable
+object FromAlgo : AlgoSource()
+object FromLeetCode : AlgoSource()
 
 class AlgoFragment : Fragment() {
 
     companion object {
-        fun getInstance(from: Int): AlgoFragment {
+        fun getInstance(from: AlgoSource): AlgoFragment {
             val fragment = AlgoFragment()
             fragment.arguments = bundleOf("from" to from)
             return fragment
         }
     }
 
-    private var mFrom = ALGO
+    private var mFrom: AlgoSource = FromAlgo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mFrom = arguments?.getInt("from") ?: ALGO
+        mFrom = (arguments?.getSerializable("from") ?: FromAlgo) as AlgoSource
     }
 
     override fun onCreateView(
@@ -64,15 +65,17 @@ class AlgoFragment : Fragment() {
         val groupAdapter =
             StickyGroupAdapter(
                 context,
-                if (mFrom == ALGO) algoDataSource else leetCodeDataSource
+                if (mFrom is FromAlgo) algoDataSource else leetCodeDataSource
             )
         vRecyclerView.adapter = groupAdapter
 
         groupAdapter.setOnItemClickListener { _, item, _, _ ->
             if (item.className != null) {
-                val intent = Intent(context, CodeViewerActivity::class.java)
-                intent.putExtra(CodeViewerActivity.PARAM_KEY, item)
-                startActivity(intent)
+                val subject = item.subject!!
+                val filePath = item.getFilePath()
+                val hardLevel =
+                    if (mFrom is FromAlgo) item.getAlgoHardLevel() else item.getLeetCodeHardLevel()
+                CodeViewerActivity.goto(context!!, subject, filePath, hardLevel)
             }
         }
     }

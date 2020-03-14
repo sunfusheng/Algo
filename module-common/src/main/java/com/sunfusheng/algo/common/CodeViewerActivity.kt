@@ -1,5 +1,7 @@
 package com.sunfusheng.algo.common
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -17,10 +19,22 @@ import kotlinx.coroutines.launch
  */
 class CodeViewerActivity : BaseActivity() {
     companion object {
-        const val PARAM_KEY = "algo-item"
+        private const val PARAM_SUBJECT = "algo_subject"
+        private const val PARAM_FILE_PATH = "algo_file_path"
+        private const val PARAM_HARD_LEVEL = "algo_hard_level"
+
+        fun goto(context: Context, subject: String, filePath: String, hardLevel: String) {
+            val intent = Intent(context, CodeViewerActivity::class.java)
+            intent.putExtra(PARAM_SUBJECT, subject)
+            intent.putExtra(PARAM_FILE_PATH, filePath)
+            intent.putExtra(PARAM_HARD_LEVEL, hardLevel)
+            context.startActivity(intent)
+        }
     }
 
-    private lateinit var mAlgo: AlgoItem
+    private lateinit var mSubject: String
+    private lateinit var mFilePath: String
+    private lateinit var mHardLevel: String
     private var mSourceCode: String? = null
 
     private var isNightMode: Boolean = true
@@ -30,15 +44,11 @@ class CodeViewerActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_code_viewer)
 
-        mAlgo = intent.getSerializableExtra(PARAM_KEY) as AlgoItem
+        mSubject = intent.getStringExtra(PARAM_SUBJECT)!!
+        mFilePath = intent.getStringExtra(PARAM_FILE_PATH)!!
+        mHardLevel = intent.getStringExtra(PARAM_HARD_LEVEL)!!
 
-        val hardLevel = if (mAlgo.rootPath == ALGO_ROOT_PATH) {
-            mAlgo.getAlgoHardLevel()
-        } else {
-            mAlgo.getLeetCodeHardLevel()
-        }
-        initActionBar(mAlgo.subject!!, hardLevel)
-
+        initActionBar(mSubject, mHardLevel)
         loadSampleCode()
     }
 
@@ -76,12 +86,11 @@ class CodeViewerActivity : BaseActivity() {
 
     private suspend fun asyncLoadCodeFile(): String? {
         return GlobalScope.async(Dispatchers.Default) {
-            val filePath = mAlgo.getFilePath()
             if (mSourceCode == null) {
-                mSourceCode = CodeViewUtil.getStringFromAssetsFile(applicationContext, filePath)
+                mSourceCode = CodeViewUtil.getStringFromAssetsFile(applicationContext, mFilePath)
             }
             return@async CodeHtmlGenerator.generate(
-                filePath,
+                mFilePath,
                 mSourceCode,
                 isNightMode,
                 showLineNums
