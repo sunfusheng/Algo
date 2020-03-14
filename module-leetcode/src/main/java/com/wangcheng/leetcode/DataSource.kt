@@ -1,10 +1,11 @@
 package com.wangcheng.leetcode
 
-import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
+import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.FindMedianSortedArrays
+import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
 import com.wangcheng.leetcode.LeetCode.String.LongestPalindrome
@@ -18,7 +19,12 @@ abstract class ChapterDataSource() {
         if (chapter.list.isEmpty()) {
             chapter.list.add(AlgoItem(chapter = getChapter()))
         }
-        chapter.list.add(AlgoItem(rootPath = "LeetCode/", chapter = getChapter()).apply(init))
+        chapter.list.add(
+            AlgoItem(
+                rootPath = LEETCODE_ROOT_PATH,
+                chapter = getChapter()
+            ).apply(init)
+        )
     }
 
     protected abstract fun getChapter(): Pair<String, String>
@@ -68,20 +74,20 @@ val leetCodeDataSource = dataSource {
     arrayChapter {
         item {
             className = TwoSum::class.simpleName
-            subject = "两数之和"
+            subject = "1.两数之和"
             hardLevel = 1
         }
         item {
             className = FindMedianSortedArrays::class.simpleName
-            subject = "寻找两个有序数组的中位数"
-            hardLevel = 4
+            subject = "4.寻找两个有序数组的中位数"
+            hardLevel = 3
         }
     }
 
     linkedListChapter {
         item {
             className = AddTwoNumbers::class.simpleName
-            subject = "两数相加"
+            subject = "2.两数相加"
             hardLevel = 2
         }
     }
@@ -89,12 +95,12 @@ val leetCodeDataSource = dataSource {
     stringChapter {
         item {
             className = LengthOfLongestSubstring::class.simpleName
-            subject = "无重复字符的最长子串"
+            subject = "3.无重复字符的最长子串"
             hardLevel = 2
         }
         item {
             className = LongestPalindrome::class.simpleName
-            subject = "最长回文子串"
+            subject = "5.最长回文子串"
             hardLevel = 2
         }
     }

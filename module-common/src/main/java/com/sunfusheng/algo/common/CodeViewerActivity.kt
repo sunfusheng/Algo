@@ -32,7 +32,12 @@ class CodeViewerActivity : BaseActivity() {
 
         mAlgo = intent.getSerializableExtra(PARAM_KEY) as AlgoItem
 
-        initActionBar(mAlgo.subject!!, mAlgo.getHardLevel())
+        val hardLevel = if (mAlgo.rootPath == ALGO_ROOT_PATH) {
+            mAlgo.getAlgoHardLevel()
+        } else {
+            mAlgo.getLeetCodeHardLevel()
+        }
+        initActionBar(mAlgo.subject!!, hardLevel)
 
         loadSampleCode()
     }

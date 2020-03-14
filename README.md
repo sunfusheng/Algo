@@ -28,13 +28,15 @@
 # LeetCode算法
 
 * 数组
-  * [两数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
+  * [1.两数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
+  * [4.寻找两个有序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMedianSortedArrays.java)
 
 * 链表
-  * [两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
+  * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
 
 * 字符串
-  * [无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
+  * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
+  * [5.最长回文子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestPalindrome.java)
 
 <br/>
 
