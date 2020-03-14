@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Algo</string>
+
     <string name="tab_algo">Algo</string>
     <string name="tab_leetcode">LeetCode</string>
+
+    <string name="title_about">关于</string>
 </resources>
