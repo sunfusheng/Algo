@@ -17,5 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".app.AboutActivity"
+            android:theme="@style/DarkActionBarTheme" />
     </application>
 </manifest>

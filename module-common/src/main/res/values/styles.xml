@@ -1,17 +1,17 @@
 <resources>
 
-    <style name="CodeViewerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="DarkActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="actionBarStyle">@style/CodeViewerActionBarStyle</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
     </style>
 
-    <style name="CodeViewerActionBarStyle" parent="@style/Widget.AppCompat.ActionBar.Solid">
-        <item name="subtitleTextStyle">@style/CodeViewerSubtitleStyle</item>
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="subtitleTextStyle">@style/ActionBarSubtitleStyle</item>
     </style>
 
-    <style name="CodeViewerSubtitleStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+    <style name="ActionBarSubtitleStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">8sp</item>
     </style>

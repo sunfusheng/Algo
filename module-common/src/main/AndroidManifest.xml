@@ -4,6 +4,6 @@
     <application>
         <activity
             android:name=".CodeViewerActivity"
-            android:theme="@style/CodeViewerTheme" />
+            android:theme="@style/DarkActionBarTheme" />
     </application>
 </manifest>

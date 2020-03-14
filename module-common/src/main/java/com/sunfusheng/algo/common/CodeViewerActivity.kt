@@ -3,7 +3,6 @@ package com.sunfusheng.algo.common
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import com.sunfusheng.codeviewer.CodeHtmlGenerator
 import com.sunfusheng.codeviewer.CodeViewUtil
 import kotlinx.android.synthetic.main.activity_code_viewer.*
@@ -16,7 +15,7 @@ import kotlinx.coroutines.launch
  * @author sunfusheng
  * @since 2020-02-22
  */
-class CodeViewerActivity : AppCompatActivity() {
+class CodeViewerActivity : BaseActivity() {
     companion object {
         const val PARAM_KEY = "algo-item"
     }
@@ -33,18 +32,9 @@ class CodeViewerActivity : AppCompatActivity() {
 
         mAlgo = intent.getSerializableExtra(PARAM_KEY) as AlgoItem
 
-        initActionBar(mAlgo.subject!!, true)
+        initActionBar(mAlgo.subject!!, mAlgo.getHardLevel())
 
         loadSampleCode()
-    }
-
-    private fun initActionBar(title: String, showHomeAsUp: Boolean) {
-        val actionBar = supportActionBar
-        if (actionBar != null) {
-            actionBar.title = title
-            actionBar.subtitle = mAlgo.getHardLevel()
-            actionBar.setDisplayHomeAsUpEnabled(showHomeAsUp)
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -56,9 +46,6 @@ class CodeViewerActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-            }
             R.id.item_night_mode -> {
                 isNightMode = !isNightMode
                 item.isChecked = isNightMode
