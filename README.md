@@ -1,6 +1,6 @@
 # Algo
 
-这是一款 Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试算法 ( Algorithm )，会持续更新！
+这是一款 Kotlin 语言版本的 Android 客户端本地化展示 Java 语言编写的面试算法 ( Algorithm )，会持续更新！
 
 # 面试算法
 
@@ -43,6 +43,11 @@
 <img src="/resources/fir.im.png" style="width: 30%;" alt="s">
 
 <br/>
+
+### 贡献者
+
+[DIY-green](https://github.com/DIY-green)
+
 
 ### 关于作者
 
