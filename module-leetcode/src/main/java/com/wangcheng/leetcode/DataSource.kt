@@ -4,8 +4,10 @@ import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
+import com.wangcheng.leetcode.LeetCode.Array.FindMedianSortedArrays
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
+import com.wangcheng.leetcode.LeetCode.String.LongestPalindrome
 
 @ChapterDslMarker
 @DataSourceDslMarker
@@ -69,6 +71,11 @@ val leetCodeDataSource = dataSource {
             subject = "两数之和"
             hardLevel = 1
         }
+        item {
+            className = FindMedianSortedArrays::class.simpleName
+            subject = "寻找两个有序数组的中位数"
+            hardLevel = 4
+        }
     }
 
     linkedListChapter {
@@ -83,6 +90,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = LengthOfLongestSubstring::class.simpleName
             subject = "无重复字符的最长子串"
+            hardLevel = 2
+        }
+        item {
+            className = LongestPalindrome::class.simpleName
+            subject = "最长回文子串"
             hardLevel = 2
         }
     }

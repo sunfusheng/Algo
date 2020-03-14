@@ -96,6 +96,7 @@ public class LengthOfLongestSubstring {
         int n = str.length();
         int max = 0;
         while (i < n && j < n) {
+            // 尝试移动窗口
             if (set.contains(str.charAt(j))) {
                 set.remove(str.charAt(i++));
             } else {
