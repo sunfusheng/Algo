@@ -1,5 +1,6 @@
 package com.sunfusheng.algo
 
+import com.sunfusheng.algo.Algo.BinaryTree.BinaryTreeTraverse
 import com.sunfusheng.algo.Algo.LinkedList.*
 import com.sunfusheng.algo.Algo.StackQueue.*
 import com.sunfusheng.algo.common.AlgoItem
@@ -22,19 +23,19 @@ abstract class ChapterDataSource() {
 }
 
 open class StackQueueChapter : ChapterDataSource() {
-    override fun getChapter(): Pair<String, String> = "StackQueue" to "栈和队列"
+    override fun getChapter(): Pair<String, String> = "StackQueue" to "栈和队列问题"
 
     fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class LinkedListChapter : ChapterDataSource() {
-    override fun getChapter(): Pair<String, String> = "LinkedList" to "链表"
+    override fun getChapter(): Pair<String, String> = "LinkedList" to "链表问题"
 
     fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class BinaryTreeChapter : ChapterDataSource() {
-    override fun getChapter(): Pair<String, String> = "BinaryTree" to "二叉树"
+    override fun getChapter(): Pair<String, String> = "BinaryTree" to "二叉树问题"
 
     fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
@@ -128,6 +129,10 @@ val algoDataSource = dataSource {
     }
 
     binaryTreeChapter {
-
+        item {
+            className = BinaryTreeTraverse::class.simpleName
+            subject = "用递归和非递归方式实现二叉树先序、中序、后序遍历"
+            hardLevel = 3
+        }
     }
 }

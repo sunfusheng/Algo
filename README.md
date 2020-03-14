@@ -2,9 +2,9 @@
 
 Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试算法 ( Algorithm )，会持续更新！
 
-# 算法目录
+# 面试算法
 
-* 第一章 栈和队列
+* 栈和队列问题
   * [设计一个有getMin功能的栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MinStack.java)
   * [用两个栈实现队列](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/TwoStacksQueue.java)
   * [如何仅用递归函数和栈操作逆序一个栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/RecursionReverseStack.java)
@@ -12,7 +12,7 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
   * [用一个栈实现另一个栈的排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/SortStackByStack.java)
   * [生成窗口最大值数组](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
 
-* 第二章 链表问题
+* 链表问题
   * [打印两个有序链表的公共部分](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/PrintCommonPart.java)
   * [删除单链表和双链表倒数第K个节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/RemoveLastKthNode.java)
   * [删除链表的中间节点和a/b处的节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/RemoveMidNode.java)
@@ -20,9 +20,12 @@ Kotlin 语言版本的 Android 客户端本地展示 Java 语言编写的面试�
   * [反转部分单向链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)
   * [环形单链表的约瑟夫问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)
 
+* 二叉树问题
+  * [用递归和非递归方式实现二叉树先序、中序、后序遍历](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/BinaryTreeTraverse.java)
+
 <br/>
 
-# LeetCode
+# LeetCode算法
 
 * 数组
   * [两数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)

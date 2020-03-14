@@ -13,7 +13,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
         android:ellipsize="end"
-        android:maxLines="2"
+        android:maxLines="1"
         android:text="child"
         android:textColor="@color/font1"
         android:textSize="15sp" />
