@@ -89,6 +89,11 @@ val algoDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = Hanoi::class.simpleName
+            subject = "用栈来求解汉诺塔问题"
+            hardLevel = 3
+        }
+        item {
             className = MaxWindow::class.simpleName
             subject = "生成窗口最大值数组"
             hardLevel = 2

@@ -10,6 +10,7 @@
   * [如何仅用递归函数和栈操作逆序一个栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/RecursionReverseStack.java)
   * [猫狗队列](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/CatDogQueue.java)
   * [用一个栈实现另一个栈的排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/SortStackByStack.java)
+  * [用栈来求解汉诺塔问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/Hanoi.java)
   * [生成窗口最大值数组](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
 
 * 链表问题
