@@ -55,12 +55,6 @@ public class LengthOfLongestSubstring {
         return max;
     }
 
-    private void check(String str) {
-        if (null == str || str.isEmpty()) {
-            throw new IllegalArgumentException("reject empty string");
-        }
-    }
-
     private boolean allUnique(String str, int start, int end) {
         Set<Character> set = new HashSet<>();
         for (int i = start; i < end; i++) {
@@ -124,11 +118,14 @@ public class LengthOfLongestSubstring {
         check(str);
         int max = 0;
         int n = str.length();
-        Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0, j = 0; j < n; j++) {
+        int i = 0;
+        Map<Character, Integer> map = new HashMap<>(n);
+        for (int j = 0; j < n; j++) {
             char ch = str.charAt(j);
-            if (map.containsKey(ch)) {
-                i = Math.max(map.get(ch), i);
+            // 尝试移动窗口
+            Integer index = map.get(ch);
+            if (index != null) {
+                i = Math.max(index, i);
             }
             max = Math.max(max, j - i);
             map.put(ch, j);
@@ -151,14 +148,22 @@ public class LengthOfLongestSubstring {
         check(str);
         int max = 0;
         int n = str.length();
+        int i = 0;
         int[] indexMap = new int[128];
-        for (int i = 0, j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++) {
             char ch = str.charAt(j);
+            // 尝试移动窗口
             i = Math.max(indexMap[ch], i);
             max = Math.max(max, j - i);
             indexMap[ch] = j;
         }
         return max;
+    }
+
+    private void check(String str) {
+        if (null == str || str.isEmpty()) {
+            throw new IllegalArgumentException("reject empty string");
+        }
     }
 
     public static void main(String[] args) {

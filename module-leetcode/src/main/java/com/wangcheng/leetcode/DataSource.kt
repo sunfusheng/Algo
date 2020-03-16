@@ -9,6 +9,7 @@ import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
 import com.wangcheng.leetcode.LeetCode.String.LongestPalindrome
+import com.wangcheng.leetcode.LeetCode.String.ZShapedConvert
 
 @ChapterDslMarker
 @DataSourceDslMarker
@@ -101,6 +102,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = LongestPalindrome::class.simpleName
             subject = "5.最长回文子串"
+            hardLevel = 2
+        }
+        item {
+            className = ZShapedConvert::class.simpleName
+            subject = "6.Z字形变换"
             hardLevel = 2
         }
     }

@@ -25,6 +25,47 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
 public class LongestPalindrome {
 
     /**
+     * 暴力破解法
+     *
+     * 时间复杂度：两层 for 循环 O(n²），for 循环里边判断是否为回文 O(n），所以时间复杂度为 O(n³）。
+     * 空间复杂度：O(1），常数个变量。
+     *
+     */
+    public String solution1(String str) {
+        if (isEmpty(str)) {
+            return "";
+        }
+        int max = 0;
+        String result = "";
+        for (int i = 0, len = str.length(); i < len; i++) {
+            for (int j = i + 1; j <= len; j++) {
+                String subStr = str.substring(i, j);
+                if (isPalindromic(subStr) && subStr.length() > max) {
+                    max = subStr.length();
+                    result = subStr;
+                }
+            }
+        }
+        return result;
+    }
+
+    private boolean isPalindromic(String str) {
+        if (isEmpty(str)) {
+            return true;
+        }
+        for (int i = 0, len = str.length(); i < len; i++) {
+            if (str.charAt(i) != str.charAt(len - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean isEmpty(String str) {
+        return null == str || str.isEmpty();
+    }
+
+    /**
      * 中心扩展算法
      * 思路：
      * 观察到回文中心的两侧互为镜像。因此，回文可以从它的中心展开，并且只有 2n - 1 个这样的中心。
@@ -32,8 +73,8 @@ public class LongestPalindrome {
      * 为什么会是 2n - 1 个，而不是 n 个中心？
      * 原因在于所含字母数为偶数的回文的中心可以处于两字母之间（例如 “abba” 的中心在两个 ‘b’ 之间）。
      */
-    public String solution(String s) {
-        if (s == null || s.length() < 1) {
+    public String solution2(String s) {
+        if (isEmpty(s)) {
             return "";
         }
         int start = 0, end = 0;
@@ -60,7 +101,9 @@ public class LongestPalindrome {
 
     public static void main(String[] args) {
         LongestPalindrome palindrome = new LongestPalindrome();
-        LeetCodeUtil.log("babad 的最大回文子串是：" + palindrome.solution("babad"));
-        LeetCodeUtil.log("abbda 的最大回文子串是：" + palindrome.solution("abbda"));
+        LeetCodeUtil.log("babad 的最大回文子串是：" + palindrome.solution1("babad"));
+        LeetCodeUtil.log("abbda 的最大回文子串是：" + palindrome.solution1("abbda"));
+        LeetCodeUtil.log("babad 的最大回文子串是：" + palindrome.solution2("babad"));
+        LeetCodeUtil.log("abbda 的最大回文子串是：" + palindrome.solution2("abbda"));
     }
 }
