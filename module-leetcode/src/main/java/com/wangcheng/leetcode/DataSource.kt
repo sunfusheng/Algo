@@ -7,6 +7,8 @@ import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.FindMedianSortedArrays
 import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
+import com.wangcheng.leetcode.LeetCode.Number.PalindromeNum
+import com.wangcheng.leetcode.LeetCode.Number.ReverseInt
 import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
 import com.wangcheng.leetcode.LeetCode.String.LongestPalindrome
 import com.wangcheng.leetcode.LeetCode.String.ZShapedConvert
@@ -49,6 +51,12 @@ open class StringChapter : ChapterDataSource() {
     fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
+open class NumberChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "Number" to "数字"
+
+    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
+}
+
 @DataSourceDslMarker
 open class DataSource {
     open val lists = ArrayList<ArrayList<AlgoItem>>()
@@ -63,6 +71,10 @@ open class DataSource {
 
     fun stringChapter(init: StringChapter.() -> Unit) {
         lists.add(StringChapter().apply(init).list)
+    }
+
+    fun numberChapter(init: NumberChapter.() -> Unit) {
+        lists.add(NumberChapter().apply(init).list)
     }
 
 }
@@ -108,6 +120,19 @@ val leetCodeDataSource = dataSource {
             className = ZShapedConvert::class.simpleName
             subject = "6.Z字形变换"
             hardLevel = 2
+        }
+    }
+
+    numberChapter {
+        item {
+            className = ReverseInt::class.simpleName
+            subject = "7.反转整数"
+            hardLevel = 1
+        }
+        item {
+            className = PalindromeNum::class.simpleName
+            subject = "9.回文数判断"
+            hardLevel = 1
         }
     }
 }

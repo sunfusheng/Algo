@@ -38,6 +38,11 @@
 * 字符串
   * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
   * [5.最长回文子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestPalindrome.java)
+  * [6.Z 字形变换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ZShapedConvert.java)
+
+* 数字
+  * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
+  * [9.回文数判断](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/PalindromeNum.java)
 
 <br/>
 
