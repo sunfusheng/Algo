@@ -9,7 +9,9 @@ import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.Number.PalindromeNum
 import com.wangcheng.leetcode.LeetCode.Number.ReverseInt
+import com.wangcheng.leetcode.LeetCode.Number.RomeToInt
 import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
+import com.wangcheng.leetcode.LeetCode.String.LongestCommonPrefix
 import com.wangcheng.leetcode.LeetCode.String.LongestPalindrome
 import com.wangcheng.leetcode.LeetCode.String.ZShapedConvert
 
@@ -121,6 +123,11 @@ val leetCodeDataSource = dataSource {
             subject = "6.Z字形变换"
             hardLevel = 2
         }
+        item {
+            className = LongestCommonPrefix::class.simpleName
+            subject = "14. 最长公共前缀"
+            hardLevel = 1
+        }
     }
 
     numberChapter {
@@ -132,6 +139,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = PalindromeNum::class.simpleName
             subject = "9.回文数判断"
+            hardLevel = 1
+        }
+        item {
+            className = RomeToInt::class.simpleName
+            subject = "13.罗马数字转整数"
             hardLevel = 1
         }
     }
