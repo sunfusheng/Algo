@@ -7,13 +7,11 @@ import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.FindMedianSortedArrays
 import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
+import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
 import com.wangcheng.leetcode.LeetCode.Number.PalindromeNum
 import com.wangcheng.leetcode.LeetCode.Number.ReverseInt
 import com.wangcheng.leetcode.LeetCode.Number.RomeToInt
-import com.wangcheng.leetcode.LeetCode.String.LengthOfLongestSubstring
-import com.wangcheng.leetcode.LeetCode.String.LongestCommonPrefix
-import com.wangcheng.leetcode.LeetCode.String.LongestPalindrome
-import com.wangcheng.leetcode.LeetCode.String.ZShapedConvert
+import com.wangcheng.leetcode.LeetCode.String.*
 
 @ChapterDslMarker
 @DataSourceDslMarker
@@ -105,6 +103,11 @@ val leetCodeDataSource = dataSource {
             subject = "2.两数相加"
             hardLevel = 2
         }
+        item {
+            className = MergeTwoLists::class.simpleName
+            subject = "21. 合并两个有序链表"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -126,6 +129,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = LongestCommonPrefix::class.simpleName
             subject = "14. 最长公共前缀"
+            hardLevel = 1
+        }
+        item {
+            className = ValidBrackets::class.simpleName
+            subject = "20. 有效的括号"
             hardLevel = 1
         }
     }

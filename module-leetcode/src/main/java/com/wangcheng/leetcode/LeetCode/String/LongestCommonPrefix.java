@@ -75,6 +75,9 @@ public class LongestCommonPrefix {
 
     /**
      * 算法三：分治
+     * 最坏情况下，我们有 n 个长度为 m 的相同字符串。
+     * 时间复杂度：O(S)，S 是所有字符串中字符数量的总和，S=m*n。
+     * 空间复杂度：O(m⋅log(n))
      */
     public static String solution3(String[] strs) {
         if (check(strs)) {
@@ -104,9 +107,49 @@ public class LongestCommonPrefix {
         return lcpLeft.substring(0, min);
     }
 
+    /**
+     * 方法四：
+     * 二分查找法
+     * 每一次将查找区间一分为二，然后丢弃一定不包含最终答案的那一个。
+     *
+     * 时间复杂度：O(S⋅log(n))，其中 S 所有字符串中字符数量的总和。
+     * 空间复杂度：O(1)，我们只需要使用常数级别的额外空间。
+     */
+    public static String solution4(String[] strs) {
+        if (check(strs)) {
+            return "";
+        }
+        int minLen = Integer.MAX_VALUE;
+        for (String str : strs) {
+            minLen = Math.min(minLen, str.length());
+        }
+        int left = 0;
+        int right = minLen;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (isCommonPrefix(strs, mid)) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return strs[0].substring(0, (left + right) / 2);
+    }
+
+    private static boolean isCommonPrefix(String[] strs, int len) {
+        String str1 = strs[0].substring(0, len);
+        for (int i = 1; i < strs.length; i++) {
+            if (!strs[i].startsWith(str1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         LeetCodeUtil.logln("solution1([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution1(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
         LeetCodeUtil.logln("solution2([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution2(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
         LeetCodeUtil.logln("solution3([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution3(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
+        LeetCodeUtil.logln("solution4([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution4(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
     }
 }
