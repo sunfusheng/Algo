@@ -1,5 +1,7 @@
 package com.sunfusheng.algo.Algo.StackQueue;
 
+import java.util.Stack;
+
 /**
  * 【题目】
  * 用栈来求解汉诺塔问题
@@ -32,6 +34,7 @@ package com.sunfusheng.algo.Algo.StackQueue;
  */
 public class Hanoi {
 
+    // 递归的方式实现汉诺塔问题
     public static int hanoiRecur(int n, String left, String mid, String right) {
         if (n < 1) {
             return 0;
@@ -71,9 +74,63 @@ public class Hanoi {
         }
     }
 
+    // 定义汉诺塔移动的动作
+    private enum Action {
+        No, LToM, MToL, MToR, RToM
+    }
+
+    // 非递归的方式实现汉诺塔问题
+    public static int hanoiUnRecur(int n, String left, String mid, String right) {
+        if (n < 1) {
+            return 0;
+        }
+
+        // 用三个栈模拟汉诺塔的三根柱子
+        Stack<Integer> ls = new Stack<>();
+        Stack<Integer> ms = new Stack<>();
+        Stack<Integer> rs = new Stack<>();
+
+        // 栈底先放上最大值
+        ls.push(Integer.MAX_VALUE);
+        ms.push(Integer.MAX_VALUE);
+        rs.push(Integer.MAX_VALUE);
+
+        for (int i = n; i > 0; i--) {
+            ls.push(i);
+        }
+
+        // 记录前一个移动动作
+        Action[] record = {Action.No};
+        int steps = 0;
+        while (rs.size() != n + 1) {
+            steps += fromStack2ToStack(record, Action.LToM, Action.MToL, ms, ls, mid, left);
+            steps += fromStack2ToStack(record, Action.MToL, Action.LToM, ls, ms, left, mid);
+            steps += fromStack2ToStack(record, Action.MToR, Action.RToM, rs, ms, right, mid);
+            steps += fromStack2ToStack(record, Action.RToM, Action.MToR, ms, rs, mid, right);
+        }
+        return steps;
+    }
+
+    private static int fromStack2ToStack(Action[] record, Action preAction, Action currAction,
+                                         Stack<Integer> fromStack, Stack<Integer> toStack,
+                                         String from, String to) {
+        if (record[0] != preAction && fromStack.peek() < toStack.peek()) {
+            toStack.push(fromStack.pop());
+            System.out.println("Move " + toStack + " from " + from + " to " + to);
+            record[0] = currAction;
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
         // 递归的方式实现汉诺塔问题
         int steps = hanoiRecur(3, "left", "mid", "right");
+        System.out.println("It will move " + steps + " steps");
+
+        System.out.println(" ");
+
+        // 非递归的方式实现汉诺塔问题
+        steps = hanoiRecur(2, "left", "mid", "right");
         System.out.println("It will move " + steps + " steps");
     }
 }
