@@ -31,17 +31,19 @@
 * 数组
   * [1.两数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
   * [4.寻找两个有序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMedianSortedArrays.java)
+  * [26.删除排序数组中的重复项](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveDuplicates.java)
+  * [27.移除元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveElement.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
-  * [21. 合并两个有序链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MergeTwoLists.java)
+  * [21.合并两个有序链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MergeTwoLists.java)
 
 * 字符串
   * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
   * [5.最长回文子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestPalindrome.java)
-  * [6.Z 字形变换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ZShapedConvert.java)
-  * [14. 最长公共前缀](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestCommonPrefix.java)
-  * [20. 有效的括号](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ValidBrackets.java)
+  * [6.Z字形变换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ZShapedConvert.java)
+  * [14.最长公共前缀](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestCommonPrefix.java)
+  * [20.有效的括号](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ValidBrackets.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)

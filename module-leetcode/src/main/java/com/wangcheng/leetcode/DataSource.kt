@@ -5,6 +5,8 @@ import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.FindMedianSortedArrays
+import com.wangcheng.leetcode.LeetCode.Array.RemoveDuplicates
+import com.wangcheng.leetcode.LeetCode.Array.RemoveElement
 import com.wangcheng.leetcode.LeetCode.Array.TwoSum
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
@@ -94,6 +96,16 @@ val leetCodeDataSource = dataSource {
             className = FindMedianSortedArrays::class.simpleName
             subject = "4.寻找两个有序数组的中位数"
             hardLevel = 3
+        }
+        item {
+            className = RemoveDuplicates::class.simpleName
+            subject = "26. 删除排序数组中的重复项"
+            hardLevel = 1
+        }
+        item {
+            className = RemoveElement::class.simpleName
+            subject = "27. 移除元素"
+            hardLevel = 1
         }
     }
 

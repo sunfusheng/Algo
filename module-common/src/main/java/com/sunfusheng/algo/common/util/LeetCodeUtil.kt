@@ -28,5 +28,10 @@ class LeetCodeUtil {
         fun logln(s: String) {
             println(s)
         }
+
+        @JvmStatic
+        fun logln(arr: IntArray) {
+            logln(arr.format())
+        }
     }
 }
