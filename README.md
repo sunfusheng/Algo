@@ -23,6 +23,7 @@
 
 * 二叉树问题
   * [用递归和非递归方式实现二叉树先序、中序、后序遍历](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/BinaryTreeTraverse.java)
+  * [打印二叉树的边界节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/PrintEdgeNodes.java)
 
 <br/>
 
