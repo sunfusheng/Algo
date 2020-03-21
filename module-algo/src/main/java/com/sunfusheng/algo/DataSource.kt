@@ -2,6 +2,7 @@ package com.sunfusheng.algo
 
 import com.sunfusheng.algo.Algo.BinaryTree.BinaryTreeTraverse
 import com.sunfusheng.algo.Algo.BinaryTree.PrintEdgeNodes
+import com.sunfusheng.algo.Algo.BinaryTree.SerializeDeserializeBinaryTree
 import com.sunfusheng.algo.Algo.LinkedList.*
 import com.sunfusheng.algo.Algo.StackQueue.*
 import com.sunfusheng.algo.common.AlgoItem
@@ -144,6 +145,11 @@ val algoDataSource = dataSource {
             className = PrintEdgeNodes::class.simpleName
             subject = "打印二叉树的边界节点"
             hardLevel = 2
+        }
+        item {
+            className = SerializeDeserializeBinaryTree::class.simpleName
+            subject = "二叉树的序列化和反序列化"
+            hardLevel = 1
         }
     }
 }
