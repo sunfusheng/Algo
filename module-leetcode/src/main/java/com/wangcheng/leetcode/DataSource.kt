@@ -4,10 +4,7 @@ import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
-import com.wangcheng.leetcode.LeetCode.Array.FindMedianSortedArrays
-import com.wangcheng.leetcode.LeetCode.Array.RemoveDuplicates
-import com.wangcheng.leetcode.LeetCode.Array.RemoveElement
-import com.wangcheng.leetcode.LeetCode.Array.TwoSum
+import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
 import com.wangcheng.leetcode.LeetCode.Number.PalindromeNum
@@ -99,12 +96,17 @@ val leetCodeDataSource = dataSource {
         }
         item {
             className = RemoveDuplicates::class.simpleName
-            subject = "26. 删除排序数组中的重复项"
+            subject = "26.删除排序数组中的重复项"
             hardLevel = 1
         }
         item {
             className = RemoveElement::class.simpleName
-            subject = "27. 移除元素"
+            subject = "27.移除元素"
+            hardLevel = 1
+        }
+        item {
+            className = SearchInsert::class.simpleName
+            subject = "35.搜索插入位置"
             hardLevel = 1
         }
     }
@@ -140,12 +142,17 @@ val leetCodeDataSource = dataSource {
         }
         item {
             className = LongestCommonPrefix::class.simpleName
-            subject = "14. 最长公共前缀"
+            subject = "14.最长公共前缀"
             hardLevel = 1
         }
         item {
             className = ValidBrackets::class.simpleName
-            subject = "20. 有效的括号"
+            subject = "20.有效的括号"
+            hardLevel = 1
+        }
+        item {
+            className = ImplStrStr::class.simpleName
+            subject = "28.实现 strStr()"
             hardLevel = 1
         }
     }

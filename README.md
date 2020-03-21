@@ -34,6 +34,7 @@
   * [4.寻找两个有序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMedianSortedArrays.java)
   * [26.删除排序数组中的重复项](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveDuplicates.java)
   * [27.移除元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveElement.java)
+  * [35.搜索插入位置](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SearchInsert.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -45,6 +46,7 @@
   * [6.Z字形变换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ZShapedConvert.java)
   * [14.最长公共前缀](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestCommonPrefix.java)
   * [20.有效的括号](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ValidBrackets.java)
+  * [28.实现 strStr()](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ImplStrStr.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
