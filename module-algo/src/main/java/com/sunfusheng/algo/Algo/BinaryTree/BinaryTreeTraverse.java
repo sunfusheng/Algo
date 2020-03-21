@@ -152,6 +152,7 @@ public class BinaryTreeTraverse {
     }
 
     public static void main(String[] args) {
+        // 先构建需要的二叉树
         TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
         TreeNode node3 = new TreeNode(3);

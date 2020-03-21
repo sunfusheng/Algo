@@ -1,6 +1,7 @@
 package com.sunfusheng.algo
 
 import com.sunfusheng.algo.Algo.BinaryTree.BinaryTreeTraverse
+import com.sunfusheng.algo.Algo.BinaryTree.PrintEdgeNodes
 import com.sunfusheng.algo.Algo.LinkedList.*
 import com.sunfusheng.algo.Algo.StackQueue.*
 import com.sunfusheng.algo.common.AlgoItem
@@ -138,6 +139,11 @@ val algoDataSource = dataSource {
             className = BinaryTreeTraverse::class.simpleName
             subject = "用递归和非递归方式实现二叉树先序、中序、后序遍历"
             hardLevel = 3
+        }
+        item {
+            className = PrintEdgeNodes::class.simpleName
+            subject = "打印二叉树的边界节点"
+            hardLevel = 2
         }
     }
 }
