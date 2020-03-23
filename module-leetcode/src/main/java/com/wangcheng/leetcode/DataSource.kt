@@ -152,8 +152,13 @@ val leetCodeDataSource = dataSource {
         }
         item {
             className = ImplStrStr::class.simpleName
-            subject = "28.实现 strStr()"
+            subject = "28.实现strStr()"
             hardLevel = 1
+        }
+        item {
+            className = CountAndSay::class.simpleName
+            subject = "38.外观数列"
+            hardLevel = 2
         }
     }
 

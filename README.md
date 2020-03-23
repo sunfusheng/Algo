@@ -47,7 +47,8 @@
   * [6.Z字形变换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ZShapedConvert.java)
   * [14.最长公共前缀](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestCommonPrefix.java)
   * [20.有效的括号](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ValidBrackets.java)
-  * [28.实现 strStr()](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ImplStrStr.java)
+  * [28.实现strStr()](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ImplStrStr.java)
+  * [38.外观数列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CountAndSay.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
