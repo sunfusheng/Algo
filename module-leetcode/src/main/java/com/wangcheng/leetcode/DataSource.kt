@@ -109,6 +109,11 @@ val leetCodeDataSource = dataSource {
             subject = "35.搜索插入位置"
             hardLevel = 1
         }
+        item {
+            className = MaxSubArray::class.simpleName
+            subject = "53.最大子序和"
+            hardLevel = 2
+        }
     }
 
     linkedListChapter {
@@ -119,7 +124,7 @@ val leetCodeDataSource = dataSource {
         }
         item {
             className = MergeTwoLists::class.simpleName
-            subject = "21. 合并两个有序链表"
+            subject = "21.合并两个有序链表"
             hardLevel = 1
         }
     }
@@ -159,6 +164,11 @@ val leetCodeDataSource = dataSource {
             className = CountAndSay::class.simpleName
             subject = "38.外观数列"
             hardLevel = 2
+        }
+        item {
+            className = LengthOfLastWord::class.simpleName
+            subject = "58.最后一个单词的长度"
+            hardLevel = 1
         }
     }
 
