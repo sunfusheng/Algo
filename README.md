@@ -37,6 +37,7 @@
   * [27.移除元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveElement.java)
   * [35.搜索插入位置](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SearchInsert.java)
   * [53.最大子序和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxSubArray.java)
+  * [66.加一](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/PlusOne.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -56,6 +57,7 @@
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
   * [9.回文数判断](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/PalindromeNum.java)
   * [13.罗马数字转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/RomeToInt.java)
+  * [67.二进制求和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/AddBinary.java)
 
 <br/>
 

@@ -7,6 +7,7 @@ import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
+import com.wangcheng.leetcode.LeetCode.Number.AddBinary
 import com.wangcheng.leetcode.LeetCode.Number.PalindromeNum
 import com.wangcheng.leetcode.LeetCode.Number.ReverseInt
 import com.wangcheng.leetcode.LeetCode.Number.RomeToInt
@@ -114,6 +115,11 @@ val leetCodeDataSource = dataSource {
             subject = "53.最大子序和"
             hardLevel = 2
         }
+        item {
+            className = PlusOne::class.simpleName
+            subject = "66.加一"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -187,6 +193,11 @@ val leetCodeDataSource = dataSource {
             className = RomeToInt::class.simpleName
             subject = "13.罗马数字转整数"
             hardLevel = 1
+        }
+        item {
+            className = AddBinary::class.simpleName
+            subject = "67.二进制求和"
+            hardLevel = 2
         }
     }
 }
