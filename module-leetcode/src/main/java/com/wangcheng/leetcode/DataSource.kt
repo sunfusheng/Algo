@@ -5,6 +5,7 @@ import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
+import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
 import com.wangcheng.leetcode.LeetCode.Number.AddBinary
@@ -18,7 +19,7 @@ import com.wangcheng.leetcode.LeetCode.String.*
 abstract class ChapterDataSource() {
     val list = ArrayList<AlgoItem>()
 
-    protected fun <T : ChapterDataSource> addItem(chapter: T, init: AlgoItem.() -> Unit) {
+    private fun <T : ChapterDataSource> addItem(chapter: T, init: AlgoItem.() -> Unit) {
         if (chapter.list.isEmpty()) {
             chapter.list.add(AlgoItem(chapter = getChapter()))
         }
@@ -31,30 +32,28 @@ abstract class ChapterDataSource() {
     }
 
     protected abstract fun getChapter(): Pair<String, String>
+
+    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class ArrayChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "Array" to "数组"
-
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class LinkedListChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "LinkedList" to "链表"
-
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class StringChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "String" to "字符串"
-
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class NumberChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "Number" to "数字"
+}
 
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
+open class BinaryTreeChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "BinaryTree" to "二叉树"
 }
 
 @DataSourceDslMarker
@@ -77,6 +76,9 @@ open class DataSource {
         lists.add(NumberChapter().apply(init).list)
     }
 
+    fun binaryTreeChapter(init: BinaryTreeChapter.() -> Unit) {
+        lists.add(BinaryTreeChapter().apply(init).list)
+    }
 }
 
 fun dataSource(init: DataSource.() -> Unit): ArrayList<ArrayList<AlgoItem>> {
@@ -197,6 +199,14 @@ val leetCodeDataSource = dataSource {
         item {
             className = AddBinary::class.simpleName
             subject = "67.二进制求和"
+            hardLevel = 2
+        }
+    }
+
+    binaryTreeChapter {
+        item {
+            className = DeleteBinarySearchTreeNode::class.simpleName
+            subject = "450. 删除二叉搜索树中的节点"
             hardLevel = 2
         }
     }

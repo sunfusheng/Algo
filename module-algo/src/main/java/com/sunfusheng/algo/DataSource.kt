@@ -14,7 +14,7 @@ import com.sunfusheng.algo.common.DataSourceDslMarker
 abstract class ChapterDataSource() {
     val list = ArrayList<AlgoItem>()
 
-    protected fun <T : ChapterDataSource> addItem(chapter: T, init: AlgoItem.() -> Unit) {
+    private fun <T : ChapterDataSource> addItem(chapter: T, init: AlgoItem.() -> Unit) {
         if (chapter.list.isEmpty()) {
             chapter.list.add(AlgoItem(chapter = getChapter()))
         }
@@ -22,24 +22,20 @@ abstract class ChapterDataSource() {
     }
 
     protected abstract fun getChapter(): Pair<String, String>
+
+    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class StackQueueChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "StackQueue" to "栈和队列问题"
-
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class LinkedListChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "LinkedList" to "链表问题"
-
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 open class BinaryTreeChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "BinaryTree" to "二叉树问题"
-
-    fun item(init: AlgoItem.() -> Unit) = addItem(this, init)
 }
 
 @DataSourceDslMarker
