@@ -22,20 +22,20 @@ import com.sunfusheng.algo.common.model.TreeNode;
  * root = [5,3,6,2,4,null,7]
  * key = 3
  * <p>
- * ---- 5
- * --- / \
- * -- 3   6
- * - / \   \
- * 2   4   7
+ * ----- 5
+ * ---- / \
+ * --- 3   6
+ * -- / \   \
+ * - 2   4   7
  * <p>
  * 给定需要删除的节点值是 3，所以我们首先找到 3 这个节点，然后删除它。
  * <p>
  * 一个正确的答案是 [5,4,6,2,null,null,7], 如下图所示。
- * ---- 5
- * --- / \
- * -- 4   6
- * - /     \
- * 2       7
+ * ----- 5
+ * ---- / \
+ * --- 4   6
+ * -- /     \
+ * - 2       7
  * <p>
  * 另一个正确答案是 [5,2,6,null,4,null,7]。
  * ---- 5
@@ -53,6 +53,7 @@ public class DeleteBinarySearchTreeNode {
         if (root == null) {
             return null;
         }
+
         if (root.value > key) {
             root.left = deleteNode(root.left, key);
         } else if (root.value < key) {
@@ -60,8 +61,7 @@ public class DeleteBinarySearchTreeNode {
         } else {
             if (root.left == null) {
                 return root.right;
-            }
-            if (root.right == null) {
+            } else if (root.right == null) {
                 return root.left;
             }
 
@@ -73,5 +73,16 @@ public class DeleteBinarySearchTreeNode {
             return root.right;
         }
         return root;
+    }
+
+    public static void main(String[] args) {
+        // 层遍历反序列化创建题目的二叉树
+        String serializeStr = "5 3 6 2 4 # 7 # # # # # #";
+        TreeNode root = BinaryTreeUtil.deserializeByLevel(serializeStr);
+        System.out.println("输入：" + serializeStr);
+
+        // 删除二叉搜索树中的节点
+        root = deleteNode(root, 3);
+        System.out.println("输出：" + BinaryTreeUtil.serializeByLevel(root));
     }
 }

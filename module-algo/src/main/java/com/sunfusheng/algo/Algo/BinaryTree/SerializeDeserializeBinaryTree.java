@@ -23,7 +23,7 @@ import java.util.Queue;
  * <p>
  * 先序遍历顺序：1 2 4 5 3 7
  * 先序遍历序列化二叉树：1 2 4 # # 5 # # 3 # 7 # #
- * 层遍历序列化二叉树：1 2 4 # # 5 # # 3 # 7 # #
+ * 层遍历序列化二叉树：1 2 3 4 5 # 7 # # # # # #
  *
  * @author sunfusheng
  * @since 2020/3/21
@@ -73,23 +73,23 @@ public class SerializeDeserializeBinaryTree {
         if (head == null) {
             return "#" + SEPARATOR;
         }
-        String res = head.value + SEPARATOR;
+        StringBuilder res = new StringBuilder(head.value + SEPARATOR);
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(head);
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            if (node.left != null) {
-                res += node.left + SEPARATOR;
+            if (node != null && node.left != null) {
+                res.append(node.left.value).append(SEPARATOR);
                 queue.offer(node.left);
             } else {
-                res += "#" + SEPARATOR;
+                res.append("#").append(SEPARATOR);
             }
 
-            if (node.right != null) {
-                res += node.right + SEPARATOR;
+            if (node != null && node.right != null) {
+                res.append(node.right.value).append(SEPARATOR);
                 queue.offer(node.right);
             } else {
-                res += "#" + SEPARATOR;
+                res.append("#").append(SEPARATOR);
             }
         }
         return res.toString();
@@ -151,7 +151,7 @@ public class SerializeDeserializeBinaryTree {
         BinaryTreeTraverse.preOrderRecur(head);
 
         System.out.println("\n层遍历序列化二叉树：");
-        serialTree = serializeByPreOrder(node1);
+        serialTree = serializeByLevel(node1);
         System.out.println(serialTree);
 
         System.out.println("层遍历反序列化二叉树，先序遍历二叉树：");
