@@ -79,21 +79,21 @@ public class MergeTwoLists {
         }
     }
 
-    private static MergeTwoLists.ListNode l1 = new MergeTwoLists.ListNode(1);
-    private static MergeTwoLists.ListNode l2 = new MergeTwoLists.ListNode(1);
+    private static ListNode l1 = new ListNode(1);
+    private static ListNode l2 = new ListNode(1);
 
     private static void init() {
-        l1.next = new MergeTwoLists.ListNode(2);
-        l2.next = new MergeTwoLists.ListNode(1);
-        l1.next.next = new MergeTwoLists.ListNode(3);
-        l2.next.next = new MergeTwoLists.ListNode(2);
-        l1.next.next.next = new MergeTwoLists.ListNode(4);
-        l2.next.next.next = new MergeTwoLists.ListNode(5);
+        l1.next = new ListNode(2);
+        l2.next = new ListNode(1);
+        l1.next.next = new ListNode(3);
+        l2.next.next = new ListNode(2);
+        l1.next.next.next = new ListNode(4);
+        l2.next.next.next = new ListNode(5);
     }
 
     public static void main(String[] args) {
         init();
-        LeetCodeUtil.logln("solution1([1,2,3,4], [1,1,2,5]) = " + MergeTwoLists.solution1(l1, l2));
-        LeetCodeUtil.logln("solution2([1,2,3,4], [1,1,2,5]) = " + MergeTwoLists.solution2(l1, l2));
+        LeetCodeUtil.logln("solution1([1,2,3,4], [1,1,2,5]) = " + solution1(l1, l2));
+        LeetCodeUtil.logln("solution2([1,2,3,4], [1,1,2,5]) = " + solution2(l1, l2));
     }
 }

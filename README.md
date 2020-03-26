@@ -42,6 +42,7 @@
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
   * [21.合并两个有序链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MergeTwoLists.java)
+  * [83.删除排序链表中的重复元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/DeleteDuplicates.java)
 
 * 字符串
   * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)

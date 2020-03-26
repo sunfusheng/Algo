@@ -7,6 +7,7 @@ import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
+import com.wangcheng.leetcode.LeetCode.LinkedList.DeleteDuplicates
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
 import com.wangcheng.leetcode.LeetCode.Number.*
 import com.wangcheng.leetcode.LeetCode.String.*
@@ -130,6 +131,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = MergeTwoLists::class.simpleName
             subject = "21.合并两个有序链表"
+            hardLevel = 1
+        }
+        item {
+            className = DeleteDuplicates::class.simpleName
+            subject = "83.删除排序链表中的重复元素"
             hardLevel = 1
         }
     }
