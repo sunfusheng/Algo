@@ -1,5 +1,7 @@
 package com.wangcheng.leetcode.LeetCode.Number;
 
+import com.sunfusheng.algo.common.util.LeetCodeUtil;
+
 import java.math.BigInteger;
 
 /**
@@ -107,4 +109,8 @@ public class AddBinary {
         return x.toString(2);
     }
 
+    public static void main(String[] args) {
+        LeetCodeUtil.logln("solution1(11, 111) = " + AddBinary.solution1("11", "111"));
+        LeetCodeUtil.logln("solution2(11, 111) = " + AddBinary.solution2("11", "111"));
+    }
 }

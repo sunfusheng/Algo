@@ -8,10 +8,7 @@ import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
-import com.wangcheng.leetcode.LeetCode.Number.AddBinary
-import com.wangcheng.leetcode.LeetCode.Number.PalindromeNum
-import com.wangcheng.leetcode.LeetCode.Number.ReverseInt
-import com.wangcheng.leetcode.LeetCode.Number.RomeToInt
+import com.wangcheng.leetcode.LeetCode.Number.*
 import com.wangcheng.leetcode.LeetCode.String.*
 
 @ChapterDslMarker
@@ -199,6 +196,16 @@ val leetCodeDataSource = dataSource {
         item {
             className = AddBinary::class.simpleName
             subject = "67.二进制求和"
+            hardLevel = 2
+        }
+        item {
+            className = MySqrt::class.simpleName
+            subject = "69.x的平方根"
+            hardLevel = 2
+        }
+        item {
+            className = ClimbStairs::class.simpleName
+            subject = "70.爬楼梯"
             hardLevel = 2
         }
     }
