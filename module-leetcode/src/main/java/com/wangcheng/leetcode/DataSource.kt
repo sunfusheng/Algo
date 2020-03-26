@@ -6,6 +6,7 @@ import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
+import com.wangcheng.leetcode.LeetCode.BinaryTree.InorderTraversal
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.DeleteDuplicates
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
@@ -218,8 +219,13 @@ val leetCodeDataSource = dataSource {
 
     binaryTreeChapter {
         item {
+            className = InorderTraversal::class.simpleName
+            subject = "94.二叉树的中序遍历"
+            hardLevel = 2
+        }
+        item {
             className = DeleteBinarySearchTreeNode::class.simpleName
-            subject = "450. 删除二叉搜索树中的节点"
+            subject = "450.删除二叉搜索树中的节点"
             hardLevel = 2
         }
     }
