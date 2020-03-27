@@ -7,6 +7,7 @@ import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
 import com.wangcheng.leetcode.LeetCode.BinaryTree.InorderTraversal
+import com.wangcheng.leetcode.LeetCode.BinaryTree.IsSymmetric
 import com.wangcheng.leetcode.LeetCode.BinaryTree.SameTree
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.DeleteDuplicates
@@ -232,6 +233,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = SameTree::class.simpleName
             subject = "100.相同的树"
+            hardLevel = 1
+        }
+        item {
+            className = IsSymmetric::class.simpleName
+            subject = "101.对称二叉树"
             hardLevel = 1
         }
         item {
