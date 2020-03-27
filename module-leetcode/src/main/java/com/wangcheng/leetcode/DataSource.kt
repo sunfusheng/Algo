@@ -7,6 +7,7 @@ import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
 import com.wangcheng.leetcode.LeetCode.BinaryTree.InorderTraversal
+import com.wangcheng.leetcode.LeetCode.BinaryTree.SameTree
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.DeleteDuplicates
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
@@ -121,6 +122,11 @@ val leetCodeDataSource = dataSource {
             subject = "66.加一"
             hardLevel = 1
         }
+        item {
+            className = MergeSortedArray::class.simpleName
+            subject = "88.合并两个有序数组"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -222,6 +228,11 @@ val leetCodeDataSource = dataSource {
             className = InorderTraversal::class.simpleName
             subject = "94.二叉树的中序遍历"
             hardLevel = 2
+        }
+        item {
+            className = SameTree::class.simpleName
+            subject = "100.相同的树"
+            hardLevel = 1
         }
         item {
             className = DeleteBinarySearchTreeNode::class.simpleName
