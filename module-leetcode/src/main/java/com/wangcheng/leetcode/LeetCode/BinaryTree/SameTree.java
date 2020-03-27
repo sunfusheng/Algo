@@ -1,5 +1,7 @@
 package com.wangcheng.leetcode.LeetCode.BinaryTree;
 
+import com.sunfusheng.algo.common.util.LeetCodeUtil;
+
 import java.util.ArrayDeque;
 
 /**
@@ -14,7 +16,7 @@ import java.util.ArrayDeque;
  * 输入:------ 1         1
  * --------- / \       / \
  * -------- 2   3     2   3
- * ------- [1,2,3],   [1,2,3]
+ * ------- [1,2,3],  [1,2,3]
  * 输出: true
  *
  * 示例 2:
@@ -28,7 +30,7 @@ import java.util.ArrayDeque;
  * 输入:------ 1         1
  * --------- / \       / \
  * -------- 2   1     1   2
- * ------- [1,2,1],   [1,1,2]
+ * ------- [1,2,1],  [1,1,2]
  * 输出: false
  *
  * @author liwangcheng
@@ -124,5 +126,30 @@ public class SameTree {
             return false;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        SameTree.TreeNode p = new SameTree.TreeNode(1);
+        p.left = new SameTree.TreeNode(2);
+        p.right = new SameTree.TreeNode(3);
+        SameTree.TreeNode q = new SameTree.TreeNode(1);
+        q.left = new SameTree.TreeNode(2);
+        q.right = new SameTree.TreeNode(3);
+        SameTree.TreeNode p2 = p;
+        SameTree.TreeNode q2 = q;
+        LeetCodeUtil.logln("solution1(p, q) = " + SameTree.solution1(p, q));
+        LeetCodeUtil.logln("solution2(p, q) = " + SameTree.solution2(p2, q2));
+        LeetCodeUtil.logln("==============================");
+        p = new SameTree.TreeNode(1);
+        p.left = new SameTree.TreeNode(2);
+        p.right = new SameTree.TreeNode(3);
+        p.left.left = new SameTree.TreeNode(4);
+        q = new SameTree.TreeNode(1);
+        q.left = new SameTree.TreeNode(2);
+        q.right = new SameTree.TreeNode(3);
+        p2 = p;
+        q2 = q;
+        LeetCodeUtil.logln("solution1(p, q) = " + SameTree.solution1(p, q));
+        LeetCodeUtil.logln("solution2(p, q) = " + SameTree.solution2(p2, q2));
     }
 }

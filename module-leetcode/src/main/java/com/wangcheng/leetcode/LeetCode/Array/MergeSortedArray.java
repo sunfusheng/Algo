@@ -1,6 +1,9 @@
 package com.wangcheng.leetcode.LeetCode.Array;
 
 
+import com.sunfusheng.algo.common.util.LeetCodeUtil;
+import com.sunfusheng.algo.common.util.LeetCodeUtilKt;
+
 import java.util.Arrays;
 
 /**
@@ -82,5 +85,16 @@ public class MergeSortedArray {
         System.arraycopy(nums2, 0, nums1, 0, p2 + 1);
     }
 
-
+    public static void main(String[] args) {
+        int[] num1 = new int[]{1, 3, 4, 0, 0, 0, 0};
+        int[] num2 = new int[]{2, 3, 5, 7};
+        MergeSortedArray.solution1(num1, 3, num2, 4);
+        LeetCodeUtil.logln("solution1()" + LeetCodeUtilKt.format(num1));
+        num1 = new int[]{1, 3, 4, 0, 0, 0, 0};
+        MergeSortedArray.solution2(num1, 3, num2, 4);
+        LeetCodeUtil.logln("solution2()" + LeetCodeUtilKt.format(num1));
+        num1 = new int[]{1, 3, 4, 0, 0, 0, 0};
+        MergeSortedArray.solution3(num1, 3, num2, 4);
+        LeetCodeUtil.logln("solution3()" + LeetCodeUtilKt.format(num1));
+    }
 }
