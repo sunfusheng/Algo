@@ -5,10 +5,7 @@ import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
-import com.wangcheng.leetcode.LeetCode.BinaryTree.DeleteBinarySearchTreeNode
-import com.wangcheng.leetcode.LeetCode.BinaryTree.InorderTraversal
-import com.wangcheng.leetcode.LeetCode.BinaryTree.IsSymmetric
-import com.wangcheng.leetcode.LeetCode.BinaryTree.SameTree
+import com.wangcheng.leetcode.LeetCode.BinaryTree.*
 import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
 import com.wangcheng.leetcode.LeetCode.LinkedList.DeleteDuplicates
 import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
@@ -238,6 +235,16 @@ val leetCodeDataSource = dataSource {
         item {
             className = IsSymmetric::class.simpleName
             subject = "101.对称二叉树"
+            hardLevel = 1
+        }
+        item {
+            className = MaxDepth::class.simpleName
+            subject = "104.二叉树的最大深度"
+            hardLevel = 1
+        }
+        item {
+            className = LevelOrderBottom::class.simpleName
+            subject = "107.二叉树的层次遍历 II"
             hardLevel = 1
         }
         item {
