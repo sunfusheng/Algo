@@ -38,11 +38,11 @@ import com.sunfusheng.algo.common.model.TreeNode;
  * - 2       7
  * <p>
  * 另一个正确答案是 [5,2,6,null,4,null,7]。
- * ---- 5
- * --- / \
- * -- 2   6
- * --- \   \
- * ---- 4   7
+ * --- 5
+ * -- / \
+ * - 2   6
+ * -- \   \
+ * --- 4   7
  *
  * @author sunfusheng
  * @since 2020/3/25
@@ -77,7 +77,7 @@ public class DeleteBinarySearchTreeNode {
 
     public static void main(String[] args) {
         // 层遍历反序列化创建题目的二叉树
-        String serializeStr = "5 3 6 2 4 # 7 # # # # # #";
+        String serializeStr = "5,3,6,2,4,null,7";
         TreeNode root = BinaryTreeUtil.deserializeByLevel(serializeStr);
         System.out.println("输入：" + serializeStr);
 
