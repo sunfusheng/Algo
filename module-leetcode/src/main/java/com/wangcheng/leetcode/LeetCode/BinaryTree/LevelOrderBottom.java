@@ -49,16 +49,16 @@ public class LevelOrderBottom {
     public static void solution1(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        TreeNode node = root;
+        TreeNode node;
         LeetCodeUtil.logln("————层序遍历————");
         while (!queue.isEmpty()) {
             node = queue.poll();
             LeetCodeUtil.logln(" - " + node.val);
             if (node.left != null) {
-                queue.offer(node.left);
+                queue.add(node.left);
             }
             if (node.right != null) {
-                queue.offer(node.right);
+                queue.add(node.right);
             }
         }
     }

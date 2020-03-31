@@ -248,6 +248,16 @@ val leetCodeDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = SortedArrayToBST::class.simpleName
+            subject = "108.将有序数组转换为二叉搜索树"
+            hardLevel = 1
+        }
+        item {
+            className = IsBalanced::class.simpleName
+            subject = "110.平衡二叉树"
+            hardLevel = 1
+        }
+        item {
             className = DeleteBinarySearchTreeNode::class.simpleName
             subject = "450.删除二叉搜索树中的节点"
             hardLevel = 2
