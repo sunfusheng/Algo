@@ -65,6 +65,7 @@
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
+  * [96.不同的二叉搜索树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/BSTNum.java)
   * [100.相同的树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/SameTree.java)
   * [101.对称二叉树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/IsSymmetric.java)
   * [104.二叉树的最大深度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/MaxDepth.java)

@@ -228,6 +228,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 2
         }
         item {
+            className = BSTNum::class.simpleName
+            subject = "96.不同的二叉搜索树"
+            hardLevel = 2
+        }
+        item {
             className = SameTree::class.simpleName
             subject = "100.相同的树"
             hardLevel = 1
