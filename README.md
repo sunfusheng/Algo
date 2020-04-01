@@ -12,6 +12,7 @@
   * [用一个栈实现另一个栈的排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/SortStackByStack.java)
   * [用栈来求解汉诺塔问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/Hanoi.java)
   * [生成窗口最大值数组](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
+  * [单调栈结构](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/NearLessNum.java)
 
 * 链表问题
   * [打印两个有序链表的公共部分](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/PrintCommonPart.java)

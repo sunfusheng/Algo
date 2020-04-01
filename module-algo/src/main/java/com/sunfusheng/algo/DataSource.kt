@@ -96,6 +96,11 @@ val algoDataSource = dataSource {
             subject = "生成窗口最大值数组"
             hardLevel = 2
         }
+        item {
+            className = NearLessNum::class.simpleName
+            subject = "单调栈结构"
+            hardLevel = 2
+        }
     }
 
     linkedListChapter {

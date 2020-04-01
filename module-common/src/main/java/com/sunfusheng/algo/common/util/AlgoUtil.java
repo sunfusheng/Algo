@@ -9,7 +9,7 @@ import com.sunfusheng.algo.common.model.Node;
  */
 public class AlgoUtil {
 
-    // 打印数组
+    // 打印一维数组
     public static void printArray(int[] arr) {
         if (arr == null || arr.length == 0) {
             System.out.println("{}");
@@ -26,6 +26,23 @@ public class AlgoUtil {
         }
         sb.append("}");
         System.out.println(sb);
+    }
+
+    // 打印二维数组
+    public static void printArray2(int[][] arr) {
+        if (arr == null || arr.length == 0) {
+            System.out.println("{{}}");
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n");
+        System.out.println("{");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("  ");
+            printArray(arr[i]);
+        }
+        System.out.println("}");
     }
 
     // 构造单向链表
