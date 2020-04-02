@@ -40,6 +40,8 @@
   * [53.最大子序和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxSubArray.java)
   * [66.加一](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/PlusOne.java)
   * [88.合并两个有序数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MergeSortedArray.java)
+  * [118.杨辉三角](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/YangHuiTriangle.java)
+  * [119.杨辉三角 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/YangHuiTriangleII.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -73,6 +75,8 @@
   * [107.二叉树的层次遍历 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/LevelOrderBottom.java)
   * [108.将有序数组转换为二叉搜索树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/SortedArrayToBST.java)
   * [110.平衡二叉树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/IsBalanced.java)
+  * [111.二叉树的最小深度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/MinDepth.java)
+  * [112.路径总和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/HasPathSum.java)
   * [450.删除二叉搜索树中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DeleteBinarySearchTreeNode.java)
 
 <br/>

@@ -125,6 +125,16 @@ val leetCodeDataSource = dataSource {
             subject = "88.合并两个有序数组"
             hardLevel = 1
         }
+        item {
+            className = YangHuiTriangle::class.simpleName
+            subject = "118.杨辉三角"
+            hardLevel = 1
+        }
+        item {
+            className = YangHuiTriangleII::class.simpleName
+            subject = "119.杨辉三角 II"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -261,6 +271,16 @@ val leetCodeDataSource = dataSource {
             className = IsBalanced::class.simpleName
             subject = "110.平衡二叉树"
             hardLevel = 1
+        }
+        item {
+            className = MinDepth::class.simpleName
+            subject = "111.二叉树的最小深度"
+            hardLevel = 1
+        }
+        item {
+            className = HasPathSum::class.simpleName
+            subject = "112.路径总和"
+            hardLevel = 2
         }
         item {
             className = DeleteBinarySearchTreeNode::class.simpleName

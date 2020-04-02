@@ -38,7 +38,7 @@ public class MaxDepth {
         }
     }
 
-    static class Pair<F, S> {
+    private static class Pair<F, S> {
         F first;
         S second;
 
