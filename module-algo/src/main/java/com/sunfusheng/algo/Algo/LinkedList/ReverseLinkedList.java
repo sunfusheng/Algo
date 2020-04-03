@@ -16,8 +16,9 @@ public class ReverseLinkedList {
     // 反转单向链表
     public static Node reverse(Node head) {
         Node pre = null;
+        Node next = null;
         while (head != null) {
-            Node next = head.next;
+            next = head.next;
             head.next = pre;
             pre = head;
             head = next;
@@ -28,8 +29,9 @@ public class ReverseLinkedList {
     // 反转双向链表
     public static DoubleNode reverseDouble(DoubleNode head) {
         DoubleNode pre = null;
+        DoubleNode next = null;
         while (head != null) {
-            DoubleNode next = head.next;
+            next = head.next;
             head.next = pre;
             head.last = next;
             pre = head;

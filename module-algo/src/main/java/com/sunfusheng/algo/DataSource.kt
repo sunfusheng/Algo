@@ -134,6 +134,11 @@ val algoDataSource = dataSource {
             subject = "环形单链表的约瑟夫问题"
             hardLevel = 1
         }
+        item {
+            className = LinkedListPalindrome::class.simpleName
+            subject = "判断一个链表是否为回文结构"
+            hardLevel = 1
+        }
     }
 
     binaryTreeChapter {
