@@ -135,6 +135,16 @@ val leetCodeDataSource = dataSource {
             subject = "119.杨辉三角 II"
             hardLevel = 1
         }
+        item {
+            className = MaxProfit::class.simpleName
+            subject = "121.买卖股票的最佳时机"
+            hardLevel = 1
+        }
+        item {
+            className = MaxProfitII::class.simpleName
+            subject = "122.买卖股票的最佳时机 II"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
