@@ -101,6 +101,11 @@ val algoDataSource = dataSource {
             subject = "单调栈结构"
             hardLevel = 2
         }
+        item {
+            className = MaxRecSize::class.simpleName
+            subject = "求最大子矩阵的大小"
+            hardLevel = 3
+        }
     }
 
     linkedListChapter {
