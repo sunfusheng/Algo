@@ -145,6 +145,11 @@ val leetCodeDataSource = dataSource {
             subject = "122.买卖股票的最佳时机 II"
             hardLevel = 1
         }
+        item {
+            className = SingleNumber::class.simpleName
+            subject = "136.只出现一次的数字"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -204,6 +209,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = LengthOfLastWord::class.simpleName
             subject = "58.最后一个单词的长度"
+            hardLevel = 1
+        }
+        item {
+            className = IsPalindrome::class.simpleName
+            subject = "125.验证回文串"
             hardLevel = 1
         }
     }

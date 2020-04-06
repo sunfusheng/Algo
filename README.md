@@ -46,6 +46,7 @@
   * [119.杨辉三角 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/YangHuiTriangleII.java)
   * [121.买卖股票的最佳时机](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxProfit.java)
   * [122.买卖股票的最佳时机 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxProfitII.java)
+  * [136.只出现一次的数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SingleNumber.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -61,6 +62,7 @@
   * [28.实现strStr()](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ImplStrStr.java)
   * [38.外观数列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CountAndSay.java)
   * [58.最后一个单词的长度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLastWord.java)
+  * [125.验证回文串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsPalindrome.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
