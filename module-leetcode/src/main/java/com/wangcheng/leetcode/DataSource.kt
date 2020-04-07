@@ -6,9 +6,7 @@ import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
 import com.wangcheng.leetcode.LeetCode.Array.*
 import com.wangcheng.leetcode.LeetCode.BinaryTree.*
-import com.wangcheng.leetcode.LeetCode.LinkedList.AddTwoNumbers
-import com.wangcheng.leetcode.LeetCode.LinkedList.DeleteDuplicates
-import com.wangcheng.leetcode.LeetCode.LinkedList.MergeTwoLists
+import com.wangcheng.leetcode.LeetCode.LinkedList.*
 import com.wangcheng.leetcode.LeetCode.Number.*
 import com.wangcheng.leetcode.LeetCode.String.*
 
@@ -166,6 +164,21 @@ val leetCodeDataSource = dataSource {
         item {
             className = DeleteDuplicates::class.simpleName
             subject = "83.删除排序链表中的重复元素"
+            hardLevel = 1
+        }
+        item {
+            className = HasCycle::class.simpleName
+            subject = "141.环形链表"
+            hardLevel = 1
+        }
+        item {
+            className = MinStack::class.simpleName
+            subject = "155.最小栈"
+            hardLevel = 1
+        }
+        item {
+            className = GetIntersectionNode::class.simpleName
+            subject = "160.相交链表"
             hardLevel = 1
         }
     }
