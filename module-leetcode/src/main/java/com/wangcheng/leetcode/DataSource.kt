@@ -148,6 +148,11 @@ val leetCodeDataSource = dataSource {
             subject = "136.只出现一次的数字"
             hardLevel = 1
         }
+        item {
+            className = TwoSumII::class.simpleName
+            subject = "167.两数之和 II - 输入有序数组"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -261,6 +266,11 @@ val leetCodeDataSource = dataSource {
             className = ClimbStairs::class.simpleName
             subject = "70.爬楼梯"
             hardLevel = 2
+        }
+        item {
+            className = ConvertToTitle::class.simpleName
+            subject = "168.Excel表列名"
+            hardLevel = 1
         }
     }
 
