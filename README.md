@@ -48,6 +48,7 @@
   * [122.买卖股票的最佳时机 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxProfitII.java)
   * [136.只出现一次的数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SingleNumber.java)
   * [167.两数之和 II - 输入有序数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSumII.java)
+  * [169.多数元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MajorityElement.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -76,6 +77,8 @@
   * [69.x的平方根](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/MySqrt.java)
   * [70.爬楼梯](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ClimbStairs.java)
   * [168.Excel表列名](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConvertToTitle.java)
+  * [171.Excel表列序号](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/TitleToNumber.java)
+  * [172.阶乘后的零](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/TrailingZeroes.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

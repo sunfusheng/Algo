@@ -153,6 +153,11 @@ val leetCodeDataSource = dataSource {
             subject = "167.两数之和 II - 输入有序数组"
             hardLevel = 1
         }
+        item {
+            className = MajorityElement::class.simpleName
+            subject = "169.多数元素"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -270,6 +275,16 @@ val leetCodeDataSource = dataSource {
         item {
             className = ConvertToTitle::class.simpleName
             subject = "168.Excel表列名"
+            hardLevel = 1
+        }
+        item {
+            className = TitleToNumber::class.simpleName
+            subject = "171.Excel表列序号"
+            hardLevel = 1
+        }
+        item {
+            className = TrailingZeroes::class.simpleName
+            subject = "172.阶乘后的零"
             hardLevel = 1
         }
     }
