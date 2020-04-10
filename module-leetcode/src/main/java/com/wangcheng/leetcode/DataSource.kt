@@ -158,6 +158,11 @@ val leetCodeDataSource = dataSource {
             subject = "169.多数元素"
             hardLevel = 1
         }
+        item {
+            className = RotateArray::class.simpleName
+            subject = "189.旋转数组"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
@@ -285,6 +290,16 @@ val leetCodeDataSource = dataSource {
         item {
             className = TrailingZeroes::class.simpleName
             subject = "172.阶乘后的零"
+            hardLevel = 1
+        }
+        item {
+            className = ReverseBits::class.simpleName
+            subject = "190.颠倒二进制位"
+            hardLevel = 1
+        }
+        item {
+            className = HammingWeight::class.simpleName
+            subject = "191.位1的个数"
             hardLevel = 1
         }
     }
