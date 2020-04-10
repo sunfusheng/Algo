@@ -144,6 +144,11 @@ val algoDataSource = dataSource {
             subject = "判断一个链表是否为回文结构"
             hardLevel = 1
         }
+        item {
+            className = Partition::class.simpleName
+            subject = "将单向链表按某值划分成左边小、中间相等、右边大的形式"
+            hardLevel = 2
+        }
     }
 
     binaryTreeChapter {

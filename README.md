@@ -23,6 +23,7 @@
   * [反转部分单向链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)
   * [环形单链表的约瑟夫问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)
   * [判断一个链表是否为回文结构](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/LinkedListPalindrome.java)
+  * [将单向链表按某值划分成左边小、中间相等、右边大的形式](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Partition.java)
 
 * 二叉树问题
   * [用递归和非递归方式实现二叉树先序、中序、后序遍历](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/BinaryTreeTraverse.java)
