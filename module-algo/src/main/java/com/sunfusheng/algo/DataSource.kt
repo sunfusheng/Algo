@@ -149,6 +149,11 @@ val algoDataSource = dataSource {
             subject = "将单向链表按某值划分成左边小、中间相等、右边大的形式"
             hardLevel = 2
         }
+        item {
+            className = CopyRandomLinkedList::class.simpleName
+            subject = "复制含有随机指针节点的链表"
+            hardLevel = 2
+        }
     }
 
     binaryTreeChapter {
