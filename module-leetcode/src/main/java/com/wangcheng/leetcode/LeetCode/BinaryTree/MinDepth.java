@@ -3,18 +3,20 @@ package com.wangcheng.leetcode.LeetCode.BinaryTree;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
- *【题目】
+ * 【题目】
  * 111.二叉树的最小深度
  * 给定一个二叉树，找出其最小深度。
  * <p>
  * 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
  * <p>
  * 说明: 叶子节点是指没有子节点的节点。
- *【示例】
+ * 【示例】
  * 给定二叉树 [3,9,20,null,null,15,7],
- *
+ * <p>
  * --- 3
  * -- / \
  * - 9  20
@@ -50,9 +52,9 @@ public class MinDepth {
     /**
      * 方法 1：递归
      * 用深度优先搜索来解决这个问题
-     *
+     * <p>
      * 复杂度分析
-     *
+     * <p>
      * 时间复杂度：我们访问每个节点一次，时间复杂度为 O(N) ，其中 N 是节点个数。
      * 空间复杂度：最坏情况下，整棵树是非平衡的，
      * 例如每个节点都只有一个孩子，递归会调用 N（树的高度）次，因此栈的空间开销是 O(N)。
@@ -82,32 +84,32 @@ public class MinDepth {
      * 想法是对于每个节点，按照深度优先搜索的策略访问，同时在访问到叶子节点时更新最小深度。
      * 从一个包含根节点的栈开始，当前深度为 1。
      * 然后开始迭代：弹出当前栈顶元素，将它的孩子节点压入栈中。当遇到叶子节点时更新最小深度。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：每个节点恰好被访问一遍，复杂度为 O(N)。
      * 空间复杂度：最坏情况下我们会在栈中保存整棵树，此时空间复杂度为 O(N)。
      */
     public static int solution2(TreeNode root) {
-        LinkedList<Pair<TreeNode, Integer>> stack = new LinkedList<>();
+        Stack<Pair<TreeNode, Integer>> stack = new Stack<>();
         if (null == root) {
             return 0;
         } else {
-            stack.add(new Pair<>(root, 1));
+            stack.push(new Pair<>(root, 1));
         }
         int minDepth = Integer.MAX_VALUE;
         while (!stack.isEmpty()) {
             // 检索并删除此列表的最后一个元素
-            Pair<TreeNode, Integer> current = stack.pollLast();
+            Pair<TreeNode, Integer> current = stack.pop();
             root = current.first;
             int currentDepth = current.second;
             if (null == root.left && null == root.right) {
                 minDepth = Math.min(minDepth, currentDepth);
             }
             if (null != root.left) {
-                stack.add(new Pair<>(root.left, currentDepth + 1));
+                stack.push(new Pair<>(root.left, currentDepth + 1));
             }
             if (null != root.right) {
-                stack.add(new Pair<>(root.right, currentDepth + 1));
+                stack.push(new Pair<>(root.right, currentDepth + 1));
             }
         }
         return minDepth;
@@ -118,33 +120,33 @@ public class MinDepth {
      * 深度优先搜索方法的缺陷是所有节点都必须访问到，以保证能够找到最小深度。因此复杂度是 O(N)。
      * 一个优化的方法是利用宽度优先搜索，按照树的层次去迭代，
      * 第一个访问到的叶子就是最小深度的节点，这样就不要遍历所有的节点了。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：最坏情况下，这是一棵平衡树，需要按照树的层次一层一层的访问完所有节点，
      * 除去最后一层的节点。这样访问了 N/2 个节点，因此复杂度是 O(N)。
      * 空间复杂度：和时间复杂度相同，也是 O(N)。
      */
     public static int solution3(TreeNode root) {
-        LinkedList<Pair<TreeNode, Integer>> stack = new LinkedList<>();
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
         if (null == root) {
             return 0;
         } else {
-            stack.add(new Pair<>(root, 1));
+            queue.add(new Pair<>(root, 1));
         }
         int currentDepth = 0;
-        while (!stack.isEmpty()) {
+        while (!queue.isEmpty()) {
             // 检索并删除此列表的头部（第一个元素）
-            Pair<TreeNode, Integer> current = stack.poll();
+            Pair<TreeNode, Integer> current = queue.poll();
             root = current.first;
             currentDepth = current.second;
             if (null == root.left && null == root.right) {
                 break;
             }
             if (null != root.left) {
-                stack.add(new Pair<>(root.left, currentDepth + 1));
+                queue.add(new Pair<>(root.left, currentDepth + 1));
             }
             if (null != root.right) {
-                stack.add(new Pair<>(root.right, currentDepth + 1));
+                queue.add(new Pair<>(root.right, currentDepth + 1));
             }
         }
         return currentDepth;
