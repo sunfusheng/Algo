@@ -154,6 +154,11 @@ val algoDataSource = dataSource {
             subject = "复制含有随机指针节点的链表"
             hardLevel = 2
         }
+        item {
+            className = AddTwoLinkedList::class.simpleName
+            subject = "两个单链表生成相加链表"
+            hardLevel = 1
+        }
     }
 
     binaryTreeChapter {
