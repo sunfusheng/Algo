@@ -159,6 +159,11 @@ val algoDataSource = dataSource {
             subject = "两个单链表生成相加链表"
             hardLevel = 1
         }
+        item {
+            className = IntersectNode::class.simpleName
+            subject = "两个单链表相交的一系列问题"
+            hardLevel = 4
+        }
     }
 
     binaryTreeChapter {

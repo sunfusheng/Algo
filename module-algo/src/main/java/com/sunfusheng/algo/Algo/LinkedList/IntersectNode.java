@@ -62,7 +62,7 @@ public class IntersectNode {
      * @param head2
      * @return
      */
-    public static Node getNoLoopNode(Node head1, Node head2) {
+    public static Node noLoop(Node head1, Node head2) {
         if (head1 == null || head2 == null) {
             return null;
         }
@@ -80,7 +80,6 @@ public class IntersectNode {
 
         // cur1 和 cur2 为null，都是最后一个节点
         if (cur1 != cur2) {
-
             return null;
         }
 
@@ -96,6 +95,73 @@ public class IntersectNode {
             cur2 = cur2.next;
         }
         return cur1;
+    }
+
+    /**
+     * 问题三：判断两个有环链表是否相交，相交则返回第一个相交节点，不相交则返回null。
+     *
+     * @param head1 有环的单链表1
+     * @param loop1 有环的单链表1，第一个进入环的节点
+     * @param head2 有环的单链表2
+     * @param loop2 有环的单链表2，第一个进入环的节点
+     * @return
+     */
+    public static Node bothLoop(Node head1, Node loop1, Node head2, Node loop2) {
+        if (loop1 == loop2) {
+            Node cur1 = head1;
+            Node cur2 = head2;
+            int n = 0;
+            while (cur1 != loop1) {
+                cur1 = cur1.next;
+                n++;
+            }
+            while (cur2 != loop2) {
+                cur2 = cur2.next;
+                n--;
+            }
+            cur1 = n > 0 ? head1 : head2;
+            cur2 = cur1 == head1 ? head2 : head1;
+            n = Math.abs(n);
+            while (n != 0) {
+                n--;
+                cur1 = cur1.next;
+            }
+            while (cur1 != cur2) {
+                cur1 = cur1.next;
+                cur2 = cur2.next;
+            }
+            return cur1;
+        } else {
+            Node cur1 = loop1.next;
+            while (cur1 != loop1) {
+                cur1 = cur1.next;
+                if (cur1 == loop2) {
+                    return loop1;
+                }
+            }
+            return null;
+        }
+    }
+
+    /**
+     * 将前面三个子问题都考虑进来，解决该题的问题
+     *
+     * @param head1
+     * @param head2
+     * @return
+     */
+    public static Node getIntersectNode(Node head1, Node head2) {
+        if (head1 == null || head2 == null) {
+            return null;
+        }
+        Node loop1 = getLoopNode(head1);
+        Node loop2 = getLoopNode(head2);
+        if (loop1 == null && loop2 == null) {
+            return noLoop(head1, head2);
+        } else if (loop1 != null && loop2 != null) {
+            return bothLoop(head1, loop1, head2, loop2);
+        }
+        return null;
     }
 
     public static void main(String[] args) {
@@ -150,7 +216,7 @@ public class IntersectNode {
         Node node24 = new Node(4);
         node23.next = node24;
         node24.next = node15;
-        firstLoopNode = getNoLoopNode(node11, node23);
+        firstLoopNode = noLoop(node11, node23);
         System.out.println("判断两个无环链表是否相交，相交则返回第一个相交节点: " +
                 (firstLoopNode != null ? firstLoopNode.value : firstLoopNode));
     }
