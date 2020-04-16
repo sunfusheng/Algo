@@ -6,6 +6,7 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * 【题目】
  * 21. 合并两个有序链表
  * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ * <p>
  * 【示例】
  * 输入：1->2->4, 1->3->4
  * 输出：1->1->2->3->4->4
@@ -15,11 +16,11 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  */
 public class MergeTwoLists {
 
-    public static class ListNode {
+    private static class ListNode {
         public int val;
         public ListNode next;
 
-        public ListNode(int x) {
+        ListNode(int x) {
             val = x;
         }
 
@@ -33,12 +34,13 @@ public class MergeTwoLists {
     }
 
     /**
-     * 方法一
-     * 迭代
-     *
+     * 方法一：迭代
+     * <p>
      * 复杂度分析
-     * 时间复杂度：O(n + m) 。因为每次循环迭代中，l1 和 l2 只有一个元素会被放进合并链表中， while 循环的次数等于两个链表的总长度。所有其他工作都是常数级别的，所以总的时间复杂度是线性的。
-     * 空间复杂度：O(1) 。迭代的过程只会产生几个指针，所以它所需要的空间是常数级别的。
+     * 【时间复杂度】：O(n + m) 。因为每次循环迭代中，l1 和 l2 只有一个元素会被放进合并链表中，
+     * while 循环的次数等于两个链表的总长度。所有其他工作都是常数级别的，所以总的时间复杂度是线性的。
+     * <p>
+     * 【空间复杂度】：O(1) 。迭代的过程只会产生几个指针，所以它所需要的空间是常数级别的。
      */
     public static ListNode solution1(ListNode l1, ListNode l2) {
         ListNode preHead = new ListNode(-1);
@@ -58,12 +60,13 @@ public class MergeTwoLists {
     }
 
     /**
-     * 方法二
-     * 递归
-     *
+     * 方法二：递归
+     * <p>
      * 复杂度分析
-     * 时间复杂度：O(n + m)。因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），函数 solution2 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。
-     * 空间复杂度：O(n + m)。调用 solution2 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，所以 n + m 个栈帧会消耗 O(n+m) 的空间。
+     * 【时间复杂度】：O(n + m)。因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），
+     * 函数 solution2 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。
+     * 【空间复杂度】：O(n + m)。调用 solution2 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，
+     * 所以 n + m 个栈帧会消耗 O(n+m) 的空间。
      */
     public static ListNode solution2(ListNode l1, ListNode l2) {
         if (null == l1) {
