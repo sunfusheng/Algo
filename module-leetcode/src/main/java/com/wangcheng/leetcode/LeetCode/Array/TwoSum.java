@@ -8,7 +8,8 @@ import java.util.Map;
 
 /**
  * 【题目】
- * 两数之和
+ * 1.两数之和
+ * <p>
  * 给定一个整数数组 nums 和一个目标值 target，
  * 请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
  * <p>
@@ -26,77 +27,77 @@ import java.util.Map;
  */
 public class TwoSum {
 
-    private final int[] nums = new int[]{2, 7, 11, 15};
-
     /**
      * 方法一：暴力法
      * 遍历每个元素x，查找是否存在一个值与target-x相等
+     * <p>
      * 时间复杂度：O(n2)
      * 空间复杂度：O(1)
      */
-    private int[] solution1(int[] arr, int target) {
-        int[] result = new int[2];
+    public static int[] solution1(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
-            int pre = arr[i];
             for (int j = i + 1; j < arr.length; j++) {
-                int next = target - pre;
-                if (arr[j] == next) {
-                    result[0] = i;
-                    result[1] = j;
-                    return result;
+                if (arr[j] == target - arr[i]) {
+                    return new int[]{i, j};
                 }
             }
         }
-        return result;
+        return new int[]{-1, -1};
     }
 
     /**
      * 方法二：两遍哈希表
+     * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
-    private int[] solution2(int[] arr, int target) {
-        int[] result = new int[2];
+    public static int[] solution2(int[] arr, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             map.put(arr[i], i);
         }
+
         for (int i = 0; i < arr.length; i++) {
             int next = target - arr[i];
             if (map.containsKey(next) && map.get(next) != i) {
-                result[0] = i;
-                result[1] = map.get(next);
-                return result;
+                return new int[]{i, map.get(next)};
             }
         }
-        return result;
+        return new int[]{-1, -1};
     }
 
     /**
      * 方法三：一遍哈希表
+     * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
-    private int[] solution3(int[] arr, int target) {
-        int[] result = new int[2];
+    public static int[] solution3(int[] arr, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             int next = target - arr[i];
             if (map.containsKey(next) && map.get(next) != i) {
-                result[0] = i;
-                result[1] = map.get(next);
-                return result;
+                return new int[]{i, map.get(next)};
             }
             map.put(arr[i], i);
         }
-        return result;
+        return new int[]{-1, -1};
     }
 
     public static void main(String[] args) {
-        TwoSum twoSum = new TwoSum();
-        LeetCodeUtil.log("nums = [2, 7, 11, 15]");
-        LeetCodeUtil.log("solution1(13) - " + LeetCodeUtilKt.format(twoSum.solution1(twoSum.nums, 13)));
-        LeetCodeUtil.log("solution2(9) - " + LeetCodeUtilKt.format(twoSum.solution2(twoSum.nums, 9)));
-        LeetCodeUtil.log("solution3(17) - " + LeetCodeUtilKt.format(twoSum.solution3(twoSum.nums, 17)));
+        int[] nums = new int[]{2, 7, 11, 15};
+        LeetCodeUtil.logln("nums = [2, 7, 11, 15]");
+
+        String res = LeetCodeUtilKt.format(solution1(nums, 13));
+        LeetCodeUtil.logln("solution1(13) -> " + res);
+
+        res = LeetCodeUtilKt.format(solution2(nums, 9));
+        LeetCodeUtil.logln("solution2(9) -> " + res);
+
+        res = LeetCodeUtilKt.format(solution3(nums, 17));
+        LeetCodeUtil.logln("solution3(17) -> " + res);
+
+        res = LeetCodeUtilKt.format(solution3(nums, 19));
+        LeetCodeUtil.logln("solution3(19) -> " + res);
     }
 }
