@@ -27,6 +27,7 @@
   * [复制含有随机指针节点的链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/CopyRandomLinkedList.java)
   * [两个单链表生成相加链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/AddTwoLinkedList.java)
   * [两个单链表相交的一系列问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/IntersectNode.java)
+  * [将单链表的每K个节点之间逆序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseKNodes.java)
 
 * 二叉树问题
   * [用递归和非递归方式实现二叉树先序、中序、后序遍历](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/BinaryTreeTraverse.java)

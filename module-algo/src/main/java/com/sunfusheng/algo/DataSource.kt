@@ -164,6 +164,11 @@ val algoDataSource = dataSource {
             subject = "两个单链表相交的一系列问题"
             hardLevel = 4
         }
+        item {
+            className = ReverseKNodes::class.simpleName
+            subject = "将单链表的每K个节点之间逆序"
+            hardLevel = 2
+        }
     }
 
     binaryTreeChapter {
