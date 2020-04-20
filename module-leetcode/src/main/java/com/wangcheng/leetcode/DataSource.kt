@@ -163,6 +163,11 @@ val leetCodeDataSource = dataSource {
             subject = "189.旋转数组"
             hardLevel = 1
         }
+        item {
+            className = Rob::class.simpleName
+            subject = "198.打家劫舍"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
