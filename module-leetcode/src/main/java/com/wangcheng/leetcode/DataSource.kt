@@ -201,6 +201,11 @@ val leetCodeDataSource = dataSource {
             subject = "160.相交链表"
             hardLevel = 1
         }
+        item {
+            className = RemoveElements::class.simpleName
+            subject = "203.移除链表元素"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -306,6 +311,16 @@ val leetCodeDataSource = dataSource {
             className = HammingWeight::class.simpleName
             subject = "191.位1的个数"
             hardLevel = 1
+        }
+        item {
+            className = IsHappy::class.simpleName
+            subject = "202.快乐数"
+            hardLevel = 2
+        }
+        item {
+            className = CountPrimes::class.simpleName
+            subject = "204.计数质数"
+            hardLevel = 2
         }
     }
 

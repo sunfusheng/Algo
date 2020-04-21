@@ -64,6 +64,7 @@
   * [141.环形链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/HasCycle.java)
   * [155.最小栈](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MinStack.java)
   * [160.相交链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/GetIntersectionNode.java)
+  * [203.移除链表元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/RemoveElements.java)
 
 * 字符串
   * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
@@ -88,6 +89,8 @@
   * [172.阶乘后的零](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/TrailingZeroes.java)
   * [190.颠倒二进制位](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseBits.java)
   * [191.位1的个数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/HammingWeight.java)
+  * [202.快乐数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsHappy.java)
+  * [204.计数质数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CountPrimes.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
