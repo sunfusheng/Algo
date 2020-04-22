@@ -206,6 +206,11 @@ val leetCodeDataSource = dataSource {
             subject = "203.移除链表元素"
             hardLevel = 1
         }
+        item {
+            className = ReverseList::class.simpleName
+            subject = "206.反转链表"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -252,6 +257,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = IsPalindrome::class.simpleName
             subject = "125.验证回文串"
+            hardLevel = 1
+        }
+        item {
+            className = IsIsomorphic::class.simpleName
+            subject = "205.同构字符串"
             hardLevel = 1
         }
     }

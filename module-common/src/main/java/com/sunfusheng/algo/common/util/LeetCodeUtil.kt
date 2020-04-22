@@ -33,5 +33,15 @@ class LeetCodeUtil {
         fun logln(arr: IntArray) {
             logln(arr.format())
         }
+
+        @JvmStatic
+        fun isEmpty(str: String?):Boolean {
+            return null == str || str.isEmpty()
+        }
+
+        @JvmStatic
+        fun length(str: String?):Int {
+            return str?.length ?: 0
+        }
     }
 }
