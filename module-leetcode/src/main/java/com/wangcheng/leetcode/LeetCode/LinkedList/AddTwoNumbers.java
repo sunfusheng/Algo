@@ -1,14 +1,11 @@
 package com.wangcheng.leetcode.LeetCode.LinkedList;
 
-import android.annotation.TargetApi;
-
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
-
-import java.util.Objects;
 
 /**
  * 【题目】
- * 两数相加
+ * 2.两数相加
+ * <p>
  * 给出两个非空的链表用来表示两个非负的整数。
  * 其中，它们各自的位数是按照逆序的方式存储的，
  * 并且它们的每个节点只能存储一位数字。
@@ -30,43 +27,44 @@ public class AddTwoNumbers {
         int data;
         ListNode next;
 
-        public ListNode(int data) {
+        ListNode(int data) {
             this.data = data;
         }
     }
 
-    @TargetApi(24)
-    private ListNode solution(ListNode l1, ListNode l2) {
+    public static ListNode solution(ListNode l1, ListNode l2) {
         ListNode root = new ListNode(0);
         ListNode ll = root;
-        int carry = 0;
+        int carry = 0; // 进位
         while (l1 != null || l2 != null) {
-            int v1 = Objects.nonNull(l1) ? l1.data : 0;
-            int v2 = Objects.nonNull(l2) ? l2.data : 0;
+            int v1 = l1 != null ? l1.data : 0;
+            int v2 = l2 != null ? l2.data : 0;
             int sum = carry + v1 + v2;
             carry = sum / 10;
             ll.next = new ListNode(sum % 10);
             ll = ll.next;
-            l1 = Objects.nonNull(l1) ? l1.next : null;
-            l2 = Objects.nonNull(l2) ? l2.next : null;
+            l1 = l1 != null ? l1.next : null;
+            l2 = l2 != null ? l2.next : null;
+        }
+        if (carry == 1) {
+            ll.next = new ListNode(1);
         }
         return root.next;
     }
 
     public static void main(String[] args) {
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
         l1.next.next = new ListNode(3);
+
         ListNode l2 = new ListNode(5);
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
 
-        ListNode ll = addTwoNumbers.solution(l1, l2);
+        ListNode ll = solution(l1, l2);
         while (ll != null) {
             LeetCodeUtil.log(ll.data + "");
             ll = ll.next;
         }
     }
-
 }

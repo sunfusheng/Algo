@@ -94,24 +94,23 @@ public class AddTwoLinkedList {
 
         int n1 = 0;
         int n2 = 0;
-        int n = 0;
-        int ca = 0;
+        int sum = 0;
+        int carry = 0; // 进位
         Node pre = null;
         Node node = null;
         while (node1 != null || node2 != null) {
             n1 = node1 != null ? node1.value : 0;
             n2 = node2 != null ? node2.value : 0;
-            n = n1 + n2 + ca;
+            sum = n1 + n2 + carry;
             pre = node;
-            node = new Node(n % 10);
+            node = new Node(sum % 10);
             node.next = pre;
-            ca = n / 10;
+            carry = sum / 10;
             node1 = node1 != null ? node1.next : null;
             node2 = node2 != null ? node2.next : null;
-
         }
 
-        if (ca == 1) {
+        if (carry == 1) {
             pre = node;
             node = new Node(1);
             node.next = pre;
@@ -135,7 +134,7 @@ public class AddTwoLinkedList {
         System.out.print("链表相加后，输出1：");
         AlgoUtil.printLinkedList(res1);
 
-        Node res2 = addTwoLinkedList1(head1, head2);
+        Node res2 = addTwoLinkedList2(head1, head2);
         System.out.print("链表相加后，输出2：");
         AlgoUtil.printLinkedList(res2);
     }
