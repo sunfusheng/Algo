@@ -94,6 +94,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 3
         }
         item {
+            className = ThreeSum::class.simpleName
+            subject = "15.三数之和"
+            hardLevel = 2
+        }
+        item {
             className = RemoveDuplicates::class.simpleName
             subject = "26.删除排序数组中的重复项"
             hardLevel = 1
