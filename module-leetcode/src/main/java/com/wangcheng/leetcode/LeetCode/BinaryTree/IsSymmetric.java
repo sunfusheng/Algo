@@ -6,18 +6,18 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- *【题目】
+ * 【题目】
  * 101.对称二叉树
  * 给定一个二叉树，检查它是否是镜像对称的。
- *【示例】
+ * 【示例】
  * 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
  * --- 1
  * -- / \
  * - 2   2
- *  / \ / \
+ * -/ \ / \
  * 3  4 4  3
  * 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
- *
+ * <p>
  * --- 1
  * -- / \
  * - 2   2
@@ -31,7 +31,7 @@ import java.util.Queue;
  */
 public class IsSymmetric {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -44,7 +44,7 @@ public class IsSymmetric {
     /**
      * 方法一：递归
      * 如果一个树的左子树与右子树镜像对称，那么这个树是对称的。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，因为遍历整个输入树一次，所以总的运行时间为 O(n)，其中 n 是树中结点的总数。
      * 空间复杂度：递归调用的次数受树的高度限制。在最糟糕情况下，树是线性的，其高度为 O(n)。

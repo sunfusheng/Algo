@@ -51,6 +51,6 @@ public class MaxWindow {
     public static void main(String[] args) {
         int[] arr = {4, 3, 5, 4, 3, 3, 6, 7};
         int[] res = getMaxWindow(arr, 3);
-        AlgoUtil.printArray(res);
+        AlgoUtil.printlnArray(res);
     }
 }

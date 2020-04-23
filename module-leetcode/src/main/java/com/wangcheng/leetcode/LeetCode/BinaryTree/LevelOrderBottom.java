@@ -8,27 +8,27 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- *【题目】
+ * 【题目】
  * 107.二叉树的层次遍历 II
  * 给定一个二叉树，返回其节点值自底向上的层次遍历。
  * <p>
  * （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
  * <p>
- *【例如】
+ * 【例如】
  * 给定二叉树 [3,9,20,null,null,15,7],
- *
+ * <p>
  * --- 3
  * -- / \
  * - 9  20
  * --- /  \
  * -- 15   7
- *
+ * <p>
  * 返回其自底向上的层次遍历为：
- *
+ * <p>
  * [
- *   [15,7],
- *   [9,20],
- *   [3]
+ * - [15,7],
+ * - [9,20],
+ * - [3]
  * ]
  *
  * @author liwangcheng
@@ -36,7 +36,7 @@ import java.util.Queue;
  */
 public class LevelOrderBottom {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -64,7 +64,7 @@ public class LevelOrderBottom {
     }
 
     public static List<List<Integer>> solution2(TreeNode root) {
-        if(root == null){
+        if (root == null) {
             return new ArrayList<>();
         }
         List<List<Integer>> res = new ArrayList<>();

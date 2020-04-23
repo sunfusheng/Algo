@@ -5,27 +5,27 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
 import java.util.ArrayDeque;
 
 /**
- *【题目】
+ * 【题目】
  * 100.相同的树
  * 给定两个二叉树，编写一个函数来检验它们是否相同。
  * <p>
  * 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
  * <p>
- *【示例】
+ * 【示例】
  * 示例 1:
  * 输入:------ 1         1
  * --------- / \       / \
  * -------- 2   3     2   3
  * ------- [1,2,3],  [1,2,3]
  * 输出: true
- *
+ * <p>
  * 示例 2:
  * 输入:------ 1         1
  * --------- /           \
  * -------- 2             2
  * ------- [1,2],     [1,null,2]
  * 输出: false
- *
+ * <p>
  * 示例 3:
  * 输入:------ 1         1
  * --------- / \       / \
@@ -38,7 +38,7 @@ import java.util.ArrayDeque;
  */
 public class SameTree {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -53,12 +53,12 @@ public class SameTree {
      * 最简单的策略是使用递归。首先判断 p 和 q 是不是 None，
      * 然后判断它们的值是否相等。
      * 若以上判断通过，则递归对子结点做同样操作。
-     *
+     * <p>
      * 复杂度分析
-     *
+     * <p>
      * 时间复杂度 : O(N)，其中 N 是树的结点数，因为每个结点都访问一次。
      * 空间复杂度 : 最优情况（完全平衡二叉树）时为 O(log(N))，
-     *  最坏情况下（完全不平衡二叉树）时为 O(N)，用于维护递归栈。
+     * 最坏情况下（完全不平衡二叉树）时为 O(N)，用于维护递归栈。
      */
     public static boolean solution1(TreeNode t1, TreeNode t2) {
         if (t1 == null && t2 == null) {

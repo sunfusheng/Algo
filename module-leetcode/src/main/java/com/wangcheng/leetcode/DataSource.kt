@@ -371,6 +371,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = LevelOrder::class.simpleName
+            subject = "102.二叉树的层序遍历"
+            hardLevel = 2
+        }
+        item {
             className = MaxDepth::class.simpleName
             subject = "104.二叉树的最大深度"
             hardLevel = 1

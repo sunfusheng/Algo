@@ -28,7 +28,7 @@ import java.util.Queue;
  */
 public class MaxDepth {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -102,23 +102,23 @@ public class MaxDepth {
     }
 
     public static void main(String[] args) {
-        MaxDepth.TreeNode p = new MaxDepth.TreeNode(1);
-        p.left = new MaxDepth.TreeNode(2);
-        p.left.left = new MaxDepth.TreeNode(3);
-        p.left.right = new MaxDepth.TreeNode(4);
-        p.right = new MaxDepth.TreeNode(2);
-        p.right.left = new MaxDepth.TreeNode(4);
-        p.right.right = new MaxDepth.TreeNode(3);
-        MaxDepth.TreeNode q = new MaxDepth.TreeNode(1);
-        q.left = new MaxDepth.TreeNode(2);
-        q.left.left = new MaxDepth.TreeNode(3);
-        q.right = new MaxDepth.TreeNode(2);
-        q.right.left = new MaxDepth.TreeNode(3);
-        MaxDepth.TreeNode p2 = p;
-        MaxDepth.TreeNode q2 = q;
-        LeetCodeUtil.logln("solution1(p) = " + MaxDepth.solution1(p));
-        LeetCodeUtil.logln("solution1(q) = " + MaxDepth.solution1(q));
-        LeetCodeUtil.logln("solution2(p2) = " + MaxDepth.solution2(p2));
-        LeetCodeUtil.logln("solution2(q2) = " + MaxDepth.solution2(q2));
+        TreeNode p = new TreeNode(1);
+        p.left = new TreeNode(2);
+        p.left.left = new TreeNode(3);
+        p.left.right = new TreeNode(4);
+        p.right = new TreeNode(2);
+        p.right.left = new TreeNode(4);
+        p.right.right = new TreeNode(3);
+        TreeNode q = new TreeNode(1);
+        q.left = new TreeNode(2);
+        q.left.left = new TreeNode(3);
+        q.right = new TreeNode(2);
+        q.right.left = new TreeNode(3);
+        TreeNode p2 = p;
+        TreeNode q2 = q;
+        LeetCodeUtil.logln("solution1(p) = " + solution1(p));
+        LeetCodeUtil.logln("solution1(q) = " + solution1(q));
+        LeetCodeUtil.logln("solution2(p2) = " + solution2(p2));
+        LeetCodeUtil.logln("solution2(q2) = " + solution2(q2));
     }
 }

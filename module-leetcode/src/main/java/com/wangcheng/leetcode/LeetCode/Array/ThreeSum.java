@@ -72,22 +72,10 @@ public class ThreeSum {
     public static void main(String[] args) {
         int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
         System.out.print("输入：");
-        AlgoUtil.printArray(nums);
+        AlgoUtil.printlnArray(nums);
 
         List<List<Integer>> lists = threeSum(nums);
-
-        StringBuilder sb = new StringBuilder();
-        if (lists != null && !lists.isEmpty()) {
-            sb.append("[");
-            for (List<Integer> list : lists) {
-                sb.append("[");
-                for (Integer i : list) {
-                    sb.append(i).append(", ");
-                }
-                sb.append("], ");
-            }
-            sb.append("]");
-        }
-        System.out.println("输出：" + sb);
+        System.out.println("输出：");
+        AlgoUtil.printList2(lists);
     }
 }

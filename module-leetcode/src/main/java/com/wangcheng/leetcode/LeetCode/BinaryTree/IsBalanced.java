@@ -3,14 +3,14 @@ package com.wangcheng.leetcode.LeetCode.BinaryTree;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 /**
- *【题目】
+ * 【题目】
  * 110.平衡二叉树
  * 给定一个二叉树，判断它是否是高度平衡的二叉树。
  * <p>
  * 本题中，一棵高度平衡二叉树定义为：
  * 一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1。
  * <p>
- *【示例】
+ * 【示例】
  * 示例 1:
  * 给定二叉树 [3,9,20,null,null,15,7]
  * --- 3
@@ -19,7 +19,7 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * --- /  \
  * -- 15   7
  * 返回 true 。
- *
+ * <p>
  * 示例 2:
  * 给定二叉树 [1,2,2,3,3,null,null,4,4]
  * ------ 1
@@ -28,15 +28,15 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * --- / \
  * -- 3   3
  * - / \
- *  4   4
+ * -4   4
  * 返回 false 。
- * 
+ *
  * @author liwangcheng
  * @date 2020/3/31.
  */
 public class IsBalanced {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -62,7 +62,7 @@ public class IsBalanced {
      * 接下来就是比较每个节点左右子树的高度。在一棵以 r 为根节点的树
      * T 中，只有每个节点左右子树高度差不大于 1 时，该树才是平衡的。
      * 因此可以比较每个节点左右两棵子树的高度差，然后向上递归。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(nlogn)。
      * 空间复杂度：O(n)。如果树完全倾斜，递归栈可能包含所有节点。
@@ -85,16 +85,16 @@ public class IsBalanced {
 
     /**
      * 方法二：自底向上的递归
-     *【思路】
+     * 【思路】
      * 方法一计算 height 存在大量冗余。每次调用 height 时，要同时计算其子树高度。
      * 但是自底向上计算，每个子树的高度只会计算一次。可以递归先计算当前节点的子节点高度，
      * 然后再通过子节点高度判断当前节点是否平衡，从而消除冗余。
-     *【算法】
+     * 【算法】
      * 使用与方法一中定义的 height 方法。自底向上与自顶向下的逻辑相反，
      * 首先判断子树是否平衡，然后比较子树高度判断父节点是否平衡。
      * 算法如下：
      * 检查子树是否平衡。如果平衡，则使用它们的高度判断父节点是否平衡，并计算父节点的高度。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，计算每棵子树的高度和判断平衡操作都在恒定时间内完成。
      * 空间复杂度：O(n)，如果树不平衡，递归栈可能达到 O(n)。

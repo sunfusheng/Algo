@@ -16,37 +16,35 @@ fun IntArray.format(): String {
     return buf.toString()
 }
 
-class LeetCodeUtil {
+object LeetCodeUtil {
 
-    companion object {
-        @JvmStatic
-        fun log(s: String) {
-            print(s)
-        }
+    @JvmStatic
+    fun log(s: String) {
+        print(s)
+    }
 
-        @JvmStatic
-        fun logln(s: String) {
-            println(s)
-        }
+    @JvmStatic
+    fun logln(s: String) {
+        println(s)
+    }
 
-        @JvmStatic
-        fun logln(arr: IntArray) {
-            logln(arr.format())
-        }
+    @JvmStatic
+    fun logln(arr: IntArray) {
+        logln(arr.format())
+    }
 
-        @JvmStatic
-        fun isEmpty(str: String?):Boolean {
-            return null == str || str.isEmpty()
-        }
+    @JvmStatic
+    fun isEmpty(str: String?): Boolean {
+        return null == str || str.isEmpty()
+    }
 
-        @JvmStatic
-        fun isEmpty(nums: IntArray?):Boolean {
-            return null == nums || nums.isEmpty()
-        }
+    @JvmStatic
+    fun isEmpty(nums: IntArray?): Boolean {
+        return null == nums || nums.isEmpty()
+    }
 
-        @JvmStatic
-        fun length(str: String?):Int {
-            return str?.length ?: 0
-        }
+    @JvmStatic
+    fun length(str: String?): Int {
+        return str?.length ?: 0
     }
 }

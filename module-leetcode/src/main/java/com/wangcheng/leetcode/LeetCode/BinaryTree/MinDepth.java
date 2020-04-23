@@ -29,7 +29,7 @@ import java.util.Stack;
  */
 public class MinDepth {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -43,7 +43,7 @@ public class MinDepth {
         F first;
         S second;
 
-        public Pair(F first, S second) {
+        Pair(F first, S second) {
             this.first = first;
             this.second = second;
         }
@@ -153,26 +153,26 @@ public class MinDepth {
     }
 
     public static void main(String[] args) {
-        MinDepth.TreeNode p = new MinDepth.TreeNode(1);
-        p.left = new MinDepth.TreeNode(2);
-        p.right = new MinDepth.TreeNode(2);
-        p.right.left = new MinDepth.TreeNode(4);
-        p.right.right = new MinDepth.TreeNode(3);
-        p.right.right.left = new MinDepth.TreeNode(3);
-        MinDepth.TreeNode q = new MinDepth.TreeNode(1);
-        q.left = new MinDepth.TreeNode(2);
-        q.left.left = new MinDepth.TreeNode(3);
-        q.right = new MinDepth.TreeNode(2);
-        q.right.left = new MinDepth.TreeNode(3);
-        MinDepth.TreeNode p2 = p;
-        MinDepth.TreeNode q2 = q;
-        MinDepth.TreeNode p3 = p;
-        MinDepth.TreeNode q3 = q;
-        LeetCodeUtil.logln("solution1(p) = " + MinDepth.solution1(p));
-        LeetCodeUtil.logln("solution1(q) = " + MinDepth.solution1(q));
-        LeetCodeUtil.logln("solution2(p2) = " + MinDepth.solution2(p2));
-        LeetCodeUtil.logln("solution2(q2) = " + MinDepth.solution2(q2));
-        LeetCodeUtil.logln("solution3(p3) = " + MinDepth.solution3(p3));
-        LeetCodeUtil.logln("solution3(q3) = " + MinDepth.solution3(q3));
+        TreeNode p = new TreeNode(1);
+        p.left = new TreeNode(2);
+        p.right = new TreeNode(2);
+        p.right.left = new TreeNode(4);
+        p.right.right = new TreeNode(3);
+        p.right.right.left = new TreeNode(3);
+        TreeNode q = new TreeNode(1);
+        q.left = new TreeNode(2);
+        q.left.left = new TreeNode(3);
+        q.right = new TreeNode(2);
+        q.right.left = new TreeNode(3);
+        TreeNode p2 = p;
+        TreeNode q2 = q;
+        TreeNode p3 = p;
+        TreeNode q3 = q;
+        LeetCodeUtil.logln("solution1(p) = " + solution1(p));
+        LeetCodeUtil.logln("solution1(q) = " + solution1(q));
+        LeetCodeUtil.logln("solution2(p2) = " + solution2(p2));
+        LeetCodeUtil.logln("solution2(q2) = " + solution2(q2));
+        LeetCodeUtil.logln("solution3(p3) = " + solution3(p3));
+        LeetCodeUtil.logln("solution3(q3) = " + solution3(q3));
     }
 }
