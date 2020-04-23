@@ -173,6 +173,16 @@ val leetCodeDataSource = dataSource {
             subject = "198.打家劫舍"
             hardLevel = 1
         }
+        item {
+            className = ContainsDuplicate::class.simpleName
+            subject = "217.存在重复元素"
+            hardLevel = 1
+        }
+        item {
+            className = ContainsNearbyDuplicate::class.simpleName
+            subject = "219.存在重复元素 II"
+            hardLevel = 1
+        }
     }
 
     linkedListChapter {
