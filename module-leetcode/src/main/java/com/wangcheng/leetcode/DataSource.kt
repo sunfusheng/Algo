@@ -226,6 +226,11 @@ val leetCodeDataSource = dataSource {
             subject = "206.反转链表"
             hardLevel = 1
         }
+        item {
+            className = MyStack::class.simpleName
+            subject = "225.用队列实现栈"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -404,6 +409,11 @@ val leetCodeDataSource = dataSource {
             className = HasPathSum::class.simpleName
             subject = "112.路径总和"
             hardLevel = 2
+        }
+        item {
+            className = InvertTree::class.simpleName
+            subject = "226.翻转二叉树"
+            hardLevel = 1
         }
         item {
             className = DeleteBinarySearchTreeNode::class.simpleName
