@@ -231,6 +231,11 @@ val leetCodeDataSource = dataSource {
             subject = "225.用队列实现栈"
             hardLevel = 1
         }
+        item {
+            className = MyQueue::class.simpleName
+            subject = "232.用栈实现队列"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -351,6 +356,11 @@ val leetCodeDataSource = dataSource {
             className = CountPrimes::class.simpleName
             subject = "204.计数质数"
             hardLevel = 2
+        }
+        item {
+            className = IsPowerOfTwo::class.simpleName
+            subject = "231.2的幂"
+            hardLevel = 1
         }
     }
 
