@@ -222,6 +222,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = LRUCache::class.simpleName
+            subject = "146.LRU缓存机制"
+            hardLevel = 2
+        }
+        item {
             className = GetIntersectionNode::class.simpleName
             subject = "160.相交链表"
             hardLevel = 1

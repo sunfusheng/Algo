@@ -68,6 +68,7 @@
   * [83.删除排序链表中的重复元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/DeleteDuplicates.java)
   * [141.环形链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/HasCycle.java)
   * [155.最小栈](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MinStack.java)
+  * [146.LRU缓存机制](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/LRUCache.java)
   * [160.相交链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/GetIntersectionNode.java)
   * [203.移除链表元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/RemoveElements.java)
   * [206.反转链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/ReverseList.java)
