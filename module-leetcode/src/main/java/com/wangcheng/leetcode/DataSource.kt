@@ -94,6 +94,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 3
         }
         item {
+            className = HolderMaxWater::class.simpleName
+            subject = "11.盛最多水的容器"
+            hardLevel = 2
+        }
+        item {
             className = ThreeSum::class.simpleName
             subject = "15.三数之和"
             hardLevel = 2
@@ -112,6 +117,11 @@ val leetCodeDataSource = dataSource {
             className = SearchInsert::class.simpleName
             subject = "35.搜索插入位置"
             hardLevel = 1
+        }
+        item {
+            className = HoldRainWater::class.simpleName
+            subject = "42.接雨水"
+            hardLevel = 3
         }
         item {
             className = MaxSubArray::class.simpleName

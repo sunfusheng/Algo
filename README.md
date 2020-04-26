@@ -41,10 +41,12 @@
 * 数组
   * [1.两数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSum.java)
   * [4.寻找两个有序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMedianSortedArrays.java)
+  * [11.盛最多水的容器](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/HolderMaxWater.java)
   * [15.三数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ThreeSum.java)
   * [26.删除排序数组中的重复项](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveDuplicates.java)
   * [27.移除元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveElement.java)
   * [35.搜索插入位置](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SearchInsert.java)
+  * [42.接雨水](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/HoldRainWater.java)
   * [53.最大子序和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxSubArray.java)
   * [66.加一](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/PlusOne.java)
   * [88.合并两个有序数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MergeSortedArray.java)

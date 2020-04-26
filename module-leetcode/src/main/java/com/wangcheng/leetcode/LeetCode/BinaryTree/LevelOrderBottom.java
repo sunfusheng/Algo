@@ -24,7 +24,6 @@ import java.util.Queue;
  * -- 15   7
  * <p>
  * 返回其自底向上的层次遍历为：
- * <p>
  * [
  * - [15,7],
  * - [9,20],
@@ -90,28 +89,30 @@ public class LevelOrderBottom {
     }
 
     public static void main(String[] args) {
-        LevelOrderBottom.TreeNode p = new LevelOrderBottom.TreeNode(1);
-        p.left = new LevelOrderBottom.TreeNode(2);
-        p.left.left = new LevelOrderBottom.TreeNode(3);
-        p.left.right = new LevelOrderBottom.TreeNode(4);
-        p.right = new LevelOrderBottom.TreeNode(2);
-        p.right.left = new LevelOrderBottom.TreeNode(4);
-        p.right.right = new LevelOrderBottom.TreeNode(3);
-        LevelOrderBottom.TreeNode q = new LevelOrderBottom.TreeNode(1);
-        q.left = new LevelOrderBottom.TreeNode(2);
-        q.left.left = new LevelOrderBottom.TreeNode(3);
-        q.right = new LevelOrderBottom.TreeNode(2);
-        q.right.left = new LevelOrderBottom.TreeNode(3);
-        LevelOrderBottom.TreeNode p2 = p;
-        LevelOrderBottom.TreeNode q2 = q;
-        LevelOrderBottom.solution1(p);
-        LevelOrderBottom.solution1(q);
-        List<List<Integer>> list = LevelOrderBottom.solution2(p2);
+        TreeNode p = new TreeNode(1);
+        p.left = new TreeNode(2);
+        p.left.left = new TreeNode(3);
+        p.left.right = new TreeNode(4);
+        p.right = new TreeNode(2);
+        p.right.left = new TreeNode(4);
+        p.right.right = new TreeNode(3);
+
+        TreeNode q = new TreeNode(1);
+        q.left = new TreeNode(2);
+        q.left.left = new TreeNode(3);
+        q.right = new TreeNode(2);
+        q.right.left = new TreeNode(3);
+
+        TreeNode p2 = p;
+        TreeNode q2 = q;
+        solution1(p);
+        solution1(q);
+        List<List<Integer>> list = solution2(p2);
         LeetCodeUtil.logln("levelOrder");
         for (List<Integer> item : list) {
             LeetCodeUtil.logln(item.toString());
         }
-        list = LevelOrderBottom.solution2(q2);
+        list = solution2(q2);
         for (List<Integer> item : list) {
             LeetCodeUtil.logln(item.toString());
         }
