@@ -9,6 +9,7 @@ import com.wangcheng.leetcode.LeetCode.BinaryTree.*
 import com.wangcheng.leetcode.LeetCode.LinkedList.*
 import com.wangcheng.leetcode.LeetCode.Number.*
 import com.wangcheng.leetcode.LeetCode.String.*
+import com.wangcheng.leetcode.LeetCode.String.IsPalindrome
 
 @ChapterDslMarker
 @DataSourceDslMarker
@@ -251,6 +252,11 @@ val leetCodeDataSource = dataSource {
             subject = "232.用栈实现队列"
             hardLevel = 1
         }
+        item {
+            className = com.wangcheng.leetcode.LeetCode.LinkedList.IsPalindrome::class.simpleName
+            subject = "234.回文链表"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -444,6 +450,11 @@ val leetCodeDataSource = dataSource {
             className = DeleteBinarySearchTreeNode::class.simpleName
             subject = "450.删除二叉搜索树中的节点"
             hardLevel = 2
+        }
+        item {
+            className = LowestCommonAncestor::class.simpleName
+            subject = "235.二叉搜索树的最近公共祖先"
+            hardLevel = 1
         }
     }
 }
