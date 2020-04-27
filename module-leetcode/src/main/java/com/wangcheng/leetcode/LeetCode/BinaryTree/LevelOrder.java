@@ -108,7 +108,7 @@ public class LevelOrder {
     }
 
     public static void main(String[] args) {
-        // 层遍历反序列化创建题目的二叉树
+        // 反序列化创建题目的二叉树
         String serializeStr = "3,9,20,null,null,15,7";
         TreeNode root = BinaryTreeUtil.deserializeByLevel(serializeStr);
         System.out.println("输入：" + serializeStr);

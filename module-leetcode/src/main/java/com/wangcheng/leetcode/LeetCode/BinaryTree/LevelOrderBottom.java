@@ -1,6 +1,7 @@
 package com.wangcheng.leetcode.LeetCode.BinaryTree;
 
-import com.sunfusheng.algo.common.util.LeetCodeUtil;
+import com.sunfusheng.algo.common.model.TreeNode;
+import com.sunfusheng.algo.common.util.AlgoUtil;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -11,12 +12,10 @@ import java.util.Queue;
  * 【题目】
  * 107.二叉树的层次遍历 II
  * 给定一个二叉树，返回其节点值自底向上的层次遍历。
- * <p>
  * （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
  * <p>
  * 【例如】
  * 给定二叉树 [3,9,20,null,null,15,7],
- * <p>
  * --- 3
  * -- / \
  * - 9  20
@@ -35,34 +34,17 @@ import java.util.Queue;
  */
 public class LevelOrderBottom {
 
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-    public static void solution1(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        TreeNode node;
-        LeetCodeUtil.logln("————层序遍历————");
-        while (!queue.isEmpty()) {
-            node = queue.poll();
-            LeetCodeUtil.logln(" - " + node.val);
-            if (node.left != null) {
-                queue.add(node.left);
-            }
-            if (node.right != null) {
-                queue.add(node.right);
-            }
-        }
-    }
-
-    public static List<List<Integer>> solution2(TreeNode root) {
+    /**
+     * 解法一：广度优先遍历
+     * <p>
+     * 复杂度分析
+     * 时间复杂度：O(N)
+     * 空间复杂度：O(N)
+     *
+     * @param root
+     * @return
+     */
+    public static List<List<Integer>> solution1(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();
         }
@@ -74,7 +56,7 @@ public class LevelOrderBottom {
             List<Integer> list = new ArrayList<>();
             while (count > 0) {
                 TreeNode node = queue.poll();
-                list.add(node.val);
+                list.add(node.value);
                 if (node.left != null) {
                     queue.add(node.left);
                 }
@@ -89,32 +71,12 @@ public class LevelOrderBottom {
     }
 
     public static void main(String[] args) {
-        TreeNode p = new TreeNode(1);
-        p.left = new TreeNode(2);
-        p.left.left = new TreeNode(3);
-        p.left.right = new TreeNode(4);
-        p.right = new TreeNode(2);
-        p.right.left = new TreeNode(4);
-        p.right.right = new TreeNode(3);
+        // 反序列化创建题目的二叉树
+        String serializeStr = "3,9,20,null,null,15,7";
+        TreeNode root = BinaryTreeUtil.deserializeByLevel(serializeStr);
+        System.out.println("输入：" + serializeStr);
 
-        TreeNode q = new TreeNode(1);
-        q.left = new TreeNode(2);
-        q.left.left = new TreeNode(3);
-        q.right = new TreeNode(2);
-        q.right.left = new TreeNode(3);
-
-        TreeNode p2 = p;
-        TreeNode q2 = q;
-        solution1(p);
-        solution1(q);
-        List<List<Integer>> list = solution2(p2);
-        LeetCodeUtil.logln("levelOrder");
-        for (List<Integer> item : list) {
-            LeetCodeUtil.logln(item.toString());
-        }
-        list = solution2(q2);
-        for (List<Integer> item : list) {
-            LeetCodeUtil.logln(item.toString());
-        }
+        System.out.println("输出：");
+        AlgoUtil.printList2(solution1(root));
     }
 }
