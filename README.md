@@ -45,6 +45,7 @@
   * [15.三数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ThreeSum.java)
   * [26.删除排序数组中的重复项](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveDuplicates.java)
   * [27.移除元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RemoveElement.java)
+  * [33.搜索旋转排序数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RotateSortArray.java)
   * [35.搜索插入位置](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SearchInsert.java)
   * [42.接雨水](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/HoldRainWater.java)
   * [53.最大子序和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxSubArray.java)

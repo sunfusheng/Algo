@@ -115,6 +115,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = RotateSortArray::class.simpleName
+            subject = "33.搜索旋转排序数组"
+            hardLevel = 2
+        }
+        item {
             className = SearchInsert::class.simpleName
             subject = "35.搜索插入位置"
             hardLevel = 1
