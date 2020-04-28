@@ -213,6 +213,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 1
         }
         item {
+            className = MergeKLists::class.simpleName
+            subject = "23.合并K个排序链表"
+            hardLevel = 3
+        }
+        item {
             className = DeleteDuplicates::class.simpleName
             subject = "83.删除排序链表中的重复元素"
             hardLevel = 1
