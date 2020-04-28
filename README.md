@@ -75,6 +75,7 @@
   * [225.用队列实现栈](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MyStack.java)
   * [232.用栈实现队列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/MyQueue.java)
   * [234.回文链表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/IsPalindrome.java)
+  * [237.删除链表中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/DeleteNode.java)
 
 * 字符串
   * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
@@ -87,6 +88,7 @@
   * [58.最后一个单词的长度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLastWord.java)
   * [125.验证回文串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsPalindrome.java)
   * [205.同构字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsIsomorphic.java)
+  * [242.有效的字母异位词](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsAnagram.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)

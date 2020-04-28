@@ -257,6 +257,11 @@ val leetCodeDataSource = dataSource {
             subject = "234.回文链表"
             hardLevel = 1
         }
+        item {
+            className = com.wangcheng.leetcode.LeetCode.LinkedList.DeleteNode::class.simpleName
+            subject = "237.删除链表中的节点"
+            hardLevel = 1
+        }
     }
 
     stringChapter {
@@ -308,6 +313,11 @@ val leetCodeDataSource = dataSource {
         item {
             className = IsIsomorphic::class.simpleName
             subject = "205.同构字符串"
+            hardLevel = 1
+        }
+        item {
+            className = IsAnagram::class.simpleName
+            subject = "242.有效的字母异位词"
             hardLevel = 1
         }
     }
