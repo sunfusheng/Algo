@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * 【题目】
- * 20. 有效的括号
+ * 20.有效的括号
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
  * <p>
  * 有效字符串需满足：
@@ -18,15 +18,15 @@ import java.util.Stack;
  * 示例 1:
  * 输入: "()"
  * 输出: true
- *
+ * <p>
  * 示例 2:
  * 输入: "()[]{}"
  * 输出: true
- *
+ * <p>
  * 示例 3:
  * 输入: "(]"
  * 输出: false
- *
+ * <p>
  * 示例 4:
  * 输入: "([)]"
  * 输出: false
@@ -42,12 +42,13 @@ public class ValidBrackets {
     /**
      * 思路
      * 借助栈结构特性，遇到开括号压栈，闭括号弹栈，到最后判断栈是否为空
+     *
      * @param str
      * @return
      */
     public static boolean solution(String str) {
         if (null == str || str.isEmpty()) {
-            return false;
+            return true;
         }
         if (indexOpenBracket(str.charAt(0)) < 0) {
             return false;
@@ -88,11 +89,11 @@ public class ValidBrackets {
     }
 
     public static void main(String[] args) {
-        LeetCodeUtil.logln("solution(')(') = " + ValidBrackets.solution(")("));
-        LeetCodeUtil.logln("solution('()') = " + ValidBrackets.solution("()"));
-        LeetCodeUtil.logln("solution('([{}])') = " + ValidBrackets.solution("([{}])"));
-        LeetCodeUtil.logln("solution('([)') = " + ValidBrackets.solution("([)"));
-        LeetCodeUtil.logln("solution('(])') = " + ValidBrackets.solution("(])"));
-        LeetCodeUtil.logln("solution('({])') = " + ValidBrackets.solution("({])"));
+        LeetCodeUtil.logln("solution(')(') = " + solution(")("));
+        LeetCodeUtil.logln("solution('()') = " + solution("()"));
+        LeetCodeUtil.logln("solution('([{}])') = " + solution("([{}])"));
+        LeetCodeUtil.logln("solution('([)') = " + solution("([)"));
+        LeetCodeUtil.logln("solution('(])') = " + solution("(])"));
+        LeetCodeUtil.logln("solution('({])') = " + solution("({])"));
     }
 }

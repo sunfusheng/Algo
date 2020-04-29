@@ -90,12 +90,12 @@ public class MinDepth {
      * 空间复杂度：最坏情况下我们会在栈中保存整棵树，此时空间复杂度为 O(N)。
      */
     public static int solution2(TreeNode root) {
-        Stack<Pair<TreeNode, Integer>> stack = new Stack<>();
         if (null == root) {
             return 0;
-        } else {
-            stack.push(new Pair<>(root, 1));
         }
+
+        Stack<Pair<TreeNode, Integer>> stack = new Stack<>();
+        stack.push(new Pair<>(root, 1));
         int minDepth = Integer.MAX_VALUE;
         while (!stack.isEmpty()) {
             // 检索并删除此列表的最后一个元素
@@ -116,7 +116,7 @@ public class MinDepth {
     }
 
     /**
-     * 方法 3：宽度优先搜索迭代
+     * 方法 3：广度优先搜索迭代
      * 深度优先搜索方法的缺陷是所有节点都必须访问到，以保证能够找到最小深度。因此复杂度是 O(N)。
      * 一个优化的方法是利用宽度优先搜索，按照树的层次去迭代，
      * 第一个访问到的叶子就是最小深度的节点，这样就不要遍历所有的节点了。
@@ -127,12 +127,12 @@ public class MinDepth {
      * 空间复杂度：和时间复杂度相同，也是 O(N)。
      */
     public static int solution3(TreeNode root) {
-        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
         if (null == root) {
             return 0;
-        } else {
-            queue.add(new Pair<>(root, 1));
         }
+
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
+        queue.add(new Pair<>(root, 1));
         int currentDepth = 0;
         while (!queue.isEmpty()) {
             // 检索并删除此列表的头部（第一个元素）
@@ -164,15 +164,12 @@ public class MinDepth {
         q.left.left = new TreeNode(3);
         q.right = new TreeNode(2);
         q.right.left = new TreeNode(3);
-        TreeNode p2 = p;
-        TreeNode q2 = q;
-        TreeNode p3 = p;
-        TreeNode q3 = q;
+
         LeetCodeUtil.logln("solution1(p) = " + solution1(p));
         LeetCodeUtil.logln("solution1(q) = " + solution1(q));
-        LeetCodeUtil.logln("solution2(p2) = " + solution2(p2));
-        LeetCodeUtil.logln("solution2(q2) = " + solution2(q2));
-        LeetCodeUtil.logln("solution3(p3) = " + solution3(p3));
-        LeetCodeUtil.logln("solution3(q3) = " + solution3(q3));
+        LeetCodeUtil.logln("solution2(p) = " + solution2(p));
+        LeetCodeUtil.logln("solution2(q) = " + solution2(q));
+        LeetCodeUtil.logln("solution3(p) = " + solution3(p));
+        LeetCodeUtil.logln("solution3(q) = " + solution3(q));
     }
 }

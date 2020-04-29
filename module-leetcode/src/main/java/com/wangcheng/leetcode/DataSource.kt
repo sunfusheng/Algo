@@ -135,6 +135,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 2
         }
         item {
+            className = MergeArrayInterval::class.simpleName
+            subject = "c"
+            hardLevel = 2
+        }
+        item {
             className = PlusOne::class.simpleName
             subject = "66.加一"
             hardLevel = 1
