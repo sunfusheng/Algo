@@ -403,6 +403,11 @@ val leetCodeDataSource = dataSource {
             subject = "231.2的幂"
             hardLevel = 1
         }
+        item {
+            className = AddDigits::class.simpleName
+            subject = "258.各位相加"
+            hardLevel = 1
+        }
     }
 
     binaryTreeChapter {
@@ -467,14 +472,19 @@ val leetCodeDataSource = dataSource {
             hardLevel = 1
         }
         item {
-            className = DeleteBinarySearchTreeNode::class.simpleName
-            subject = "450.删除二叉搜索树中的节点"
-            hardLevel = 2
-        }
-        item {
             className = LowestCommonAncestor::class.simpleName
             subject = "235.二叉搜索树的最近公共祖先"
             hardLevel = 1
+        }
+        item {
+            className = BinaryTreePaths::class.simpleName
+            subject = "257.二叉树的所有路径"
+            hardLevel = 1
+        }
+        item {
+            className = DeleteBinarySearchTreeNode::class.simpleName
+            subject = "450.删除二叉搜索树中的节点"
+            hardLevel = 2
         }
     }
 }

@@ -107,6 +107,7 @@
   * [202.快乐数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsHappy.java)
   * [204.计数质数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CountPrimes.java)
   * [231.2的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfTwo.java)
+  * [258.各位相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/AddDigits.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
@@ -122,6 +123,7 @@
   * [112.路径总和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/HasPathSum.java)
   * [226.翻转二叉树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InvertTree.java)
   * [235.二叉搜索树的最近公共祖先](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/LowestCommonAncestor.java)
+  * [257.二叉树的所有路径](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/BinaryTreePaths.java)
   * [450.删除二叉搜索树中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DeleteBinarySearchTreeNode.java)
 
 <br/>
