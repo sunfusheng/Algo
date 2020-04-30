@@ -48,6 +48,7 @@
   * [33.搜索旋转排序数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/RotateSortArray.java)
   * [35.搜索插入位置](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SearchInsert.java)
   * [42.接雨水](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/HoldRainWater.java)
+  * [46.全排列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/Permute.java)
   * [53.最大子序和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxSubArray.java)
   * [56.合并区间](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MergeArrayInterval.java)
   * [66.加一](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/PlusOne.java)

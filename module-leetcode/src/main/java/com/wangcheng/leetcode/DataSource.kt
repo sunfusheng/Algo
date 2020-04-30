@@ -130,6 +130,11 @@ val leetCodeDataSource = dataSource {
             hardLevel = 3
         }
         item {
+            className = Permute::class.simpleName
+            subject = "46.全排列"
+            hardLevel = 2
+        }
+        item {
             className = MaxSubArray::class.simpleName
             subject = "53.最大子序和"
             hardLevel = 2
