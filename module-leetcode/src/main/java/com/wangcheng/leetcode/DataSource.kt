@@ -413,6 +413,16 @@ val leetCodeDataSource = dataSource {
             subject = "258.各位相加"
             hardLevel = 1
         }
+        item {
+            className = IsUgly::class.simpleName
+            subject = "263.丑数"
+            hardLevel = 1
+        }
+        item {
+            className = MissingNumber::class.simpleName
+            subject = "268.缺失数字"
+            hardLevel = 1
+        }
     }
 
     binaryTreeChapter {

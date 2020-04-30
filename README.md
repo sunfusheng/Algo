@@ -109,6 +109,8 @@
   * [204.计数质数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CountPrimes.java)
   * [231.2的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfTwo.java)
   * [258.各位相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/AddDigits.java)
+  * [263.丑数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsUgly.java)
+  * [268.缺失数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/MissingNumber.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
