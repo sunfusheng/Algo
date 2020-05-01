@@ -5,14 +5,14 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
 import java.util.Stack;
 
 /**
- *【题目】
+ * 【题目】
  * 232.用栈实现队列
  * 使用栈实现队列的下列操作：
  * push(x) -- 将一个元素放入队列的尾部。
  * pop() -- 从队列首部移除元素。
  * peek() -- 返回队列首部的元素。
  * empty() -- 返回队列是否为空。
- *【示例】
+ * 【示例】
  * MyQueue queue = new MyQueue();
  * queue.push(1);
  * queue.push(2);
@@ -44,7 +44,7 @@ public class MyQueue {
 
     /**
      * 复杂度分析
-     *
+     * <p>
      * 时间复杂度：O(n)
      * 对于除了新元素之外的所有元素，它们都会被压入两次，弹出两次。
      * 新元素只被压入一次，弹出一次。这个过程产生了 4n+2 次操作，
@@ -82,6 +82,7 @@ public class MyQueue {
 
     private Stack<Integer> pushStack = new Stack<>();
     private Stack<Integer> popStack = new Stack<>();
+
     /**
      * 方法二（使用两个栈 入队 - O(1)，出队 - 摊还复杂度 O(1)）
      */
@@ -100,8 +101,7 @@ public class MyQueue {
     }
 
     public boolean empty2() {
-        pushToPop();
-        return popStack.isEmpty();
+        return pushStack.isEmpty() && popStack.isEmpty();
     }
 
     private void pushToPop() {

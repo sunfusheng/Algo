@@ -141,7 +141,7 @@ val leetCodeDataSource = dataSource {
         }
         item {
             className = MergeArrayInterval::class.simpleName
-            subject = "c"
+            subject = "56.合并区间"
             hardLevel = 2
         }
         item {
@@ -173,6 +173,11 @@ val leetCodeDataSource = dataSource {
             className = MaxProfitII::class.simpleName
             subject = "122.买卖股票的最佳时机 II"
             hardLevel = 1
+        }
+        item {
+            className = DistributeCandy::class.simpleName
+            subject = "135.分发糖果"
+            hardLevel = 3
         }
         item {
             className = SingleNumber::class.simpleName
