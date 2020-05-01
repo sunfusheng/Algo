@@ -65,6 +65,7 @@
   * [198.打家劫舍](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/Rob.java)
   * [217.存在重复元素](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ContainsDuplicate.java)
   * [219.存在重复元素 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ContainsNearbyDuplicate.java)
+  * [283.移动零](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MoveZeroes.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -131,6 +132,9 @@
   * [257.二叉树的所有路径](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/BinaryTreePaths.java)
   * [450.删除二叉搜索树中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DeleteBinarySearchTreeNode.java)
 
+* 查找排序
+  * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)
+  
 <br/>
 
 ### 扫一扫[Fir.im](http://d.alphaqr.com/Algo)二维码下载APK体验
