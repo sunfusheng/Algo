@@ -96,6 +96,11 @@ class NumberChapterData {
                     subject = "268.缺失数字"
                     hardLevel = 1
                 }
+                item {
+                    className = CanWinNim::class.simpleName
+                    subject = "292.Nim 游戏"
+                    hardLevel = 1
+                }
             }
         }
 

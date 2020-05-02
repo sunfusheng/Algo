@@ -67,6 +67,11 @@ class StringChapterData {
                     subject = "242.有效的字母异位词"
                     hardLevel = 1
                 }
+                item {
+                    className = WordPattern::class.simpleName
+                    subject = "290.单词规律"
+                    hardLevel = 1
+                }
             }
         }
 

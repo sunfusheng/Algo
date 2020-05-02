@@ -95,6 +95,7 @@
   * [125.验证回文串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsPalindrome.java)
   * [205.同构字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsIsomorphic.java)
   * [242.有效的字母异位词](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsAnagram.java)
+  * [290.单词规律](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/WordPattern.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -114,6 +115,7 @@
   * [258.各位相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/AddDigits.java)
   * [263.丑数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsUgly.java)
   * [268.缺失数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/MissingNumber.java)
+  * [292.Nim 游戏](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CanWinNim.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
