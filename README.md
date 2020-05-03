@@ -34,6 +34,11 @@
   * [打印二叉树的边界节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/PrintEdgeNodes.java)
   * [二叉树的序列化和反序列化](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/SerializeDeserializeBinaryTree.java)
 
+* 排序算法
+  * [冒泡排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/BubbleSort.java)
+  * [快速排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/QuickSort.java)
+  * [堆排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/HeapSort.java)
+
 <br/>
 
 # LeetCode算法

@@ -1,10 +1,5 @@
 package com.sunfusheng.algo
 
-import com.sunfusheng.algo.Algo.BinaryTree.BinaryTreeTraverse
-import com.sunfusheng.algo.Algo.BinaryTree.PrintEdgeNodes
-import com.sunfusheng.algo.Algo.BinaryTree.SerializeDeserializeBinaryTree
-import com.sunfusheng.algo.Algo.LinkedList.*
-import com.sunfusheng.algo.Algo.StackQueue.*
 import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
@@ -38,6 +33,10 @@ open class BinaryTreeChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "BinaryTree" to "二叉树问题"
 }
 
+open class SortChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "Sort" to "排序算法"
+}
+
 @DataSourceDslMarker
 open class DataSource {
     open val lists = ArrayList<ArrayList<AlgoItem>>()
@@ -53,6 +52,10 @@ open class DataSource {
     fun binaryTreeChapter(init: BinaryTreeChapter.() -> Unit) {
         lists.add(BinaryTreeChapter().apply(init).list)
     }
+
+    fun sortChapter(init: SortChapter.() -> Unit) {
+        lists.add(SortChapter().apply(init).list)
+    }
 }
 
 fun dataSource(init: DataSource.() -> Unit): ArrayList<ArrayList<AlgoItem>> {
@@ -60,132 +63,11 @@ fun dataSource(init: DataSource.() -> Unit): ArrayList<ArrayList<AlgoItem>> {
 }
 
 val algoDataSource = dataSource {
-    stackQueueChapter {
-        item {
-            className = MinStack::class.simpleName
-            subject = "设计一个有getMin功能的栈"
-            hardLevel = 1
-        }
-        item {
-            className = TwoStacksQueue::class.simpleName
-            subject = "用两个栈实现队列"
-            hardLevel = 1
-        }
-        item {
-            className = RecursionReverseStack::class.simpleName
-            subject = "如何仅用递归函数和栈操作逆序一个栈"
-            hardLevel = 2
-        }
-        item {
-            className = CatDogQueue::class.simpleName
-            subject = "猫狗队列"
-            hardLevel = 1
-        }
-        item {
-            className = SortStackByStack::class.simpleName
-            subject = "用一个栈实现另一个栈的排序"
-            hardLevel = 1
-        }
-        item {
-            className = Hanoi::class.simpleName
-            subject = "用栈来求解汉诺塔问题"
-            hardLevel = 3
-        }
-        item {
-            className = MaxWindow::class.simpleName
-            subject = "生成窗口最大值数组"
-            hardLevel = 2
-        }
-        item {
-            className = NearLessNum::class.simpleName
-            subject = "单调栈结构"
-            hardLevel = 2
-        }
-        item {
-            className = MaxRecSize::class.simpleName
-            subject = "求最大子矩阵的大小"
-            hardLevel = 3
-        }
-    }
+    stackQueueDataSource(this)
 
-    linkedListChapter {
-        item {
-            className = PrintCommonPart::class.simpleName
-            subject = "打印两个有序链表的公共部分"
-            hardLevel = 1
-        }
-        item {
-            className = RemoveLastKthNode::class.simpleName
-            subject = "删除单链表和双链表倒数第K个节点"
-            hardLevel = 1
-        }
-        item {
-            className = RemoveMidNode::class.simpleName
-            subject = "删除链表的中间节点和a/b处的节点"
-            hardLevel = 1
-        }
-        item {
-            className = ReverseLinkedList::class.simpleName
-            subject = "反转单向链表和双向链表"
-            hardLevel = 1
-        }
-        item {
-            className = ReversePartLinkedList::class.simpleName
-            subject = "反转部分单向链表"
-            hardLevel = 1
-        }
-        item {
-            className = Josephus::class.simpleName
-            subject = "环形单链表的约瑟夫问题"
-            hardLevel = 1
-        }
-        item {
-            className = LinkedListPalindrome::class.simpleName
-            subject = "判断一个链表是否为回文结构"
-            hardLevel = 1
-        }
-        item {
-            className = Partition::class.simpleName
-            subject = "将单向链表按某值划分成左边小、中间相等、右边大的形式"
-            hardLevel = 2
-        }
-        item {
-            className = CopyRandomLinkedList::class.simpleName
-            subject = "复制含有随机指针节点的链表"
-            hardLevel = 2
-        }
-        item {
-            className = AddTwoLinkedList::class.simpleName
-            subject = "两个单链表生成相加链表"
-            hardLevel = 1
-        }
-        item {
-            className = IntersectNode::class.simpleName
-            subject = "两个单链表相交的一系列问题"
-            hardLevel = 4
-        }
-        item {
-            className = ReverseKNodes::class.simpleName
-            subject = "将单链表的每K个节点之间逆序"
-            hardLevel = 2
-        }
-    }
+    linkedListDataSource(this)
 
-    binaryTreeChapter {
-        item {
-            className = BinaryTreeTraverse::class.simpleName
-            subject = "用递归和非递归方式实现二叉树先序、中序、后序遍历"
-            hardLevel = 3
-        }
-        item {
-            className = PrintEdgeNodes::class.simpleName
-            subject = "打印二叉树的边界节点"
-            hardLevel = 2
-        }
-        item {
-            className = SerializeDeserializeBinaryTree::class.simpleName
-            subject = "二叉树的序列化和反序列化"
-            hardLevel = 1
-        }
-    }
+    binaryTreeDataSource(this)
+
+    sortDataSource(this)
 }

@@ -1,7 +1,6 @@
 package com.wangcheng.leetcode.LeetCode.Array;
 
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
-import com.wangcheng.leetcode.util.UtilsKt;
 
 /**
  * 【题目】
@@ -48,7 +47,7 @@ public class MaxProfitII {
      * 空间复杂度：O(n)，递归的深度为 n。
      */
     public static int solution1(int[] prices) {
-        if (UtilsKt.isEmpty(prices)) {
+        if (LeetCodeUtil.isEmpty(prices)) {
             return 0;
         }
         return calculate(prices, 0);
@@ -86,7 +85,7 @@ public class MaxProfitII {
      * 空间复杂度：O(1)。需要常量的空间。
      */
     public static int solution2(int[] prices) {
-        if (UtilsKt.isEmpty(prices)) {
+        if (LeetCodeUtil.isEmpty(prices)) {
             return 0;
         }
         int i = 0;
@@ -122,7 +121,7 @@ public class MaxProfitII {
      * 空间复杂度：O(1)，需要常量的空间。
      */
     public static int solution3(int[] prices) {
-        if (UtilsKt.isEmpty(prices)) {
+        if (LeetCodeUtil.isEmpty(prices)) {
             return 0;
         }
         int maxProfit = 0;

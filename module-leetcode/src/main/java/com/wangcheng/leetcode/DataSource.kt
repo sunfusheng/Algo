@@ -85,16 +85,15 @@ fun dataSource(init: DataSource.() -> Unit): ArrayList<ArrayList<AlgoItem>> {
 }
 
 val leetCodeDataSource = dataSource {
+    arrayDataSource(this)
 
-    ArrayChapterData.simpleArray(this)
+    linkedListDataSource(this)
 
-    LinkedListChapterData.simpleLinkedList(this)
+    stringDataSource(this)
 
-    StringChapterData.simpleString(this)
+    numberDataSource(this)
 
-    NumberChapterData.simpleNumber(this)
+    binaryTreeDataSource(this)
 
-    BinaryTreeChapterData.simpleBinaryTree(this)
-
-    FindSortChapterData.simpleFindSort(this)
+    findSortDataSource(this)
 }
