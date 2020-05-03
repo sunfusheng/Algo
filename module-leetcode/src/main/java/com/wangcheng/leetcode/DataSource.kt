@@ -4,13 +4,6 @@ import com.sunfusheng.algo.common.AlgoItem
 import com.sunfusheng.algo.common.ChapterDslMarker
 import com.sunfusheng.algo.common.DataSourceDslMarker
 import com.sunfusheng.algo.common.LEETCODE_ROOT_PATH
-import com.wangcheng.leetcode.LeetCode.Array.*
-import com.wangcheng.leetcode.LeetCode.BinaryTree.*
-import com.wangcheng.leetcode.LeetCode.FindSort.FindSortChapterData
-import com.wangcheng.leetcode.LeetCode.LinkedList.*
-import com.wangcheng.leetcode.LeetCode.Number.*
-import com.wangcheng.leetcode.LeetCode.String.*
-import com.wangcheng.leetcode.LeetCode.String.IsPalindrome
 
 @ChapterDslMarker
 @DataSourceDslMarker
