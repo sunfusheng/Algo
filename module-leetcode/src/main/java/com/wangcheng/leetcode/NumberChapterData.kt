@@ -100,6 +100,16 @@ object NumberChapterData {
                 subject = "292.Nim 游戏"
                 hardLevel = 1
             }
+            item {
+                className = GetHint::class.simpleName
+                subject = "299.猜数字游戏"
+                hardLevel = 2
+            }
+            item {
+                className = IsPowerOfThree::class.simpleName
+                subject = "326.3的幂"
+                hardLevel = 1
+            }
         }
     }
 }

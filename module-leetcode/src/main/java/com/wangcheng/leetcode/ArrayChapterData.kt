@@ -149,6 +149,11 @@ object ArrayChapterData {
                 subject = "283.移动零"
                 hardLevel = 1
             }
+            item {
+                className = NumArray::class.simpleName
+                subject = "303.区域和检索 - 数组不可变"
+                hardLevel = 1
+            }
         }
     }
 }
