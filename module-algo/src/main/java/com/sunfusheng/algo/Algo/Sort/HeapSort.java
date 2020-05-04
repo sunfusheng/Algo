@@ -79,11 +79,11 @@ public class HeapSort {
         }
     }
 
-    // 交换数组的两个元素
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    // 交换数组两个元素
+    private static void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 
     public static void main(String[] args) {

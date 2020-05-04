@@ -1,8 +1,6 @@
 package com.sunfusheng.algo
 
-import com.sunfusheng.algo.Algo.Sort.BubbleSort
-import com.sunfusheng.algo.Algo.Sort.HeapSort
-import com.sunfusheng.algo.Algo.Sort.QuickSort
+import com.sunfusheng.algo.Algo.Sort.*
 
 /**
  * @author sunfusheng
@@ -16,8 +14,23 @@ fun sortDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = SelectionSort::class.simpleName
+            subject = "选择排序"
+            hardLevel = 1
+        }
+        item {
+            className = InsertionSort::class.simpleName
+            subject = "插入排序"
+            hardLevel = 2
+        }
+        item {
             className = QuickSort::class.simpleName
             subject = "快速排序"
+            hardLevel = 3
+        }
+        item {
+            className = MergeSort::class.simpleName
+            subject = "归并排序"
             hardLevel = 3
         }
         item {
