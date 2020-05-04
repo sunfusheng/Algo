@@ -106,7 +106,12 @@ fun numberDataSource(dataSource: DataSource) {
         item {
             className = IsPowerOfThree::class.simpleName
             subject = "326.3的幂"
-            hardLevel = 1
+            hardLevel = 2
+        }
+        item {
+            className = IsPowerOfFour::class.simpleName
+            subject = "342.4的幂"
+            hardLevel = 2
         }
     }
 }

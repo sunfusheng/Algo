@@ -69,5 +69,15 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "290.单词规律"
             hardLevel = 1
         }
+        item {
+            className = ReverseString::class.simpleName
+            subject = "344.反转字符串"
+            hardLevel = 1
+        }
+        item {
+            className = ReverseVowels::class.simpleName
+            subject = "345.反转字符串中的元音字母"
+            hardLevel = 1
+        }
     }
 }

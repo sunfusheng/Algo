@@ -103,6 +103,8 @@
   * [205.同构字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsIsomorphic.java)
   * [242.有效的字母异位词](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsAnagram.java)
   * [290.单词规律](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/WordPattern.java)
+  * [344.反转字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseString.java)
+  * [345.反转字符串中的元音字母](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseVowels.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -125,6 +127,7 @@
   * [292.Nim 游戏](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CanWinNim.java)
   * [299.猜数字游戏](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/GetHint.java)
   * [326.3的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfThree.java)
+  * [342.4的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfFour.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

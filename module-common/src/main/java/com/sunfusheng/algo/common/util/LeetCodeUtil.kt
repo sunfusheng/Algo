@@ -44,6 +44,11 @@ object LeetCodeUtil {
     }
 
     @JvmStatic
+    fun isEmpty(nums: CharArray?): Boolean {
+        return null == nums || nums.isEmpty()
+    }
+
+    @JvmStatic
     fun length(str: String?): Int {
         return str?.length ?: 0
     }
