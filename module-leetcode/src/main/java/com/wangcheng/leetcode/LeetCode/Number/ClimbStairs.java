@@ -43,18 +43,14 @@ public class ClimbStairs {
      * 时间复杂度：O(2^n)。
      * 空间复杂度：O(n)，递归树的深度可以达到 n。
      */
-    public static int solution1(int x) {
-        return climbStairs(0, x);
-    }
-
-    private static int climbStairs(int i, int n) {
-        if (i > n) {
+    public static int solution1(int n) {
+        if (n < 0) {
             return 0;
         }
-        if (i == n) {
-            return 1;
+        if (n == 1 || n == 2) {
+            return n;
         }
-        return climbStairs(i + 1, n) + climbStairs(i + 2, n);
+        return solution1(n - 1) + solution1(n - 2);
     }
 
     /**
@@ -133,17 +129,18 @@ public class ClimbStairs {
      * 空间复杂度：O(1)，使用常量级空间。
      */
     public static int solution4(int n) {
-        if (n == 1) {
-            return 1;
+        if (n == 1 || n == 2) {
+            return n;
         }
         int first = 1;
         int second = 2;
+        int third = 3;
         for (int i = 3; i <= n; i++) {
-            int third = first + second;
+            third = first + second;
             first = second;
             second = third;
         }
-        return second;
+        return third;
     }
 
     /**
@@ -189,7 +186,7 @@ public class ClimbStairs {
 
     /**
      * 方法六：斐波那契公式
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(log(n))，pow 方法将会用去 log(n) 的时间。
      * 空间复杂度：O(1)，使用常量级空间。
@@ -202,7 +199,7 @@ public class ClimbStairs {
 
     public static void main(String[] args) {
         LeetCodeUtil.logln("solution1(5) = " + solution1(5));
-        LeetCodeUtil.logln("solution1(5) = " + solution1(5));
+        LeetCodeUtil.logln("solution2(5) = " + solution2(5));
         LeetCodeUtil.logln("solution3(5) = " + solution3(5));
         LeetCodeUtil.logln("solution4(5) = " + solution4(5));
         LeetCodeUtil.logln("solution5(5) = " + solution5(5));

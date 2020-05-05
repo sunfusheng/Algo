@@ -50,6 +50,11 @@ fun stringDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = RestoreIpAddresses::class.simpleName
+            subject = "93.复原IP地址"
+            hardLevel = 2
+        }
+        item {
             className = IsPalindrome::class.simpleName
             subject = "125.验证回文串"
             hardLevel = 1
