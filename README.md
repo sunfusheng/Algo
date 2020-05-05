@@ -76,6 +76,8 @@
   * [219.存在重复元素 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ContainsNearbyDuplicate.java)
   * [283.移动零](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MoveZeroes.java)
   * [303.区域和检索 - 数组不可变](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NumArray.java)
+  * [349.两个数组的交集](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/Intersection.java)
+  * [350.两个数组的交集 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/IntersectionII.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -132,6 +134,7 @@
   * [299.猜数字游戏](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/GetHint.java)
   * [326.3的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfThree.java)
   * [342.4的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfFour.java)
+  * [367.有效的完全平方数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPerfectSquare.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

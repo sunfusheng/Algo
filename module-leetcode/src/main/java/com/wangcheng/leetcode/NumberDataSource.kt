@@ -113,5 +113,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "342.4的幂"
             hardLevel = 2
         }
+        item {
+            className = IsPerfectSquare::class.simpleName
+            subject = "367.有效的完全平方数"
+            hardLevel = 1
+        }
     }
 }

@@ -153,5 +153,15 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "303.区域和检索 - 数组不可变"
             hardLevel = 1
         }
+        item {
+            className = Intersection::class.simpleName
+            subject = "349.两个数组的交集"
+            hardLevel = 1
+        }
+        item {
+            className = IntersectionII::class.simpleName
+            subject = "350.两个数组的交集 II"
+            hardLevel = 1
+        }
     }
 }
