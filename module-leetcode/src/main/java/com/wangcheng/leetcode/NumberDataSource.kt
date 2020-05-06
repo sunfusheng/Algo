@@ -118,5 +118,15 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "367.有效的完全平方数"
             hardLevel = 1
         }
+        item {
+            className = GetSum::class.simpleName
+            subject = "371.两整数之和"
+            hardLevel = 1
+        }
+        item {
+            className = GuessNumber::class.simpleName
+            subject = "374.猜数字大小"
+            hardLevel = 1
+        }
     }
 }

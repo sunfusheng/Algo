@@ -111,6 +111,7 @@
   * [290.单词规律](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/WordPattern.java)
   * [344.反转字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseString.java)
   * [345.反转字符串中的元音字母](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseVowels.java)
+  * [383.赎金信](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CanConstruct.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -135,6 +136,8 @@
   * [326.3的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfThree.java)
   * [342.4的幂](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPowerOfFour.java)
   * [367.有效的完全平方数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/IsPerfectSquare.java)
+  * [371.两整数之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/GetSum.java)
+  * [374.猜数字大小](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/GuessNumber.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

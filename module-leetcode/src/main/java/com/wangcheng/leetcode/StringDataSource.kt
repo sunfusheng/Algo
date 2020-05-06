@@ -84,5 +84,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "345.反转字符串中的元音字母"
             hardLevel = 1
         }
+        item {
+            className = CanConstruct::class.simpleName
+            subject = "383.赎金信"
+            hardLevel = 1
+        }
     }
 }
