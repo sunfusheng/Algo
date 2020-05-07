@@ -9,8 +9,8 @@ import java.util.Stack;
 
 /**
  * 【题目】
- * 94.二叉树的中序遍历
- * 给定一个二叉树，返回它的中序遍历。
+ * 144.二叉树的前序遍历
+ * 给定一个二叉树，返回它的前序遍历。
  * <p>
  * 示例:
  * 输入: [1,null,2,3,null]
@@ -19,13 +19,14 @@ import java.util.Stack;
  * --- 2
  * -- /
  * - 3
- * 输出: [1,3,2]
- * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
+ * 输出: [1,2,3]
+ * <p>
+ * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  *
  * @author sunfusheng
- * @since 2020/3/26
+ * @since 2020/5/7
  */
-public class InorderTraversal {
+public class PreOrderTraversal {
 
     /**
      * 方法一：递归
@@ -36,22 +37,22 @@ public class InorderTraversal {
      * @param root
      * @return
      */
-    public static List<Integer> inorderTraversal(TreeNode root) {
+    public static List<Integer> preOrderTraversal(TreeNode root) {
         if (root == null) {
             return null;
         }
         List<Integer> res = new ArrayList<>();
-        inorderTraversalRecur(root, res);
+        preOrderTraversalRecur(root, res);
         return res;
     }
 
-    private static void inorderTraversalRecur(TreeNode node, List<Integer> list) {
+    private static void preOrderTraversalRecur(TreeNode node, List<Integer> list) {
         if (node == null) {
             return;
         }
-        inorderTraversalRecur(node.left, list);
         list.add(node.value);
-        inorderTraversalRecur(node.right, list);
+        preOrderTraversalRecur(node.left, list);
+        preOrderTraversalRecur(node.right, list);
     }
 
     /**
@@ -63,17 +64,21 @@ public class InorderTraversal {
      * @param root
      * @return
      */
-    public static List<Integer> inorderTraversal2(TreeNode root) {
+    public static List<Integer> preOrderTraversal2(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        while (!stack.isEmpty() || root != null) {
-            if (root != null) {
-                stack.push(root);
-                root = root.left;
-            } else {
-                TreeNode node = stack.pop();
-                res.add(node.value);
-                root = node.right;
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(node.value);
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
             }
         }
         return res;
@@ -85,8 +90,8 @@ public class InorderTraversal {
         System.out.println("输入：" + serializeStr);
 
         System.out.print("方法一输出：");
-        AlgoUtil.printlnList(inorderTraversal(root));
+        AlgoUtil.printlnList(preOrderTraversal(root));
         System.out.print("方法二输出：");
-        AlgoUtil.printlnList(inorderTraversal2(root));
+        AlgoUtil.printlnList(preOrderTraversal2(root));
     }
 }

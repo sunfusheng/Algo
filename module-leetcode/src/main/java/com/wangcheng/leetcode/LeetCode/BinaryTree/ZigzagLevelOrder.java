@@ -10,9 +10,9 @@ import java.util.Queue;
 
 /**
  * 【题目】
- * 107.二叉树的层次遍历 II
- * 给定一个二叉树，返回其节点值自底向上的层次遍历。
- * （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+ * 103.二叉树的锯齿形层次遍历
+ * 给定一个二叉树，返回其节点值的锯齿形层次遍历。
+ * （即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
  * <p>
  * 【例如】
  * 给定二叉树 [3,9,20,null,null,15,7],
@@ -24,39 +24,46 @@ import java.util.Queue;
  * <p>
  * 返回其自底向上的层次遍历为：
  * [
- * - [15,7],
- * - [9,20],
- * - [3]
+ * - [3],
+ * - [20,9],
+ * - [15,7]
  * ]
  *
- * @author liwangcheng
- * @date 2020/3/30.
+ * @author sunfusheng
+ * @since 2020/5/7
  */
-public class LevelOrderBottom {
+public class ZigzagLevelOrder {
 
     /**
      * 解法一：广度优先遍历
      * <p>
      * 复杂度分析
-     * 时间复杂度：O(N)
-     * 空间复杂度：O(N)
+     * 时间复杂度：O(N)，因为每个节点恰好会被运算一次。
+     * 空间复杂度：O(N)，保存输出结果的数组包含 N 个节点的值。
      *
      * @param root
      * @return
      */
-    public static List<List<Integer>> solution1(TreeNode root) {
+    public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root == null) {
-            return new ArrayList<>();
+            return null;
         }
+
         List<List<Integer>> res = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
+        int height = 1; // 奇数从左至右，偶数从右至左
         while (!queue.isEmpty()) {
-            int size = queue.size();
             List<Integer> list = new ArrayList<>();
+            int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                list.add(node.value);
+                if (height % 2 == 0) {
+                    list.add(0, node.value);
+                } else {
+                    list.add(node.value);
+                }
+
                 if (node.left != null) {
                     queue.add(node.left);
                 }
@@ -64,18 +71,18 @@ public class LevelOrderBottom {
                     queue.add(node.right);
                 }
             }
-            res.add(0, list);
+            height++;
+            res.add(list);
         }
         return res;
     }
 
     public static void main(String[] args) {
-        // 反序列化创建题目的二叉树
         String serializeStr = "3,9,20,null,null,15,7";
         TreeNode root = BinaryTreeUtil.deserializeByLevel(serializeStr);
         System.out.println("输入：" + serializeStr);
 
         System.out.println("输出：");
-        AlgoUtil.printList2(solution1(root));
+        AlgoUtil.printList2(zigzagLevelOrder(root));
     }
 }

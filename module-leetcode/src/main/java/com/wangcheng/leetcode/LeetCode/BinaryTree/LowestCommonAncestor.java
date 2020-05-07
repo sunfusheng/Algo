@@ -3,7 +3,7 @@ package com.wangcheng.leetcode.LeetCode.BinaryTree;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 /**
- *【题目】
+ * 【题目】
  * 235.二叉搜索树的最近公共祖先
  * 给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。
  * <p>
@@ -11,9 +11,9 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * “对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，
  * 满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
  * <p>
- *【示例】
+ * 【示例】
  * 输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
- *
+ * <p>
  * -------- 6
  * ------ /   \
  * ----- 2     8
@@ -21,10 +21,10 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * --- 0  4  7  9
  * ----- / \
  * ---- 3  5
- *
+ * <p>
  * 输出: 6
  * 解释: 节点 2 和节点 8 的最近公共祖先是 6。
- *【说明】
+ * 【说明】
  * 所有节点的值都是唯一的。
  * p、q 为不同节点且均存在于给定的二叉搜索树中。
  *
@@ -33,7 +33,7 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  */
 public class LowestCommonAncestor {
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -80,10 +80,10 @@ public class LowestCommonAncestor {
      * 这个分割点就是能让节点 p 和节点 q 不能在同一颗子树上的那个节点，
      * 或者是节点 p 和节点 q 中的一个，这种情况下其中一个节点是
      * 另一个节点的父亲节点。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(N)
-     *  其中 N 为 BST 中节点的个数，在最坏的情况下可能需要遍历 BST 中所有的节点。
+     * 其中 N 为 BST 中节点的个数，在最坏的情况下可能需要遍历 BST 中所有的节点。
      * 空间复杂度：O(1)
      */
     public static TreeNode solution2(TreeNode root, TreeNode p, TreeNode q) {

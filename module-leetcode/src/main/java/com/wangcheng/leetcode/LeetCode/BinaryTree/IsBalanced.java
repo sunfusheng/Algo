@@ -46,7 +46,7 @@ public class IsBalanced {
         }
     }
 
-    static class TreeInfo {
+    private static class TreeInfo {
         public final int height;
         public final boolean balanced;
 

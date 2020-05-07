@@ -34,6 +34,11 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = ZigzagLevelOrder::class.simpleName
+            subject = "103.二叉树的锯齿形层次遍历"
+            hardLevel = 2
+        }
+        item {
             className = MaxDepth::class.simpleName
             subject = "104.二叉树的最大深度"
             hardLevel = 1
@@ -62,6 +67,16 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             className = HasPathSum::class.simpleName
             subject = "112.路径总和"
             hardLevel = 2
+        }
+        item {
+            className = PreOrderTraversal::class.simpleName
+            subject = "144.二叉树的前序遍历"
+            hardLevel = 2
+        }
+        item {
+            className = PostOrderTraversal::class.simpleName
+            subject = "145.二叉树的后序遍历"
+            hardLevel = 3
         }
         item {
             className = InvertTree::class.simpleName

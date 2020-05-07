@@ -23,7 +23,7 @@ import com.sunfusheng.algo.common.util.AlgoUtil;
 public class InsertionSort {
 
     /**
-     * 时间复杂度：O(n2)
+     * 时间复杂度：O(n^2)
      *
      * @param arr
      */

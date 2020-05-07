@@ -30,7 +30,7 @@ import java.util.List;
  */
 public class BinaryTreePaths {
     
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
