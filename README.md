@@ -112,6 +112,9 @@
   * [344.反转字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseString.java)
   * [345.反转字符串中的元音字母](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseVowels.java)
   * [383.赎金信](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CanConstruct.java)
+  * [387.字符串中的第一个唯一字符](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FirstUniqChar.java)
+  * [389.找不同](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindTheDifference.java)
+  * [392.判断子序列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsSubsequence.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)

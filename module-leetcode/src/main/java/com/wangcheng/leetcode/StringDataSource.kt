@@ -89,5 +89,20 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "383.赎金信"
             hardLevel = 1
         }
+        item {
+            className = FirstUniqChar::class.simpleName
+            subject = "387.字符串中的第一个唯一字符"
+            hardLevel = 1
+        }
+        item {
+            className = FindTheDifference::class.simpleName
+            subject = "389.找不同"
+            hardLevel = 1
+        }
+        item {
+            className = IsSubsequence::class.simpleName
+            subject = "392.判断子序列"
+            hardLevel = 2
+        }
     }
 }
