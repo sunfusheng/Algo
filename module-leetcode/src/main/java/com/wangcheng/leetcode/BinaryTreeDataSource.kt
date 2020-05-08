@@ -94,6 +94,11 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = SumOfLeftLeaves::class.simpleName
+            subject = "404.左叶子之和"
+            hardLevel = 1
+        }
+        item {
             className = DeleteBinarySearchTreeNode::class.simpleName
             subject = "450.删除二叉搜索树中的节点"
             hardLevel = 2

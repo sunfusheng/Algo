@@ -128,5 +128,15 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "374.猜数字大小"
             hardLevel = 1
         }
+        item {
+            className = ReadBinaryWatch::class.simpleName
+            subject = "401.二进制手表"
+            hardLevel = 2
+        }
+        item {
+            className = ToHex::class.simpleName
+            subject = "405.数字转换为十六进制数"
+            hardLevel = 1
+        }
     }
 }
