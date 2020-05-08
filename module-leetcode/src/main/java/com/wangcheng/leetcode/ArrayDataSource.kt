@@ -64,6 +64,11 @@ fun arrayDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = SpiralOrder::class.simpleName
+            subject = "54.螺旋矩阵"
+            hardLevel = 2
+        }
+        item {
             className = MergeArrayInterval::class.simpleName
             subject = "56.合并区间"
             hardLevel = 2
@@ -129,6 +134,11 @@ fun arrayDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = NumIslands::class.simpleName
+            subject = "200.岛屿数量"
+            hardLevel = 2
+        }
+        item {
             className = FindKthLargest::class.simpleName
             subject = "215.数组中的第K个最大元素"
             hardLevel = 2
@@ -147,6 +157,11 @@ fun arrayDataSource(dataSource: DataSource) {
             className = MoveZeroes::class.simpleName
             subject = "283.移动零"
             hardLevel = 1
+        }
+        item {
+            className = CoinChange::class.simpleName
+            subject = "322.零钱兑换"
+            hardLevel = 2
         }
         item {
             className = NumArray::class.simpleName
