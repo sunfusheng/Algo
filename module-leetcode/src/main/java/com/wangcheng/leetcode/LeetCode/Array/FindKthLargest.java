@@ -47,14 +47,20 @@ public class FindKthLargest {
                 heap.poll();
             }
         }
-        return heap.poll();
+        if (heap.size() == k) {
+            Integer res;
+            return (res = heap.poll()) == null ? -1 : res;
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
         int[] nums = new int[]{3, 2, 1, 5, 6, 4};
         int[] nums2 = new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6};
-        System.out.print("输入：");
+        System.out.print("输入1：");
         AlgoUtil.printlnArray(nums);
+        System.out.print("输入2：");
+        AlgoUtil.printlnArray(nums2);
 
         System.out.println("方法一输出1：" + findKthLargest1(nums, 2));
         System.out.println("方法一输出2：" + findKthLargest1(nums2, 4));

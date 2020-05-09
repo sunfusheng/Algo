@@ -34,20 +34,18 @@ public class AddTwoNumbers {
 
     public static ListNode solution(ListNode l1, ListNode l2) {
         ListNode root = new ListNode(0);
-        ListNode ll = root;
+        ListNode cur = root;
         int carry = 0; // 进位
-        while (l1 != null || l2 != null) {
-            int v1 = l1 != null ? l1.data : 0;
-            int v2 = l2 != null ? l2.data : 0;
-            int sum = carry + v1 + v2;
+        while (l1 != null || l2 != null || carry > 0) {
+            int sum = carry;
+            sum += l1 != null ? l1.data : 0;
+            sum += l2 != null ? l2.data : 0;
+            cur.next = new ListNode(sum % 10);
+            cur = cur.next;
+
             carry = sum / 10;
-            ll.next = new ListNode(sum % 10);
-            ll = ll.next;
             l1 = l1 != null ? l1.next : null;
             l2 = l2 != null ? l2.next : null;
-        }
-        if (carry == 1) {
-            ll.next = new ListNode(1);
         }
         return root.next;
     }
