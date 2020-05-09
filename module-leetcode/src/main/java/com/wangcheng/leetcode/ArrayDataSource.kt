@@ -178,5 +178,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "350.两个数组的交集 II"
             hardLevel = 1
         }
+        item {
+            className = ThirdMax::class.simpleName
+            subject = "414.第三大的数"
+            hardLevel = 1
+        }
     }
 }

@@ -81,6 +81,7 @@
   * [322.零钱兑换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/CoinChange.java)
   * [349.两个数组的交集](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/Intersection.java)
   * [350.两个数组的交集 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/IntersectionII.java)
+  * [414.第三大的数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ThirdMax.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -118,6 +119,7 @@
   * [387.字符串中的第一个唯一字符](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FirstUniqChar.java)
   * [389.找不同](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindTheDifference.java)
   * [392.判断子序列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsSubsequence.java)
+  * [409.最长回文串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/BuildLongestPalindrome.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -146,6 +148,7 @@
   * [374.猜数字大小](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/GuessNumber.java)
   * [401.二进制手表](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReadBinaryWatch.java)
   * [405.数字转换为十六进制数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ToHex.java)
+  * [412.Fizz Buzz](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/FizzBuzz.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

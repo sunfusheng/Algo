@@ -138,5 +138,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "405.数字转换为十六进制数"
             hardLevel = 1
         }
+        item {
+            className = FizzBuzz::class.simpleName
+            subject = "412.Fizz Buzz"
+            hardLevel = 1
+        }
     }
 }

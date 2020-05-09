@@ -104,5 +104,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "392.判断子序列"
             hardLevel = 2
         }
+        item {
+            className = BuildLongestPalindrome::class.simpleName
+            subject = "409.最长回文串"
+            hardLevel = 2
+        }
     }
 }
