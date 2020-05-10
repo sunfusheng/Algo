@@ -12,18 +12,19 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * 满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
  * <p>
  * 【示例】
+ * ------- 6
+ * ------ / \
+ * ---- /    \
+ * --- 2      8
+ * -- / \    / \
+ * - 0   4  7   9
+ * ---- / \
+ * --- 3   5
+ * <p>
  * 输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
- * <p>
- * -------- 6
- * ------ /   \
- * ----- 2     8
- * ---- / \   / \
- * --- 0  4  7  9
- * ----- / \
- * ---- 3  5
- * <p>
  * 输出: 6
  * 解释: 节点 2 和节点 8 的最近公共祖先是 6。
+ * <p>
  * 【说明】
  * 所有节点的值都是唯一的。
  * p、q 为不同节点且均存在于给定的二叉搜索树中。
@@ -113,7 +114,7 @@ public class LowestCommonAncestor {
         root.right.right = new LowestCommonAncestor.TreeNode(9);
         root.left.right.left = new LowestCommonAncestor.TreeNode(3);
         root.left.right.right = new LowestCommonAncestor.TreeNode(5);
-        LeetCodeUtil.logln("solution1()" + LowestCommonAncestor.solution1(root, root.left.left, root.left.right.right));
-        LeetCodeUtil.logln("solution2()" + LowestCommonAncestor.solution2(root, root.left.left, root.left.right.right));
+        LeetCodeUtil.logln("solution1()" + solution1(root, root.left.left, root.left.right.right));
+        LeetCodeUtil.logln("solution2()" + solution2(root, root.left.left, root.left.right.right));
     }
 }

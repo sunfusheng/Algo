@@ -22,7 +22,7 @@ import java.util.Stack;
 public class SumOfLeftLeaves {
 
 
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

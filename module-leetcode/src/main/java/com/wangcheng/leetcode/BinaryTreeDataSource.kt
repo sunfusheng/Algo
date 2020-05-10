@@ -89,6 +89,11 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = LowestCommonAncestorII::class.simpleName
+            subject = "236.二叉树的最近公共祖先"
+            hardLevel = 2
+        }
+        item {
             className = BinaryTreePaths::class.simpleName
             subject = "257.二叉树的所有路径"
             hardLevel = 1
