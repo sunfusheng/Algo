@@ -109,5 +109,15 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "409.最长回文串"
             hardLevel = 2
         }
+        item {
+            className = AddStrings::class.simpleName
+            subject = "415.字符串相加"
+            hardLevel = 2
+        }
+        item {
+            className = CountSegments::class.simpleName
+            subject = "434.字符串中的单词数"
+            hardLevel = 2
+        }
     }
 }

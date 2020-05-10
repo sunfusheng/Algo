@@ -121,6 +121,8 @@
   * [389.找不同](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindTheDifference.java)
   * [392.判断子序列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsSubsequence.java)
   * [409.最长回文串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/BuildLongestPalindrome.java)
+  * [415.字符串相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/AddStrings.java)
+  * [434.字符串中的单词数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CountSegments.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -170,6 +172,7 @@
   * [235.二叉搜索树的最近公共祖先](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/LowestCommonAncestor.java)
   * [257.二叉树的所有路径](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/BinaryTreePaths.java)
   * [404.左叶子之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/SumOfLeftLeaves.java)
+  * [437.路径总和 III](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/PathSumIII.java)
   * [450.删除二叉搜索树中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DeleteBinarySearchTreeNode.java)
 
 * 查找排序

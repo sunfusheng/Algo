@@ -99,6 +99,11 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = PathSumIII::class.simpleName
+            subject = "437.路径总和 III"
+            hardLevel = 2
+        }
+        item {
             className = DeleteBinarySearchTreeNode::class.simpleName
             subject = "450.删除二叉搜索树中的节点"
             hardLevel = 2
