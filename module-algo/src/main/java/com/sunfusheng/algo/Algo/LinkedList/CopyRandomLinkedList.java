@@ -27,12 +27,12 @@ import java.util.Map;
  */
 public class CopyRandomLinkedList {
 
-    private static class Node {
+    static class Node {
         public int value;
         public Node next;
         public Node random;
 
-        public Node(int value) {
+        Node(int value) {
             this.value = value;
         }
     }
@@ -40,8 +40,8 @@ public class CopyRandomLinkedList {
     /**
      * 原问题解法
      * <p>
-     * 时间复杂度O(N)
-     * 空间复杂度O(N)
+     * 时间复杂度：O(N)
+     * 空间复杂度：O(N)
      *
      * @param head
      * @return
@@ -72,8 +72,8 @@ public class CopyRandomLinkedList {
      * 把原链表的每一个节点的复制节点放到原节点的后面，把它们连起来，
      * 设置复制节点的random指针，最后再拆分成两个链表，返回复制链表的头节点
      * <p>
-     * 时间复杂度O(N)
-     * 空间复杂度O(1)
+     * 时间复杂度：O(N)
+     * 空间复杂度：O(1)
      *
      * @param head
      * @return

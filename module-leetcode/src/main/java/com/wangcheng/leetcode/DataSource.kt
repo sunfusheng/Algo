@@ -51,6 +51,10 @@ open class FindSortChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "FindSort" to "查找排序"
 }
 
+open class InterviewChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "Interview" to "面试题"
+}
+
 @DataSourceDslMarker
 open class DataSource {
     open val lists = ArrayList<ArrayList<AlgoItem>>()
@@ -78,6 +82,10 @@ open class DataSource {
     fun findSortChapter(init: FindSortChapter.() -> Unit) {
         lists.add(FindSortChapter().apply(init).list)
     }
+
+    fun interviewChapter(init: InterviewChapter.() -> Unit) {
+        lists.add(InterviewChapter().apply(init).list)
+    }
 }
 
 fun dataSource(init: DataSource.() -> Unit): ArrayList<ArrayList<AlgoItem>> {
@@ -96,4 +104,6 @@ val leetCodeDataSource = dataSource {
     binaryTreeDataSource(this)
 
     findSortDataSource(this)
+
+    interviewDataSource(this)
 }

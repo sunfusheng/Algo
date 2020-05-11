@@ -27,11 +27,11 @@ import java.util.Set;
  */
 public class HasCycle {
 
-    public static class ListNode {
+    static class ListNode {
         int data;
         ListNode next;
 
-        public ListNode(int data) {
+        ListNode(int data) {
             this.data = data;
         }
 
@@ -49,13 +49,13 @@ public class HasCycle {
      * 思路
      * 可以通过检查一个结点此前是否被访问过来判断链表是否为环形链表。
      * 常用的方法是使用哈希表。
-     *
+     * <p>
      * 算法
      * 遍历所有结点并在哈希表中存储每个结点的引用（或内存地址）。
      * 如果当前结点为空结点 null（即已检测到链表尾部的下一个结点），
      * 那么已经遍历完整个链表，并且该链表不是环形链表。
      * 如果当前结点的引用已经存在于哈希表中，那么返回 true（即该链表为环形链表）。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，对于含有 n 个元素的链表，访问每个元素最多一次。
      * 添加一个结点到哈希表中只需要花费 O(1) 的时间。
@@ -79,7 +79,7 @@ public class HasCycle {
 
     /**
      * 方法二：双指针
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，将 n 设为链表中结点的总数。
      * 空间复杂度：O(1)，只使用了慢指针和快指针两个结点，所以空间复杂度为 O(1)。
@@ -107,7 +107,7 @@ public class HasCycle {
         l1.next.next.next = new HasCycle.ListNode(4);
         l1.next.next.next.next = l1.next;
         HasCycle.ListNode l2 = l1;
-        LeetCodeUtil.logln("solution1(l1) = " + HasCycle.solution1(l1));
-        LeetCodeUtil.logln("solution2(l2) = " + HasCycle.solution2(l2));
+        LeetCodeUtil.logln("solution1(l1) = " + solution1(l1));
+        LeetCodeUtil.logln("solution2(l2) = " + solution2(l2));
     }
 }
