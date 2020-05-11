@@ -119,5 +119,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "434.字符串中的单词数"
             hardLevel = 2
         }
+        item {
+            className = Compress::class.simpleName
+            subject = "443.压缩字符串"
+            hardLevel = 2
+        }
     }
 }

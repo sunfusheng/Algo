@@ -143,5 +143,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "412.Fizz Buzz"
             hardLevel = 1
         }
+        item {
+            className = ArrangeCoins::class.simpleName
+            subject = "441.排列硬币"
+            hardLevel = 1
+        }
     }
 }

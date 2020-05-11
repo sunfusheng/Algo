@@ -183,5 +183,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "414.第三大的数"
             hardLevel = 1
         }
+        item {
+            className = NumberOfBoomerangs::class.simpleName
+            subject = "447.回旋镖的数量"
+            hardLevel = 1
+        }
     }
 }
