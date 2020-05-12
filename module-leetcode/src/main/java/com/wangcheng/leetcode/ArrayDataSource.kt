@@ -188,5 +188,15 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "447.回旋镖的数量"
             hardLevel = 1
         }
+        item {
+            className = FindDisappearedNumbers::class.simpleName
+            subject = "448.找到所有数组中消失的数字"
+            hardLevel = 1
+        }
+        item {
+            className = MinMoves::class.simpleName
+            subject = "453.最小移动次数使数组元素相等"
+            hardLevel = 1
+        }
     }
 }

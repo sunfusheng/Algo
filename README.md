@@ -83,6 +83,8 @@
   * [350.两个数组的交集 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/IntersectionII.java)
   * [414.第三大的数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ThirdMax.java)
   * [447.回旋镖的数量](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NumberOfBoomerangs.java)
+  * [448.找到所有数组中消失的数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindDisappearedNumbers.java)
+  * [453.最小移动次数使数组元素相等](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MinMoves.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
