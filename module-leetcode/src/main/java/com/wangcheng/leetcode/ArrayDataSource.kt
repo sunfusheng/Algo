@@ -198,5 +198,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "453.最小移动次数使数组元素相等"
             hardLevel = 1
         }
+        item {
+            className = FindContentChildren::class.simpleName
+            subject = "455.分发饼干"
+            hardLevel = 1
+        }
     }
 }

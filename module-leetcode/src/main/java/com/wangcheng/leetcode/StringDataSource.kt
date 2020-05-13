@@ -124,5 +124,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "443.压缩字符串"
             hardLevel = 2
         }
+        item {
+            className = RepeatedSubstringPattern::class.simpleName
+            subject = "459.重复的子字符串"
+            hardLevel = 2
+        }
     }
 }

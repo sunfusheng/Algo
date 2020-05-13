@@ -85,6 +85,7 @@
   * [447.回旋镖的数量](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NumberOfBoomerangs.java)
   * [448.找到所有数组中消失的数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindDisappearedNumbers.java)
   * [453.最小移动次数使数组元素相等](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MinMoves.java)
+  * [455.分发饼干](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindContentChildren.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -127,6 +128,7 @@
   * [415.字符串相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/AddStrings.java)
   * [434.字符串中的单词数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CountSegments.java)
   * [443.压缩字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/Compress.java)
+  * [459.重复的子字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/RepeatedSubstringPattern.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -157,6 +159,7 @@
   * [405.数字转换为十六进制数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ToHex.java)
   * [412.Fizz Buzz](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/FizzBuzz.java)
   * [441.排列硬币](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ArrangeCoins.java)
+  * [461.汉明距离](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/HammingDistance.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
@@ -185,7 +188,7 @@
   * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)
 
 * 面试题
-    * [面试题 01.07. 旋转矩阵](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/RotateMatrix.java)
+  * [面试题 01.07. 旋转矩阵](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/RotateMatrix.java)
 
 <br/>
 

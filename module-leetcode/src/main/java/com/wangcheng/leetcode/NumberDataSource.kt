@@ -148,5 +148,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "441.排列硬币"
             hardLevel = 1
         }
+        item {
+            className = HammingDistance::class.simpleName
+            subject = "461.汉明距离"
+            hardLevel = 1
+        }
     }
 }
