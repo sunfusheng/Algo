@@ -33,31 +33,26 @@ public class QuickSort {
         quickSortRecur(arr, 0, arr.length - 1);
     }
 
-    private static void quickSortRecur(int[] arr, int low, int high) {
-        if (low >= high) {
+    private static void quickSortRecur(int[] arr, int left, int right) {
+        if (left >= right) {
             return;
         }
 
-        int mid = partition(arr, low, high);
-        quickSortRecur(arr, low, mid - 1);
-        quickSortRecur(arr, mid + 1, high);
+        int mid = partition(arr, left, right);
+        quickSortRecur(arr, left, mid - 1);
+        quickSortRecur(arr, mid + 1, right);
     }
 
-    private static int partition(int[] arr, int low, int high) {
-        int pivot = arr[low]; // 基准数据
-        while (low < high) {
-            while (low < high && arr[high] > pivot) {
-                high--;
-            }
-            arr[low] = arr[high];
-
-            while (low < high && arr[low] <= pivot) {
-                low++;
-            }
-            arr[high] = arr[low];
+    private static int partition(int[] arr, int left, int right) {
+        int pivot = arr[left]; // 基准数据
+        while (left < right) {
+            while (left < right && arr[right] > pivot) right--;
+            arr[left] = arr[right];
+            while (left < right && arr[left] <= pivot) left++;
+            arr[right] = arr[left];
         }
-        arr[low] = pivot;
-        return low;
+        arr[left] = pivot;
+        return left;
     }
 
     public static void main(String[] args) {

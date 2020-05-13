@@ -23,6 +23,37 @@ import com.sunfusheng.algo.common.util.AlgoUtil;
  */
 public class MergeKLists {
 
+    /**
+     * 解题思路：
+     * 使用分治思想，转成合并两个有序链表，再递归分而治之
+     *
+     * @param lists
+     * @return
+     */
+    public static Node mergeKLists(Node[] lists) {
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+
+        if (lists.length == 1) {
+            return lists[0];
+        }
+        return merge(lists, 0, lists.length - 1);
+    }
+
+    private static Node merge(Node[] lists, int left, int right) {
+        if (left > right) {
+            return null;
+        }
+
+        if (left == right) {
+            return lists[left];
+        }
+
+        int mid = left + (right - left) / 2;
+        return mergeTwoLists(merge(lists, left, mid), merge(lists, mid + 1, right));
+    }
+
     // 合并两个有序链表
     public static Node mergeTwoLists(Node n1, Node n2) {
         if (n1 == null || n2 == null) {
@@ -43,39 +74,6 @@ public class MergeKLists {
         }
         cur.next = n1 == null ? n2 : n1;
         return root.next;
-    }
-
-    /**
-     * 解题思路：
-     * 使用分治思想，转成合并两个有序链表，再递归分而治之
-     *
-     * @param lists
-     * @param left
-     * @param right
-     * @return
-     */
-    private static Node merge(Node[] lists, int left, int right) {
-        if (left > right) {
-            return null;
-        }
-
-        if (left == right) {
-            return lists[left];
-        }
-
-        int mid = left + (right - left) / 2;
-        return mergeTwoLists(merge(lists, left, mid), merge(lists, mid + 1, right));
-    }
-
-    public static Node mergeKLists(Node[] lists) {
-        if (lists == null || lists.length == 0) {
-            return null;
-        }
-
-        if (lists.length == 1) {
-            return lists[0];
-        }
-        return merge(lists, 0, lists.length - 1);
     }
 
     public static void main(String[] args) {

@@ -40,7 +40,7 @@ public class FindKthLargest {
      * @return
      */
     public static int findKthLargest1(int[] nums, int k) {
-        PriorityQueue<Integer> heap = new PriorityQueue<>(nums.length, (o1, o2) -> o1 - o2);
+        PriorityQueue<Integer> heap = new PriorityQueue<>(nums.length);
         for (int num : nums) {
             heap.offer(num);
             if (heap.size() > k) {
@@ -57,12 +57,13 @@ public class FindKthLargest {
     public static void main(String[] args) {
         int[] nums = new int[]{3, 2, 1, 5, 6, 4};
         int[] nums2 = new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6};
-        System.out.print("输入1：");
-        AlgoUtil.printlnArray(nums);
-        System.out.print("输入2：");
-        AlgoUtil.printlnArray(nums2);
 
+        System.out.print("方法一输入1：");
+        AlgoUtil.printlnArray(nums);
         System.out.println("方法一输出1：" + findKthLargest1(nums, 2));
+
+        System.out.print("方法一输入2：");
+        AlgoUtil.printlnArray(nums2);
         System.out.println("方法一输出2：" + findKthLargest1(nums2, 4));
     }
 }
