@@ -11,12 +11,12 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * 说明:
  * 所有输入只包含小写字母 a-z 。
  * <p>
- *
+ * <p>
  * 【示例】
  * 示例 1:
  * 输入: ["flower","flow","flight"]
  * 输出: "fl"
- *
+ * <p>
  * 示例 2:
  * 输入: ["dog","racecar","car"]
  * 输出: ""
@@ -111,7 +111,7 @@ public class LongestCommonPrefix {
      * 方法四：
      * 二分查找法
      * 每一次将查找区间一分为二，然后丢弃一定不包含最终答案的那一个。
-     *
+     * <p>
      * 时间复杂度：O(S⋅log(n))，其中 S 所有字符串中字符数量的总和。
      * 空间复杂度：O(1)，我们只需要使用常数级别的额外空间。
      */
@@ -147,9 +147,13 @@ public class LongestCommonPrefix {
     }
 
     public static void main(String[] args) {
-        LeetCodeUtil.logln("solution1([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution1(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
-        LeetCodeUtil.logln("solution2([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution2(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
-        LeetCodeUtil.logln("solution3([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution3(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
-        LeetCodeUtil.logln("solution4([leetcode, leet, leetc, leetco, lee]) = " + LongestCommonPrefix.solution4(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
+        LeetCodeUtil.logln("solution1([leetcode, leet, leetc, leetco, lee]) = " +
+                solution1(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
+        LeetCodeUtil.logln("solution2([leetcode, leet, leetc, leetco, lee]) = " +
+                solution2(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
+        LeetCodeUtil.logln("solution3([leetcode, leet, leetc, leetco, lee]) = " +
+                solution3(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
+        LeetCodeUtil.logln("solution4([leetcode, leet, leetc, leetco, lee]) = " +
+                solution4(new String[]{"leetcode", "leetode", "leetcod", "leetco", "lee"}));
     }
 }

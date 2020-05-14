@@ -3,7 +3,7 @@ package com.wangcheng.leetcode.LeetCode.String;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 /**
- *【题目】
+ * 【题目】
  * 344.反转字符串
  * 编写一个函数，其作用是将输入的字符串反转过来。
  * 输入字符串以字符数组 char[] 的形式给出。
@@ -13,11 +13,11 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * <p>
  * 你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。
  * <p>
- *【示例】
+ * 【示例】
  * 示例 1：
  * 输入：["h","e","l","l","o"]
  * 输出：["o","l","l","e","h"]
- *
+ * <p>
  * 示例 2：
  * 输入：["H","a","n","n","a","h"]
  * 输出：["h","a","n","n","a","H"]
@@ -31,11 +31,11 @@ public class ReverseString {
      * 方法一：递归
      * 算法：
      * 实现递归函数 helper，它接受两个参数：left 左指针和 right 右指针。
-     *
+     * <p>
      * - 如果 left>=right，不做任何操作。
      * - 否则交换 s[left] 和 s[right] 和调用 helper(left + 1, right - 1)。
      * - 首次调用函数传递首尾指针反转整个字符串 return helper(0, len(s) - 1)。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(N)。执行了 N/2 次的交换。
      * 空间复杂度：O(N)，递归过程中使用的堆栈空间。
@@ -63,14 +63,14 @@ public class ReverseString {
      * 双指针法是使用两个指针，一个左指针 left，右指针 right，
      * 开始工作时 left 指向首元素，right 指向尾元素。交换两个
      * 指针指向的元素，并向中间移动，直到两个指针相遇。
-     *
+     * <p>
      * 算法：
      * - 将 left 指向首元素，right 指向尾元素。
      * - 当 left<right：
-     *  - 交换 s[left] 和 s[right]。
-     *  - left++
-     *  - right++
-     *
+     * - 交换 s[left] 和 s[right]。
+     * - left++
+     * - right++
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(N)。执行了 N/2 次的交换。
      * 空间复杂度：O(1)。只使用了常数级空间。

@@ -6,18 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *【题目】
+ * 【题目】
  * 234.回文链表
  * 请判断一个链表是否为回文链表。
- *【示例】
+ * 【示例】
  * 示例 1:
  * 输入: 1->2
  * 输出: false
- *
+ * <p>
  * 示例 2:
  * 输入: 1->2->2->1
  * 输出: true
- *【进阶】
+ * 【进阶】
  * 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
  *
  * @author liwangcheng
@@ -40,14 +40,14 @@ public class IsPalindrome {
      * 可以分为两个步骤：
      * - 复制链表值到数组列表中。
      * - 使用双指针法判断是否为回文。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，其中 n 指的是链表的元素个数。
-     *  第一步：遍历链表并将值复制到数组中，O(n)。
-     *  第二步：双指针判断是否为回文，执行了 O(n/2) 次的判断，即 O(n)。
-     *  总的时间复杂度：O(2n)=O(n)。
+     * 第一步：遍历链表并将值复制到数组中，O(n)。
+     * 第二步：双指针判断是否为回文，执行了 O(n/2) 次的判断，即 O(n)。
+     * 总的时间复杂度：O(2n)=O(n)。
      * 空间复杂度：O(n)，其中 n 指的是链表的元素个数，
-     *  使用了一个数组列表存放链表的元素值。
+     * 使用了一个数组列表存放链表的元素值。
      */
     public static boolean solution1(ListNode head) {
         List<Integer> list = new ArrayList<>();
@@ -72,12 +72,13 @@ public class IsPalindrome {
      * 如果使用递归反向迭代节点，同时使用递归函数外的变量向前迭代，就可以判断链表是否为回文。
      * 之所以起作用的原因是递归处理节点的顺序是相反的。
      * 由于递归，从本质上，同时在正向和逆向迭代。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，其中 n 指的是链表的大小。
      * 空间复杂度：O(n)，其中 n 指的是链表的大小。
      */
     private static ListNode frontPointer;
+
     public static boolean solution2(ListNode head) {
         frontPointer = head;
         return recursivelyCheck(head);
@@ -107,7 +108,7 @@ public class IsPalindrome {
      * - 判断是否为回文。
      * - 恢复链表。
      * - 返回结果。
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，其中 n 指的是链表的大小。
      * 空间复杂度：O(1)，是一个接着一个的改变指针，在堆栈上的堆栈帧不超过 O(1)。

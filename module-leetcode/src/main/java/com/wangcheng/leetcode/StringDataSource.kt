@@ -60,6 +60,11 @@ fun stringDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = ReverseWords::class.simpleName
+            subject = "151.翻转字符串里的单词"
+            hardLevel = 2
+        }
+        item {
             className = IsIsomorphic::class.simpleName
             subject = "205.同构字符串"
             hardLevel = 1
