@@ -153,5 +153,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "461.汉明距离"
             hardLevel = 1
         }
+        item {
+            className = FindComplement::class.simpleName
+            subject = "476.数字的补数"
+            hardLevel = 1
+        }
     }
 }
