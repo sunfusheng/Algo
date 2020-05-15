@@ -208,5 +208,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "463.岛屿的周长"
             hardLevel = 1
         }
+        item {
+            className = FindMaxConsecutiveOnes::class.simpleName
+            subject = "485.最大连续1的个数"
+            hardLevel = 1
+        }
     }
 }

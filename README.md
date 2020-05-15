@@ -87,6 +87,7 @@
   * [453.最小移动次数使数组元素相等](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MinMoves.java)
   * [455.分发饼干](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindContentChildren.java)
   * [463.岛屿的周长](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/IslandPerimeter.java)
+  * [485.最大连续1的个数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMaxConsecutiveOnes.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
