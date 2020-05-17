@@ -92,7 +92,7 @@ public class ReverseString {
 
     public static void main(String[] args) {
         char[] str = "Hello,World".toCharArray();
-        LeetCodeUtil.logln("solution1() = " + ReverseString.solution1(str));
-        LeetCodeUtil.logln("solution2() = " + ReverseString.solution2(str));
+        LeetCodeUtil.logln("solution1() = " + String.valueOf(solution1(str)));
+        LeetCodeUtil.logln("solution2() = " + String.valueOf(solution2(str)));
     }
 }
