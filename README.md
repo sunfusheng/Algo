@@ -134,6 +134,7 @@
   * [434.字符串中的单词数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CountSegments.java)
   * [443.压缩字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/Compress.java)
   * [459.重复的子字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/RepeatedSubstringPattern.java)
+  * [482.密钥格式化](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LicenseKeyFormatting.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)

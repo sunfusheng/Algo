@@ -134,5 +134,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "459.重复的子字符串"
             hardLevel = 2
         }
+        item {
+            className = LicenseKeyFormatting::class.simpleName
+            subject = "482.密钥格式化"
+            hardLevel = 2
+        }
     }
 }
