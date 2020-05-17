@@ -24,6 +24,16 @@ fun linkedListDataSource(dataSource: DataSource) {
             hardLevel = 3
         }
         item {
+            className = SwapPairs::class.simpleName
+            subject = "24.两两交换链表中的节点"
+            hardLevel = 2
+        }
+        item {
+            className = ReverseKGroup::class.simpleName
+            subject = "25.K 个一组翻转链表"
+            hardLevel = 3
+        }
+        item {
             className = DeleteDuplicates::class.simpleName
             subject = "83.删除排序链表中的重复元素"
             hardLevel = 1
