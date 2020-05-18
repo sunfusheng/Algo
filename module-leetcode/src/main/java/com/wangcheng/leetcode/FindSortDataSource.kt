@@ -1,5 +1,6 @@
 package com.wangcheng.leetcode
 
+import com.wangcheng.leetcode.LeetCode.FindSort.FindRadius
 import com.wangcheng.leetcode.LeetCode.FindSort.FirstBadVersion
 
 /**
@@ -12,6 +13,11 @@ fun findSortDataSource(dataSource: DataSource) {
             className = FirstBadVersion::class.simpleName
             subject = "278.第一个错误的版本"
             hardLevel = 1
+        }
+        item {
+            className = FindRadius::class.simpleName
+            subject = "475.供暖器"
+            hardLevel = 2
         }
     }
 }

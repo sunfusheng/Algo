@@ -88,6 +88,7 @@
   * [455.分发饼干](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindContentChildren.java)
   * [463.岛屿的周长](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/IslandPerimeter.java)
   * [485.最大连续1的个数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMaxConsecutiveOnes.java)
+  * [496.下一个更大元素 I](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NextGreaterElement.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -167,6 +168,7 @@
   * [441.排列硬币](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ArrangeCoins.java)
   * [461.汉明距离](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/HammingDistance.java)
   * [476.数字的补数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/FindComplement.java)
+  * [492.构造矩形](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConstructRectangle.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)
@@ -193,6 +195,7 @@
 
 * 查找排序
   * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)
+  * [475.供暖器](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FindRadius.java)
 
 * 面试题
   * [面试题 01.07. 旋转矩阵](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/RotateMatrix.java)

@@ -158,5 +158,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "476.数字的补数"
             hardLevel = 1
         }
+        item {
+            className = ConstructRectangle::class.simpleName
+            subject = "492.构造矩形"
+            hardLevel = 1
+        }
     }
 }

@@ -213,5 +213,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "485.最大连续1的个数"
             hardLevel = 1
         }
+        item {
+            className = NextGreaterElement::class.simpleName
+            subject = "496.下一个更大元素 I"
+            hardLevel = 1
+        }
     }
 }
