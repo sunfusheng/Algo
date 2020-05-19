@@ -136,6 +136,7 @@
   * [443.压缩字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/Compress.java)
   * [459.重复的子字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/RepeatedSubstringPattern.java)
   * [482.密钥格式化](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LicenseKeyFormatting.java)
+  * [500.键盘行](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindWords.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -169,6 +170,7 @@
   * [461.汉明距离](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/HammingDistance.java)
   * [476.数字的补数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/FindComplement.java)
   * [492.构造矩形](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConstructRectangle.java)
+  * [504.七进制数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConvertToBase7.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

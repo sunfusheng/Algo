@@ -163,5 +163,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "492.构造矩形"
             hardLevel = 1
         }
+        item {
+            className = ConvertToBase7::class.simpleName
+            subject = "504.七进制数"
+            hardLevel = 1
+        }
     }
 }

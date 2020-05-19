@@ -139,5 +139,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "482.密钥格式化"
             hardLevel = 2
         }
+        item {
+            className = FindWords::class.simpleName
+            subject = "500.键盘行"
+            hardLevel = 1
+        }
     }
 }
