@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 /**
  * 【题目】
- * 面试题 #.01. 无序数组的中位数
+ * #.01. 无序数组的中位数
  * <p>
  * 中位数，就是数组排序后处于数组最中间的那个元素。如果数组长度是奇数，最中间就是位置为（n+1）／2的那个元素。
  * 如果是偶数呢，标准的定义是位置为 n/2 和位置为 n/2+1 的两个元素的和除以2的结果
@@ -85,7 +85,7 @@ public class UnorderedArrayMedian {
             }
         }
         if (arr.length % 2 == 1) {
-            return arr[arr.length / 2];
+            return heap.peek();
         }
         return (heap.poll() + heap.peek()) / 2.0;
     }
@@ -100,6 +100,9 @@ public class UnorderedArrayMedian {
         System.out.print("方法一输入2：");
         AlgoUtil.printlnArray(arr2);
         System.out.println("方法一输出2：" + median(arr2));
+
+        arr = new int[]{2, 3, 1};
+        arr2 = new int[]{3, 2, 4, 1};
 
         System.out.print("方法二输入1：");
         AlgoUtil.printlnArray(arr);

@@ -1,5 +1,6 @@
 package com.wangcheng.leetcode
 
+import com.wangcheng.leetcode.LeetCode.Interview.PositiveNegative
 import com.wangcheng.leetcode.LeetCode.Interview.ProducerConsumer
 import com.wangcheng.leetcode.LeetCode.Interview.RotateMatrix
 import com.wangcheng.leetcode.LeetCode.Interview.UnorderedArrayMedian
@@ -12,17 +13,22 @@ fun interviewDataSource(dataSource: DataSource) {
     dataSource.interviewChapter {
         item {
             className = RotateMatrix::class.simpleName
-            subject = "面试题 01.07. 旋转矩阵"
+            subject = "01.07. 旋转矩阵"
             hardLevel = 2
         }
         item {
             className = UnorderedArrayMedian::class.simpleName
-            subject = "面试题 #.01. 无序数组的中位数"
+            subject = "#.01. 无序数组的中位数"
             hardLevel = 2
         }
         item {
             className = ProducerConsumer::class.simpleName
-            subject = "面试题 #.02. 生产者消费者模式"
+            subject = "#.02. 生产者消费者模式"
+            hardLevel = 2
+        }
+        item {
+            className = PositiveNegative::class.simpleName
+            subject = "#.03. 无序数组排序，负数在前正数在后且有序"
             hardLevel = 2
         }
     }
