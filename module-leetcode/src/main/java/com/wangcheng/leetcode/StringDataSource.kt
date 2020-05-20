@@ -25,6 +25,11 @@ fun stringDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = MyAtoi::class.simpleName
+            subject = "8.字符串转换整数 (atoi)"
+            hardLevel = 2
+        }
+        item {
             className = LongestCommonPrefix::class.simpleName
             subject = "14.最长公共前缀"
             hardLevel = 1

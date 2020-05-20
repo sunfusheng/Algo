@@ -114,6 +114,7 @@
   * [3.无重复字符的最长子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LengthOfLongestSubstring.java)
   * [5.最长回文子串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestPalindrome.java)
   * [6.Z字形变换](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ZShapedConvert.java)
+  * [8.字符串转换整数 (atoi)](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/MyAtoi.java)
   * [14.最长公共前缀](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LongestCommonPrefix.java)
   * [20.有效的括号](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ValidBrackets.java)
   * [28.实现strStr()](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ImplStrStr.java)
@@ -202,10 +203,10 @@
   * [475.供暖器](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FindRadius.java)
 
 * 面试题
-  * [01.07. 旋转矩阵](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/RotateMatrix.java)
-  * [#.01. 无序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/UnorderedArrayMedian.java)
-  * [#.02. 生产者消费者模式](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/ProducerConsumer.java)
-  * [#.03. 无序数组排序，负数在前正数在后且有序](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/PositiveNegative.java)
+  * [面试题 01.07. 旋转矩阵](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/RotateMatrix.java)
+  * [面试题 #.01. 无序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/UnorderedArrayMedian.java)
+  * [面试题 #.02. 生产者消费者模式](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/ProducerConsumer.java)
+  * [面试题 #.03. 无序数组排序，负数在前正数在后且有序](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/PositiveNegative.java)
 
 <br/>
 

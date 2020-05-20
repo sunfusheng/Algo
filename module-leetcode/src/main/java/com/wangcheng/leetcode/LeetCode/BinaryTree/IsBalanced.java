@@ -46,16 +46,6 @@ public class IsBalanced {
         }
     }
 
-    private static class TreeInfo {
-        public final int height;
-        public final boolean balanced;
-
-        public TreeInfo(int height, boolean balanced) {
-            this.height = height;
-            this.balanced = balanced;
-        }
-    }
-
     /**
      * 方法一：自顶向下的递归
      * 定义方法 height，用于计算任意一个节点 p ∈ T 的高度
@@ -71,14 +61,14 @@ public class IsBalanced {
         if (null == root) {
             return true;
         }
-        return Math.abs(height(root.left) - height(root.right)) < 2
+        return Math.abs(height(root.left) - height(root.right)) <= 1
                 && solution1(root.left)
                 && solution1(root.right);
     }
 
     private static int height(TreeNode root) {
         if (null == root) {
-            return -1;
+            return 0;
         }
         return 1 + Math.max(height(root.left), height(root.right));
     }
@@ -100,43 +90,45 @@ public class IsBalanced {
      * 空间复杂度：O(n)，如果树不平衡，递归栈可能达到 O(n)。
      */
     public static boolean solution2(TreeNode root) {
-        return isBalanceTreeHelper(root).balanced;
+        if (root == null) {
+            return true;
+        }
+        return isBalanceTreeHelper(root) != -1;
     }
 
-    private static TreeInfo isBalanceTreeHelper(TreeNode root) {
+    private static int isBalanceTreeHelper(TreeNode root) {
         if (null == root) {
-            return new TreeInfo(-1, true);
+            return 0;
         }
-        TreeInfo left = isBalanceTreeHelper(root.left);
-        if (!left.balanced) {
-            return new TreeInfo(-1, false);
+
+        int left = isBalanceTreeHelper(root.left);
+        if (left == -1) {
+            return -1;
         }
-        TreeInfo right = isBalanceTreeHelper(root.right);
-        if (!right.balanced) {
-            return new TreeInfo(-1, false);
+
+        int right = isBalanceTreeHelper(root.right);
+        if (right == -1) {
+            return -1;
         }
-        if (Math.abs(left.height - right.height) < 2) {
-            return new TreeInfo(Math.max(left.height, right.height) + 1, true);
-        }
-        return new TreeInfo(-1, false);
+        return Math.abs(left - right) <= 1 ? Math.max(left, right) + 1 : -1;
     }
 
     public static void main(String[] args) {
-        IsBalanced.TreeNode p = new IsBalanced.TreeNode(1);
-        p.left = new IsBalanced.TreeNode(2);
-        p.left.left = new IsBalanced.TreeNode(3);
-        p.left.left.left = new IsBalanced.TreeNode(4);
-        p.right = new IsBalanced.TreeNode(2);
-        p.right.right = new IsBalanced.TreeNode(4);
-        p.right.right.right = new IsBalanced.TreeNode(3);
-        IsBalanced.TreeNode q = new IsBalanced.TreeNode(1);
-        q.left = new IsBalanced.TreeNode(2);
-        q.left.left = new IsBalanced.TreeNode(3);
-        q.right = new IsBalanced.TreeNode(2);
-        q.right.left = new IsBalanced.TreeNode(3);
-        LeetCodeUtil.logln("solution1 = " + IsBalanced.solution1(p));
-        LeetCodeUtil.logln("solution1 = " + IsBalanced.solution1(q));
-        LeetCodeUtil.logln("solution2 = " + IsBalanced.solution2(p));
-        LeetCodeUtil.logln("solution2 = " + IsBalanced.solution2(q));
+        TreeNode p = new TreeNode(1);
+        p.left = new TreeNode(2);
+        p.left.left = new TreeNode(3);
+        p.left.left.left = new TreeNode(4);
+        p.right = new TreeNode(2);
+        p.right.right = new TreeNode(4);
+        p.right.right.right = new TreeNode(3);
+        TreeNode q = new TreeNode(1);
+        q.left = new TreeNode(2);
+        q.left.left = new TreeNode(3);
+        q.right = new TreeNode(2);
+        q.right.left = new TreeNode(3);
+        LeetCodeUtil.logln("solution1 = " + solution1(p));
+        LeetCodeUtil.logln("solution1 = " + solution1(q));
+        LeetCodeUtil.logln("solution2 = " + solution2(p));
+        LeetCodeUtil.logln("solution2 = " + solution2(q));
     }
 }
