@@ -98,7 +98,6 @@ public class LevelOrder {
         if (level + 1 > lists.size()) {
             lists.add(new ArrayList<>());
         }
-
         List<Integer> list = lists.get(level);
         list.add(root.value);
 

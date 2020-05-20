@@ -79,6 +79,11 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 3
         }
         item {
+            className = RightSideView::class.simpleName
+            subject = "199.二叉树的右视图"
+            hardLevel = 2
+        }
+        item {
             className = InvertTree::class.simpleName
             subject = "226.翻转二叉树"
             hardLevel = 1
