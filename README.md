@@ -89,6 +89,7 @@
   * [463.岛屿的周长](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/IslandPerimeter.java)
   * [485.最大连续1的个数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMaxConsecutiveOnes.java)
   * [496.下一个更大元素 I](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NextGreaterElement.java)
+  * [506.相对名次](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindRelativeRanks.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -171,6 +172,7 @@
   * [476.数字的补数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/FindComplement.java)
   * [492.构造矩形](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConstructRectangle.java)
   * [504.七进制数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConvertToBase7.java)
+  * [507.完美数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CheckPerfectNumber.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

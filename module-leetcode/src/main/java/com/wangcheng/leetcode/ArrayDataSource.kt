@@ -218,5 +218,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "496.下一个更大元素 I"
             hardLevel = 1
         }
+        item {
+            className = FindRelativeRanks::class.simpleName
+            subject = "506.相对名次"
+            hardLevel = 1
+        }
     }
 }

@@ -168,5 +168,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "504.七进制数"
             hardLevel = 1
         }
+        item {
+            className = CheckPerfectNumber::class.simpleName
+            subject = "507.完美数"
+            hardLevel = 1
+        }
     }
 }
