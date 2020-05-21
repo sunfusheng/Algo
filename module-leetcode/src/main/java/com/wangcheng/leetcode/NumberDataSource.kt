@@ -173,5 +173,10 @@ fun numberDataSource(dataSource: DataSource) {
             subject = "507.完美数"
             hardLevel = 1
         }
+        item {
+            className = Fibonacci::class.simpleName
+            subject = "509.斐波那契数"
+            hardLevel = 1
+        }
     }
 }

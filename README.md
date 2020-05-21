@@ -139,6 +139,8 @@
   * [459.重复的子字符串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/RepeatedSubstringPattern.java)
   * [482.密钥格式化](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/LicenseKeyFormatting.java)
   * [500.键盘行](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindWords.java)
+  * [520.检测大写字母](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/DetectCapitalUse.java)
+  * [521.最长特殊序列 Ⅰ](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindLUSlength.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -174,6 +176,7 @@
   * [492.构造矩形](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConstructRectangle.java)
   * [504.七进制数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ConvertToBase7.java)
   * [507.完美数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/CheckPerfectNumber.java)
+  * [509.斐波那契数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/Fibonacci.java)
 
 * 二叉树
   * [94.二叉树的中序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/InorderTraversal.java)

@@ -149,5 +149,15 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "500.键盘行"
             hardLevel = 1
         }
+        item {
+            className = DetectCapitalUse::class.simpleName
+            subject = "520.检测大写字母"
+            hardLevel = 1
+        }
+        item {
+            className = FindLUSlength::class.simpleName
+            subject = "521.最长特殊序列 Ⅰ"
+            hardLevel = 1
+        }
     }
 }
