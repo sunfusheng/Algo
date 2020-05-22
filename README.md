@@ -90,6 +90,7 @@
   * [485.最大连续1的个数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindMaxConsecutiveOnes.java)
   * [496.下一个更大元素 I](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NextGreaterElement.java)
   * [506.相对名次](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindRelativeRanks.java)
+  * [532.数组中的K-diff数对](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindPairs.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
@@ -201,6 +202,7 @@
   * [404.左叶子之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/SumOfLeftLeaves.java)
   * [437.路径总和 III](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/PathSumIII.java)
   * [450.删除二叉搜索树中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DeleteBinarySearchTreeNode.java)
+  * [530.二叉搜索树的最小绝对差](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/GetMinimumDifference.java)
 
 * 查找排序
   * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)

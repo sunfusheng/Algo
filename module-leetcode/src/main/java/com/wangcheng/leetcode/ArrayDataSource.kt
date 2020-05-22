@@ -223,5 +223,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "506.相对名次"
             hardLevel = 1
         }
+        item {
+            className = FindPairs::class.simpleName
+            subject = "532.数组中的K-diff数对"
+            hardLevel = 1
+        }
     }
 }

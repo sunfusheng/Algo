@@ -118,5 +118,10 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             subject = "450.删除二叉搜索树中的节点"
             hardLevel = 2
         }
+        item {
+            className = GetMinimumDifference::class.simpleName
+            subject = "530.二叉搜索树的最小绝对差"
+            hardLevel = 1
+        }
     }
 }
