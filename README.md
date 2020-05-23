@@ -142,6 +142,7 @@
   * [500.键盘行](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindWords.java)
   * [520.检测大写字母](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/DetectCapitalUse.java)
   * [521.最长特殊序列 Ⅰ](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindLUSlength.java)
+  * [541.反转字符串 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseStr.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
@@ -202,7 +203,10 @@
   * [404.左叶子之和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/SumOfLeftLeaves.java)
   * [437.路径总和 III](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/PathSumIII.java)
   * [450.删除二叉搜索树中的节点](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DeleteBinarySearchTreeNode.java)
+  * [501.二叉搜索树中的众数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/FindMode.java)
   * [530.二叉搜索树的最小绝对差](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/GetMinimumDifference.java)
+  * [538.把二叉搜索树转换为累加树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/ConvertBST.java)
+  * [543.二叉树的直径](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DiameterOfBinaryTree.java)
 
 * 查找排序
   * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)

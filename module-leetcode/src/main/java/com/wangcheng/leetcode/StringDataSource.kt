@@ -159,5 +159,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "521.最长特殊序列 Ⅰ"
             hardLevel = 1
         }
+        item {
+            className = ReverseStr::class.simpleName
+            subject = "541.反转字符串 II"
+            hardLevel = 1
+        }
     }
 }

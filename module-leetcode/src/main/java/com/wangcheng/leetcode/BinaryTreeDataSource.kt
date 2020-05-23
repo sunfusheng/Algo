@@ -119,8 +119,23 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = FindMode::class.simpleName
+            subject = "501.二叉搜索树中的众数"
+            hardLevel = 2
+        }
+        item {
             className = GetMinimumDifference::class.simpleName
             subject = "530.二叉搜索树的最小绝对差"
+            hardLevel = 1
+        }
+        item {
+            className = ConvertBST::class.simpleName
+            subject = "538.把二叉搜索树转换为累加树"
+            hardLevel = 2
+        }
+        item {
+            className = DiameterOfBinaryTree::class.simpleName
+            subject = "543.二叉树的直径"
             hardLevel = 1
         }
     }
