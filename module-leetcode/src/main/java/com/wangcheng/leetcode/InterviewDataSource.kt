@@ -1,9 +1,6 @@
 package com.wangcheng.leetcode
 
-import com.wangcheng.leetcode.LeetCode.Interview.PositiveNegative
-import com.wangcheng.leetcode.LeetCode.Interview.ProducerConsumer
-import com.wangcheng.leetcode.LeetCode.Interview.RotateMatrix
-import com.wangcheng.leetcode.LeetCode.Interview.UnorderedArrayMedian
+import com.wangcheng.leetcode.LeetCode.Interview.*
 
 /**
  * @author sunfusheng
@@ -30,6 +27,11 @@ fun interviewDataSource(dataSource: DataSource) {
             className = PositiveNegative::class.simpleName
             subject = "面试题 #.03. 无序数组排序，负数在前正数在后且有序"
             hardLevel = 2
+        }
+        item {
+            className = BinarySearch::class.simpleName
+            subject = "面试题 #.04. 泛型化的二分搜索"
+            hardLevel = 1
         }
     }
 }

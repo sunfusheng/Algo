@@ -16,12 +16,11 @@ import com.sunfusheng.algo.common.model.TreeNode;
  * 一般来说，删除节点可分为两个步骤：
  * 1、首先找到需要删除的节点；
  * 2、如果找到了，删除它。
- * 说明： 要求算法时间复杂度为 O(h)，h 为树的高度。
+ * 说明：要求算法时间复杂度为 O(h)，h 为树的高度。
  * <p>
  * 示例:
  * root = [5,3,6,2,4,null,7]
  * key = 3
- * <p>
  * ----- 5
  * ---- / \
  * --- 3   6
@@ -49,6 +48,16 @@ import com.sunfusheng.algo.common.model.TreeNode;
  */
 public class DeleteBinarySearchTreeNode {
 
+    /**
+     * 方法一
+     * <p>
+     * 时间复杂度：O(logN)
+     * 空间复杂度：O(h)
+     *
+     * @param root
+     * @param key
+     * @return
+     */
     public static TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return null;

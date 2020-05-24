@@ -217,6 +217,7 @@
   * [面试题 #.01. 无序数组的中位数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/UnorderedArrayMedian.java)
   * [面试题 #.02. 生产者消费者模式](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/ProducerConsumer.java)
   * [面试题 #.03. 无序数组排序，负数在前正数在后且有序](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/PositiveNegative.java)
+  * [面试题 #.04. 泛型化的二分搜索](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Interview/BinarySearch.java)
 
 <br/>
 
