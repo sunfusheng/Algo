@@ -143,6 +143,7 @@
   * [520.检测大写字母](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/DetectCapitalUse.java)
   * [521.最长特殊序列 Ⅰ](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindLUSlength.java)
   * [541.反转字符串 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/ReverseStr.java)
+  * [551.学生出勤记录 I](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CheckRecord.java)
 
 * 数字
   * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)

@@ -164,5 +164,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "541.反转字符串 II"
             hardLevel = 1
         }
+        item {
+            className = CheckRecord::class.simpleName
+            subject = "551.学生出勤记录 I"
+            hardLevel = 1
+        }
     }
 }
