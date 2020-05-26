@@ -169,5 +169,10 @@ fun stringDataSource(dataSource: DataSource) {
             subject = "551.学生出勤记录 I"
             hardLevel = 1
         }
+        item {
+            className = ReverseWordsIII::class.simpleName
+            subject = "557.反转字符串中的单词 III"
+            hardLevel = 1
+        }
     }
 }
