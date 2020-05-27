@@ -209,6 +209,7 @@
   * [530.二叉搜索树的最小绝对差](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/GetMinimumDifference.java)
   * [538.把二叉搜索树转换为累加树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/ConvertBST.java)
   * [543.二叉树的直径](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/DiameterOfBinaryTree.java)
+  * [559.N叉树的最大深度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/MultiMaxDepth.java)
 
 * 查找排序
   * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)

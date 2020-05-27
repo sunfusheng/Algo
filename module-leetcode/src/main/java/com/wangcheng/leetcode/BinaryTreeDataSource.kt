@@ -138,5 +138,10 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             subject = "543.二叉树的直径"
             hardLevel = 1
         }
+        item {
+            className = MultiMaxDepth::class.simpleName
+            subject = "559.N叉树的最大深度"
+            hardLevel = 1
+        }
     }
 }
