@@ -228,5 +228,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "532.数组中的K-diff数对"
             hardLevel = 1
         }
+        item {
+            className = ArrayPairSum::class.simpleName
+            subject = "561.数组拆分 I"
+            hardLevel = 1
+        }
     }
 }

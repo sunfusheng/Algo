@@ -91,6 +91,7 @@
   * [496.下一个更大元素 I](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/NextGreaterElement.java)
   * [506.相对名次](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindRelativeRanks.java)
   * [532.数组中的K-diff数对](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindPairs.java)
+  * [561.数组拆分 I](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/ArrayPairSum.java)
 
 * 链表
   * [2.两数相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/LinkedList/AddTwoNumbers.java)
