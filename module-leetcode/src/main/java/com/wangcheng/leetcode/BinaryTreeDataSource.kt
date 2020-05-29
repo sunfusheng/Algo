@@ -143,5 +143,10 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             subject = "559.N叉树的最大深度"
             hardLevel = 1
         }
+        item {
+            className = FindTilt::class.simpleName
+            subject = "563.二叉树的坡度"
+            hardLevel = 1
+        }
     }
 }
