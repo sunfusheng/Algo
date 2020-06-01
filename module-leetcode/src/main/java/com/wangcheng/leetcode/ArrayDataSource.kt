@@ -233,5 +233,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "561.数组拆分 I"
             hardLevel = 1
         }
+        item {
+            className = MatrixReshape::class.simpleName
+            subject = "566.重塑矩阵"
+            hardLevel = 1
+        }
     }
 }
