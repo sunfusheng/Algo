@@ -148,5 +148,10 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             subject = "563.二叉树的坡度"
             hardLevel = 1
         }
+        item {
+            className = IsSubtree::class.simpleName
+            subject = "572.另一个树的子树"
+            hardLevel = 1
+        }
     }
 }
