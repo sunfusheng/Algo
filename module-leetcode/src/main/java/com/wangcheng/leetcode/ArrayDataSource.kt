@@ -238,5 +238,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "566.重塑矩阵"
             hardLevel = 1
         }
+        item {
+            className = DistributeCandies::class.simpleName
+            subject = "575.分糖果"
+            hardLevel = 1
+        }
     }
 }
