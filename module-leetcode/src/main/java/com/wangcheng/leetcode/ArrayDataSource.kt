@@ -243,5 +243,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "575.分糖果"
             hardLevel = 1
         }
+        item {
+            className = FindUnsortedSubArray::class.simpleName
+            subject = "581.最短无序连续子数组"
+            hardLevel = 1
+        }
     }
 }
