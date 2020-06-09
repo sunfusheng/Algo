@@ -153,5 +153,15 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             subject = "572.另一个树的子树"
             hardLevel = 1
         }
+        item {
+            className = MultiWayTreePreOrder::class.simpleName
+            subject = "589.N叉树的前序遍历"
+            hardLevel = 1
+        }
+        item {
+            className = MultiWayTreePostOrder::class.simpleName
+            subject = "590.N叉树的后序遍历"
+            hardLevel = 1
+        }
     }
 }

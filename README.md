@@ -216,6 +216,8 @@
   * [559.N叉树的最大深度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/MultiMaxDepth.java)
   * [563.二叉树的坡度](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/FindTilt.java)
   * [572.另一个树的子树](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/IsSubtree.java)
+  * [589.N叉树的前序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/MultiWayTreePreOrder.java)
+  * [590.N叉树的后序遍历](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/BinaryTree/MultiWayTreePostOrder.java)
 
 * 查找排序
   * [278.第一个错误的版本](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/FindSort/FirstBadVersion.java)

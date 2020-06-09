@@ -54,6 +54,11 @@ object LeetCodeUtil {
     }
 
     @JvmStatic
+    fun <E> isEmpty(list: List<E>?): Boolean {
+        return null == list || list.isEmpty()
+    }
+
+    @JvmStatic
     fun length(str: String?): Int {
         return str?.length ?: 0
     }
