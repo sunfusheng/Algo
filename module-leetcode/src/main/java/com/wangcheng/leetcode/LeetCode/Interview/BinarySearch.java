@@ -33,7 +33,7 @@ public class BinarySearch {
                 left = ++mid;
             } else if (value < arr[mid]) {
                 right = --mid;
-            } else if (value == arr[mid]) {
+            } else {
                 return mid;
             }
         }
@@ -45,10 +45,10 @@ public class BinarySearch {
      *
      * @param arr
      * @param value
-     * @param <E>
+     * @param <T>
      * @return
      */
-    public static <E extends Comparable<E>> int binarySearch2(E[] arr, E value) {
+    public static <T extends Comparable<T>> int binarySearch2(T[] arr, T value) {
         if (arr == null || arr.length == 0) {
             return -1;
         }
@@ -61,7 +61,7 @@ public class BinarySearch {
                 left = ++mid;
             } else if (value.compareTo(arr[mid]) < 0) {
                 left = --mid;
-            } else if (value.compareTo(arr[mid]) == 0) {
+            } else {
                 return mid;
             }
         }
