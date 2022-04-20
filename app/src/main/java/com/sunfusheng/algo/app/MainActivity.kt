@@ -12,7 +12,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.android.material.tabs.TabLayoutMediator.TabConfigurationStrategy
-import com.sunfusheng.FirUpdater
 import com.sunfusheng.algo.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,10 +33,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdate() {
-        FirUpdater.getInstance(applicationContext)
-            .apiToken("3c57fb226edf7facf821501e4eba08d2")
-            .appId("5e50fd3923389f1297a7aa5e")
-            .checkVersion()
+//        FirUpdater.getInstance(applicationContext)
+//            .apiToken("3c57fb226edf7facf821501e4eba08d2")
+//            .appId("5e50fd3923389f1297a7aa5e")
+//            .checkVersion()
     }
 
     private fun loadFragments() {
