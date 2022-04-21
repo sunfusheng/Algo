@@ -3,39 +3,39 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 task copyAlgoFiles() {
-    def srcDir = '../module-algo/src/main/java/com/sunfusheng/algo/Algo/'
-    def destDir = '../module-algo/src/main/assets/Algo/'
+  def srcDir = '../module-algo/src/main/java/com/sunfusheng/algo/Algo/'
+  def destDir = '../module-algo/src/main/assets/Algo/'
 
-    delete destDir
+  delete destDir
 
-    copy {
-        from srcDir
-        into destDir
-    }
+  copy {
+    from srcDir
+    into destDir
+  }
 }
 
 android {
-    compileSdkVersion compile_sdk_version
-    defaultConfig {
-        minSdkVersion min_sdk_version
-        targetSdkVersion target_sdk_version
-    }
+  compileSdkVersion compile_sdk_version
+  defaultConfig {
+    minSdkVersion min_sdk_version
+    targetSdkVersion target_sdk_version
+  }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 
-    buildTypes {
-        copyAlgoFiles
+  buildTypes {
+    copyAlgoFiles
 
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
+  }
 }
 
 dependencies {
-    api project(path: ':module-common')
+  api project(path: ':module-common')
 }

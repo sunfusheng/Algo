@@ -17,64 +17,64 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val TAB_NAMES = intArrayOf(
-        R.string.tab_algo,
-        R.string.tab_leetcode
-    )
+  private val TAB_NAMES = intArrayOf(
+    R.string.tab_algo,
+    R.string.tab_leetcode
+  )
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(vToolbar)
-        title = ""
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+    setSupportActionBar(vToolbar)
+    title = ""
 
-        checkUpdate()
-        loadFragments()
-    }
+    checkUpdate()
+    loadFragments()
+  }
 
-    private fun checkUpdate() {
+  private fun checkUpdate() {
 //        FirUpdater.getInstance(applicationContext)
 //            .apiToken("3c57fb226edf7facf821501e4eba08d2")
 //            .appId("5e50fd3923389f1297a7aa5e")
 //            .checkVersion()
-    }
+  }
 
-    private fun loadFragments() {
-        val fragments = SparseArray<Fragment>()
-        fragments.put(0, AlgoFragment.getInstance(FromAlgo))
-        fragments.put(1, AlgoFragment.getInstance(FromLeetCode))
+  private fun loadFragments() {
+    val fragments = SparseArray<Fragment>()
+    fragments.put(0, AlgoFragment.getInstance(FromAlgo))
+    fragments.put(1, AlgoFragment.getInstance(FromLeetCode))
 
-        val adapter = FragmentViewPager2Adapter(this, fragments)
-        vViewPager.adapter = adapter
-        TabLayoutMediator(vTabLayout, vViewPager,
-            TabConfigurationStrategy { tab: TabLayout.Tab, position: Int ->
-                tab.setText(TAB_NAMES[position])
-            }
-        ).attach()
-    }
+    val adapter = FragmentViewPager2Adapter(this, fragments)
+    vViewPager.adapter = adapter
+    TabLayoutMediator(vTabLayout, vViewPager,
+      TabConfigurationStrategy { tab: TabLayout.Tab, position: Int ->
+        tab.setText(TAB_NAMES[position])
+      }
+    ).attach()
+  }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return true
-    }
+  override fun onCreateOptionsMenu(menu: Menu): Boolean {
+    menuInflater.inflate(R.menu.main_menu, menu)
+    return true
+  }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_about) {
-            startActivity(Intent(this, AboutActivity::class.java))
-            return true
-        }
-        return super.onOptionsItemSelected(item)
+  override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    if (item.itemId == R.id.action_about) {
+      startActivity(Intent(this, AboutActivity::class.java))
+      return true
     }
+    return super.onOptionsItemSelected(item)
+  }
 }
 
 class FragmentViewPager2Adapter(activity: FragmentActivity, val fragments: SparseArray<Fragment>) :
-    FragmentStateAdapter(activity) {
+  FragmentStateAdapter(activity) {
 
-    override fun createFragment(position: Int): Fragment {
-        return fragments[position]
-    }
+  override fun createFragment(position: Int): Fragment {
+    return fragments[position]
+  }
 
-    override fun getItemCount(): Int {
-        return fragments.size()
-    }
+  override fun getItemCount(): Int {
+    return fragments.size()
+  }
 }

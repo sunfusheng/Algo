@@ -1,4 +1,4 @@
 include ':module-common',
-        ':module-algo',
-        ':module-leetcode',
-        ':app'
+    ':module-algo',
+    ':module-leetcode',
+    ':app'
