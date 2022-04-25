@@ -57,8 +57,8 @@ public class ProducerConsumer {
      * 生产者消费者模式二：await 和 signal
      */
     private static final ReentrantLock lock = new ReentrantLock();
-    private static final Condition notEmpty = lock.newCondition(); // 出队锁
-    private static final Condition notFull = lock.newCondition(); // 入队锁
+    private static final Condition notEmpty = lock.newCondition(); // 出队条件
+    private static final Condition notFull = lock.newCondition(); // 入队条件
 
     // 生产者2
     private static void produce2() throws InterruptedException {
