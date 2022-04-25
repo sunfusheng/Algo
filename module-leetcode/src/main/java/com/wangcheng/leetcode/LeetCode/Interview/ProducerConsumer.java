@@ -25,88 +25,88 @@ public class ProducerConsumer {
     /**
      * 生产者消费者模式一：wait 和 notify
      */
-    private static final Queue<Object> mList = new LinkedList<>();
+    private static final Queue<Object> list = new LinkedList<>();
 
     // 生产者1
     private static void produce1() throws InterruptedException {
-        synchronized (mList) {
-            if (mList.size() == MAX_SIZE) {
+        synchronized (list) {
+            if (list.size() == MAX_SIZE) {
                 println("仓库已满，暂停生产");
-                mList.wait();
+                list.wait();
             }
-            mList.add(new Object());
-            println("生产了一个产品，现库存为：" + mList.size());
-            mList.notifyAll();
+            list.add(new Object());
+            println("生产了一个产品，现库存为：" + list.size());
+            list.notifyAll();
         }
     }
 
     // 消费者1
     private static void consume1() throws InterruptedException {
-        synchronized (mList) {
-            if (mList.size() == 0) {
+        synchronized (list) {
+            if (list.size() == 0) {
                 println("仓库已空，暂停消费");
-                mList.wait();
+                list.wait();
             }
-            mList.remove();
-            println("消费了一个产品，现库存为：" + mList.size());
-            mList.notifyAll();
+            list.remove();
+            println("消费了一个产品，现库存为：" + list.size());
+            list.notifyAll();
         }
     }
 
     /**
      * 生产者消费者模式二：await 和 signal
      */
-    private static final ReentrantLock mLock = new ReentrantLock();
-    private static final Condition mEmpty = mLock.newCondition();
-    private static final Condition mFull = mLock.newCondition();
+    private static final ReentrantLock lock = new ReentrantLock();
+    private static final Condition notEmpty = lock.newCondition(); // 出队锁
+    private static final Condition notFull = lock.newCondition(); // 入队锁
 
     // 生产者2
     private static void produce2() throws InterruptedException {
-        mLock.lock();
-        while (mList.size() == MAX_SIZE) {
+        lock.lock();
+        while (list.size() == MAX_SIZE) {
             println("仓库已满，暂停生产");
-            mFull.await();
+            notEmpty.await();
         }
-        mList.add(new Object());
-        println("生产了一个产品，现库存为：" + mList.size());
-        mEmpty.signalAll();
-        mLock.unlock();
+        list.add(new Object());
+        println("生产了一个产品，现库存为：" + list.size());
+        notFull.signalAll();
+        lock.unlock();
     }
 
     // 消费者2
     private static void consume2() throws InterruptedException {
-        mLock.lock();
-        while (mList.size() == 0) {
+        lock.lock();
+        while (list.size() == 0) {
             println("仓库已空，暂停消费");
-            mEmpty.await();
+            notFull.await();
         }
-        mList.remove();
-        println("消费了一个产品，现库存为：" + mList.size());
-        mFull.signalAll();
-        mLock.unlock();
+        list.remove();
+        println("消费了一个产品，现库存为：" + list.size());
+        notEmpty.signalAll();
+        lock.unlock();
     }
 
     /**
      * 生产者消费者模式三：LinkedBlockingQueue
      */
-    private static final LinkedBlockingQueue<Object> mBlockingQueue = new LinkedBlockingQueue<>(MAX_SIZE);
+    private static final LinkedBlockingQueue<Object> blockingQueue = new LinkedBlockingQueue<>(MAX_SIZE);
 
     // 生产者3
     private static void produce3() throws InterruptedException {
-        if (mBlockingQueue.size() == MAX_SIZE) {
+        if (blockingQueue.size() == MAX_SIZE) {
             println("仓库已满，暂停生产");
         }
-        mBlockingQueue.put(new Object());
-        println("生产了一个产品，现库存为：" + mBlockingQueue.size());
+        blockingQueue.put(new Object());
+        println("生产了一个产品，现库存为：" + blockingQueue.size());
     }
 
     // 消费者3
     private static void consume3() throws InterruptedException {
-        if (mBlockingQueue.size() == 0) {
+        if (blockingQueue.size() == 0) {
             println("仓库已空，暂停消费");
         }
-        mBlockingQueue.take();
-        println("消费了一个产品，现库存为：" + mBlockingQueue.size());
+        blockingQueue.take();
+        println("消费了一个产品，现库存为：" + blockingQueue.size());
     }
 
     private static void println(String tip) {
@@ -117,7 +117,7 @@ public class ProducerConsumer {
         Thread producerThread = new Thread(() -> {
             while (true) {
                 try {
-                    produce1();
+                    produce2();
                     Thread.sleep(new Random().nextInt(1000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -128,7 +128,7 @@ public class ProducerConsumer {
         Thread consumerThread = new Thread(() -> {
             while (true) {
                 try {
-                    consume1();
+                    consume2();
                     Thread.sleep(new Random().nextInt(1000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
