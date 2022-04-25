@@ -19,38 +19,13 @@ import java.util.concurrent.locks.ReentrantLock;
  * @since 2020/5/17
  */
 public class ProducerConsumer {
+
     private static final int MAX_SIZE = 10;
-    private static final Queue<Object> mList = new LinkedList<>();
 
     /**
      * 生产者消费者模式一：wait 和 notify
      */
-    public static void producerConsumer1() {
-        Thread producerThread1 = new Thread(() -> {
-            while (true) {
-                try {
-                    produce1();
-                    Thread.sleep(new Random().nextInt(1000));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        producerThread1.setName("producerThread1");
-        Thread consumerThread1 = new Thread(() -> {
-            while (true) {
-                try {
-                    consume1();
-                    Thread.sleep(new Random().nextInt(1000));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        consumerThread1.setName("consumerThread1");
-        producerThread1.start();
-        consumerThread1.start();
-    }
+    private static final Queue<Object> mList = new LinkedList<>();
 
     // 生产者1
     private static void produce1() throws InterruptedException {
@@ -81,36 +56,9 @@ public class ProducerConsumer {
     /**
      * 生产者消费者模式二：await 和 signal
      */
-    public static void producerConsumer2() {
-        Thread producerThread2 = new Thread(() -> {
-            while (true) {
-                try {
-                    produce2();
-                    Thread.sleep(new Random().nextInt(1000));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        producerThread2.setName("producerThread2");
-        Thread consumerThread2 = new Thread(() -> {
-            while (true) {
-                try {
-                    consume2();
-                    Thread.sleep(new Random().nextInt(1000));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        consumerThread2.setName("consumerThread2");
-        producerThread2.start();
-        consumerThread2.start();
-    }
-
-    private static ReentrantLock mLock = new ReentrantLock();
-    private static Condition mEmpty = mLock.newCondition();
-    private static Condition mFull = mLock.newCondition();
+    private static final ReentrantLock mLock = new ReentrantLock();
+    private static final Condition mEmpty = mLock.newCondition();
+    private static final Condition mFull = mLock.newCondition();
 
     // 生产者2
     private static void produce2() throws InterruptedException {
@@ -141,34 +89,7 @@ public class ProducerConsumer {
     /**
      * 生产者消费者模式三：LinkedBlockingQueue
      */
-    public static void producerConsumer3() {
-        Thread producerThread3 = new Thread(() -> {
-            while (true) {
-                try {
-                    produce3();
-                    Thread.sleep(new Random().nextInt(1000));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        producerThread3.setName("producerThread3");
-        Thread consumerThread3 = new Thread(() -> {
-            while (true) {
-                try {
-                    consume3();
-                    Thread.sleep(new Random().nextInt(1000));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        consumerThread3.setName("consumerThread3");
-        producerThread3.start();
-        consumerThread3.start();
-    }
-
-    private static LinkedBlockingQueue<Object> mBlockingQueue = new LinkedBlockingQueue<>(MAX_SIZE);
+    private static final LinkedBlockingQueue<Object> mBlockingQueue = new LinkedBlockingQueue<>(MAX_SIZE);
 
     // 生产者3
     private static void produce3() throws InterruptedException {
@@ -193,6 +114,29 @@ public class ProducerConsumer {
     }
 
     public static void main(String[] args) {
-        producerConsumer3();
+        Thread producerThread = new Thread(() -> {
+            while (true) {
+                try {
+                    produce1();
+                    Thread.sleep(new Random().nextInt(1000));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        producerThread.setName("producerThread");
+        Thread consumerThread = new Thread(() -> {
+            while (true) {
+                try {
+                    consume1();
+                    Thread.sleep(new Random().nextInt(1000));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        consumerThread.setName("consumerThread");
+        producerThread.start();
+        consumerThread.start();
     }
 }
