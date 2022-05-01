@@ -40,7 +40,7 @@ public class FindKthLargest {
      * @return
      */
     public static int findKthLargest1(int[] nums, int k) {
-        PriorityQueue<Integer> heap = new PriorityQueue<>(nums.length);
+        PriorityQueue<Integer> heap = new PriorityQueue<>(k);
         for (int num : nums) {
             heap.offer(num);
             if (heap.size() > k) {
