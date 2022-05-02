@@ -232,12 +232,6 @@
 
 <br/>
 
-### 扫一扫[Fir.im](http://d.alphaqr.com/Algo)二维码下载APK体验
-
-<img src="/resources/fir.im.png" style="width: 30%;" alt="s">
-
-<br/>
-
 ### 贡献者
 
 [DIY-green](https://github.com/DIY-green)
