@@ -32,26 +32,23 @@ public class InorderTraversal {
      * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
-     *
-     * @param root
-     * @return
      */
     public static List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) {
             return null;
         }
         List<Integer> res = new ArrayList<>();
-        inorderTraversalRecur(root, res);
+        dfs(root, res);
         return res;
     }
 
-    private static void inorderTraversalRecur(TreeNode node, List<Integer> list) {
+    private static void dfs(TreeNode node, List<Integer> list) {
         if (node == null) {
             return;
         }
-        inorderTraversalRecur(node.left, list);
+        dfs(node.left, list);
         list.add(node.value);
-        inorderTraversalRecur(node.right, list);
+        dfs(node.right, list);
     }
 
     /**
@@ -59,22 +56,22 @@ public class InorderTraversal {
      * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
-     *
-     * @param root
-     * @return
      */
     public static List<Integer> inorderTraversal2(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        while (!stack.isEmpty() || root != null) {
-            if (root != null) {
-                stack.push(root);
-                root = root.left;
-            } else {
-                TreeNode node = stack.pop();
-                res.add(node.value);
-                root = node.right;
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
             }
+            cur = stack.pop();
+            res.add(cur.value);
+            cur = cur.right;
         }
         return res;
     }

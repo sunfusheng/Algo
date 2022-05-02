@@ -25,32 +25,29 @@ import java.util.Stack;
  * @author sunfusheng
  * @since 2020/5/7
  */
-public class PostOrderTraversal {
+public class PostorderTraversal {
 
     /**
      * 方法一：递归
      * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
-     *
-     * @param root
-     * @return
      */
-    public static List<Integer> postOrderTraversal(TreeNode root) {
+    public static List<Integer> postorderTraversal(TreeNode root) {
         if (root == null) {
             return null;
         }
         List<Integer> res = new ArrayList<>();
-        postOrderTraversalRecur(root, res);
+        dfs(root, res);
         return res;
     }
 
-    private static void postOrderTraversalRecur(TreeNode node, List<Integer> list) {
+    private static void dfs(TreeNode node, List<Integer> list) {
         if (node == null) {
             return;
         }
-        postOrderTraversalRecur(node.left, list);
-        postOrderTraversalRecur(node.right, list);
+        dfs(node.left, list);
+        dfs(node.right, list);
         list.add(node.value);
     }
 
@@ -59,25 +56,28 @@ public class PostOrderTraversal {
      * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
-     *
-     * @param root
-     * @return
      */
-    public static List<Integer> postOrderTraversal2(TreeNode root) {
+    public static List<Integer> postorderTraversal2(TreeNode root) {
         if (root == null) {
             return null;
         }
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        stack.add(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            res.add(0, node.value);
-            if (node.left != null) {
-                stack.push(node.left);
+        TreeNode cur = root;
+        TreeNode prev = null;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
             }
-            if (node.right != null) {
-                stack.push(node.right);
+            cur = stack.peek();
+            if (cur.right != null && cur.right != prev) {
+                cur = cur.right;
+            } else {
+                stack.pop();
+                res.add(cur.value);
+                prev = cur;
+                cur = null;
             }
         }
         return res;
@@ -89,8 +89,8 @@ public class PostOrderTraversal {
         System.out.println("输入：" + serializeStr);
 
         System.out.print("方法一输出：");
-        AlgoUtil.printlnList(postOrderTraversal(root));
+        AlgoUtil.printlnList(postorderTraversal(root));
         System.out.print("方法二输出：");
-        AlgoUtil.printlnList(postOrderTraversal2(root));
+        AlgoUtil.printlnList(postorderTraversal2(root));
     }
 }

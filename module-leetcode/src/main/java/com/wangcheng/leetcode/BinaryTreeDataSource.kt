@@ -69,12 +69,12 @@ fun binaryTreeDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
-            className = PreOrderTraversal::class.simpleName
+            className = PreorderTraversal::class.simpleName
             subject = "144.二叉树的前序遍历"
             hardLevel = 2
         }
         item {
-            className = PostOrderTraversal::class.simpleName
+            className = PostorderTraversal::class.simpleName
             subject = "145.二叉树的后序遍历"
             hardLevel = 3
         }

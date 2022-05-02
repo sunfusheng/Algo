@@ -26,33 +26,30 @@ import java.util.Stack;
  * @author sunfusheng
  * @since 2020/5/7
  */
-public class PreOrderTraversal {
+public class PreorderTraversal {
 
     /**
      * 方法一：递归
      * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
-     *
-     * @param root
-     * @return
      */
-    public static List<Integer> preOrderTraversal(TreeNode root) {
+    public static List<Integer> preorderTraversal(TreeNode root) {
         if (root == null) {
             return null;
         }
         List<Integer> res = new ArrayList<>();
-        preOrderTraversalRecur(root, res);
+        dfs(root, res);
         return res;
     }
 
-    private static void preOrderTraversalRecur(TreeNode node, List<Integer> list) {
+    private static void dfs(TreeNode node, List<Integer> list) {
         if (node == null) {
             return;
         }
         list.add(node.value);
-        preOrderTraversalRecur(node.left, list);
-        preOrderTraversalRecur(node.right, list);
+        dfs(node.left, list);
+        dfs(node.right, list);
     }
 
     /**
@@ -60,26 +57,22 @@ public class PreOrderTraversal {
      * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
-     *
-     * @param root
-     * @return
      */
-    public static List<Integer> preOrderTraversal2(TreeNode root) {
+    public static List<Integer> preorderTraversal2(TreeNode root) {
         if (root == null) {
             return null;
         }
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            res.add(node.value);
-            if (node.right != null) {
-                stack.push(node.right);
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                res.add(cur.value);
+                stack.push(cur);
+                cur = cur.left;
             }
-            if (node.left != null) {
-                stack.push(node.left);
-            }
+            cur = stack.pop();
+            cur = cur.right;
         }
         return res;
     }
@@ -90,8 +83,8 @@ public class PreOrderTraversal {
         System.out.println("输入：" + serializeStr);
 
         System.out.print("方法一输出：");
-        AlgoUtil.printlnList(preOrderTraversal(root));
+        AlgoUtil.printlnList(preorderTraversal(root));
         System.out.print("方法二输出：");
-        AlgoUtil.printlnList(preOrderTraversal2(root));
+        AlgoUtil.printlnList(preorderTraversal2(root));
     }
 }
