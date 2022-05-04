@@ -7,21 +7,26 @@ import org.jetbrains.annotations.NotNull;
  * @since 2020/3/7
  */
 public class TreeNode {
-    public int value;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
-    public TreeNode(int value) {
-        this.value = value;
+    public TreeNode() {
+    }
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
+
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 
     @NotNull
     @Override
     public String toString() {
-        return "{" +
-                "value=" + value +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
+        return "{" + "val=" + val + ", left=" + left + ", right=" + right + '}';
     }
 }

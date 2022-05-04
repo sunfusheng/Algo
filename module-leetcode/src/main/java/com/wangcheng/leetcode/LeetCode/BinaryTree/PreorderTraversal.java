@@ -47,7 +47,7 @@ public class PreorderTraversal {
         if (node == null) {
             return;
         }
-        list.add(node.value);
+        list.add(node.val);
         dfs(node.left, list);
         dfs(node.right, list);
     }
@@ -67,7 +67,7 @@ public class PreorderTraversal {
         TreeNode cur = root;
         while (cur != null || !stack.isEmpty()) {
             while (cur != null) {
-                res.add(cur.value);
+                res.add(cur.val);
                 stack.push(cur);
                 cur = cur.left;
             }

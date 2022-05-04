@@ -37,7 +37,7 @@ public class SerializeDeserializeBinaryTree {
         if (head == null) {
             return "#" + SEPARATOR;
         }
-        String res = head.value + SEPARATOR;
+        String res = head.val + SEPARATOR;
         res += serializeByPreOrder(head.left);
         res += serializeByPreOrder(head.right);
         return res;
@@ -73,20 +73,20 @@ public class SerializeDeserializeBinaryTree {
         if (head == null) {
             return "#" + SEPARATOR;
         }
-        StringBuilder res = new StringBuilder(head.value + SEPARATOR);
+        StringBuilder res = new StringBuilder(head.val + SEPARATOR);
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(head);
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             if (node != null && node.left != null) {
-                res.append(node.left.value).append(SEPARATOR);
+                res.append(node.left.val).append(SEPARATOR);
                 queue.offer(node.left);
             } else {
                 res.append("#").append(SEPARATOR);
             }
 
             if (node != null && node.right != null) {
-                res.append(node.right.value).append(SEPARATOR);
+                res.append(node.right.val).append(SEPARATOR);
                 queue.offer(node.right);
             } else {
                 res.append("#").append(SEPARATOR);

@@ -56,7 +56,7 @@ public class RightSideView {
                     queue.offer(node.right);
                 }
                 if (i == size - 1) {
-                    res.add(node.value);
+                    res.add(node.val);
                 }
             }
         }
@@ -86,7 +86,7 @@ public class RightSideView {
             return;
         }
         if (depth == list.size()) {
-            list.add(root.value);
+            list.add(root.val);
         }
         dfs(root.right, list, depth + 1);
         dfs(root.left, list, depth + 1);

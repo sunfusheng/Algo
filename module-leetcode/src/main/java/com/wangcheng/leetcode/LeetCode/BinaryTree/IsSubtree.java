@@ -1,9 +1,10 @@
 package com.wangcheng.leetcode.LeetCode.BinaryTree;
 
+import com.sunfusheng.algo.common.model.TreeNode;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 /**
- *【题目】
+ * 【题目】
  * 572.另一个树的子树
  * 给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有
  * 相同结构和节点值的子树。
@@ -11,25 +12,25 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * s 的一个子树包括 s 的一个节点和这个节点的所有子孙。
  * s 也可以看做它自身的一棵子树。
  * <p>
- *【示例】
+ * 【示例】
  * 示例 1:
  * 给定的树 s:
- *
+ * <p>
  * ----- 3
  * ---- / \
  * --- 4   5
  * -- / \
  * - 1   2
  * 给定的树 t：
- *
+ * <p>
  * --- 4
  * -- / \
  * - 1   2
  * 返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。
- *
+ * <p>
  * 示例 2:
  * 给定的树 s：
- *
+ * <p>
  * ----- 3
  * ---- / \
  * --- 4   5
@@ -38,7 +39,7 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * ---- /
  * --- 0
  * 给定的树 t：
- *
+ * <p>
  * --- 4
  * -- / \
  * - 1   2
@@ -48,22 +49,6 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
  * @date 2020/6/2.
  */
 public class IsSubtree {
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     /**
      * 递归
@@ -97,18 +82,18 @@ public class IsSubtree {
     }
 
     public static void main(String[] args) {
-        IsSubtree.TreeNode s = new IsSubtree.TreeNode(3);
-        s.left = new IsSubtree.TreeNode(4);
-        s.right = new IsSubtree.TreeNode(5);
-        s.left.left = new IsSubtree.TreeNode(1);
-        s.left.right = new IsSubtree.TreeNode(2);
-        IsSubtree.TreeNode t = new IsSubtree.TreeNode(4);
-        t.left = new IsSubtree.TreeNode(1);
-        t.right = new IsSubtree.TreeNode(2);
-        LeetCodeUtil.logln("solution() = " + IsSubtree.solution(s, t));
+        TreeNode s = new TreeNode(3);
+        s.left = new TreeNode(4);
+        s.right = new TreeNode(5);
+        s.left.left = new TreeNode(1);
+        s.left.right = new TreeNode(2);
+        TreeNode t = new TreeNode(4);
+        t.left = new TreeNode(1);
+        t.right = new TreeNode(2);
+        LeetCodeUtil.logln("solution() = " + solution(s, t));
 
-        s.left.right = new IsSubtree.TreeNode(2);
-        s.left.right.left = new IsSubtree.TreeNode(0);
-        LeetCodeUtil.logln("solution() = " + IsSubtree.solution(s, t));
+        s.left.right = new TreeNode(2);
+        s.left.right.left = new TreeNode(0);
+        LeetCodeUtil.logln("solution() = " + solution(s, t));
     }
 }

@@ -133,13 +133,13 @@ public class LowestCommonAncestorII {
         node2.right = node4;
 
         TreeNode node = lowestCommonAncestor(root, node5, node1);
-        System.out.println("方法一输出1：" + node.value);
+        System.out.println("方法一输出1：" + node.val);
         node = lowestCommonAncestor(root, node5, node4);
-        System.out.println("方法一输出2：" + node.value);
+        System.out.println("方法一输出2：" + node.val);
 
         node = lowestCommonAncestor2(root, node5, node1);
-        System.out.println("方法二输出1：" + node.value);
+        System.out.println("方法二输出1：" + node.val);
         node = lowestCommonAncestor2(root, node5, node4);
-        System.out.println("方法二输出2：" + node.value);
+        System.out.println("方法二输出2：" + node.val);
     }
 }

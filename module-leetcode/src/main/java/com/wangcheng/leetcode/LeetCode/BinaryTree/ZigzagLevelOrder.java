@@ -59,9 +59,9 @@ public class ZigzagLevelOrder {
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 if (height % 2 == 0) {
-                    list.add(0, node.value);
+                    list.add(0, node.val);
                 } else {
-                    list.add(node.value);
+                    list.add(node.val);
                 }
 
                 if (node.left != null) {

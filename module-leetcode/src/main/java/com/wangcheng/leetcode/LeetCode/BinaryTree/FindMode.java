@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.sunfusheng.algo.common.model.TreeNode;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *【题目】
+ * 【题目】
  * 501.二叉搜索树中的众数
  * 给定一个有相同值的二叉搜索树（BST），
  * 找出 BST 中的所有众数（出现频率最高的元素）。
@@ -41,16 +42,6 @@ import java.util.Map;
  * @date 2020/5/19.
  */
 public class FindMode {
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 参考：
@@ -125,12 +116,12 @@ public class FindMode {
             return new int[0];
         }
         map = new HashMap<>();
-        count =  0;
+        count = 0;
         max = 0;
         midTraversal2(root);
         int[] res = new int[count];
-        for(int key : map.keySet()){
-            if(map.get(key) == max) {
+        for (int key : map.keySet()) {
+            if (map.get(key) == max) {
                 res[--count] = key;
             }
         }
@@ -138,27 +129,27 @@ public class FindMode {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private static void midTraversal2(TreeNode x){
-        if(x == null) {
+    private static void midTraversal2(TreeNode x) {
+        if (x == null) {
             return;
         }
         midTraversal2(x.left);
         int temp = map.getOrDefault(x.val, 0) + 1;
         map.put(x.val, temp);
-        if(temp > max){
+        if (temp > max) {
             max = temp;
             count = 1;
-        } else if(temp == max){
+        } else if (temp == max) {
             count++;
         }
         midTraversal2(x.right);
     }
 
     public static void main(String[] args) {
-        FindMode.TreeNode root = new FindMode.TreeNode(1);
-        root.right = new FindMode.TreeNode(2);
-        root.right.left = new FindMode.TreeNode(2);
-        LeetCodeUtil.logln("solution1() = " + Arrays.toString(FindMode.solution1(root)));
-        LeetCodeUtil.logln("solution2() = " + Arrays.toString(FindMode.solution2(root)));
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(2);
+        LeetCodeUtil.logln("solution1() = " + Arrays.toString(solution1(root)));
+        LeetCodeUtil.logln("solution2() = " + Arrays.toString(solution2(root)));
     }
 }

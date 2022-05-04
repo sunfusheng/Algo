@@ -56,7 +56,7 @@ public class LevelOrderBottom {
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                list.add(node.value);
+                list.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);
                 }

@@ -47,7 +47,7 @@ public class InorderTraversal {
             return;
         }
         dfs(node.left, list);
-        list.add(node.value);
+        list.add(node.val);
         dfs(node.right, list);
     }
 
@@ -70,7 +70,7 @@ public class InorderTraversal {
                 cur = cur.left;
             }
             cur = stack.pop();
-            res.add(cur.value);
+            res.add(cur.val);
             cur = cur.right;
         }
         return res;

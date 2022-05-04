@@ -16,7 +16,7 @@ public class BinaryTreeUtil {
         if (head == null) {
             return;
         }
-        System.out.print(head.value + " ");
+        System.out.print(head.val + " ");
         preOrderRecur(head.left);
         preOrderRecur(head.right);
     }
@@ -27,7 +27,7 @@ public class BinaryTreeUtil {
             return;
         }
         inOrderRecur(head.left);
-        System.out.print(head.value + " ");
+        System.out.print(head.val + " ");
         inOrderRecur(head.right);
     }
 
@@ -38,7 +38,7 @@ public class BinaryTreeUtil {
         }
         posOrderRecur(head.left);
         posOrderRecur(head.right);
-        System.out.print(head.value + " ");
+        System.out.print(head.val + " ");
     }
 
     /**
@@ -67,14 +67,14 @@ public class BinaryTreeUtil {
             return "null";
         }
 
-        StringBuilder res = new StringBuilder(root.value + ",");
+        StringBuilder res = new StringBuilder(root.val + ",");
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             if (node != null && node.left != null) {
                 if (!res.toString().endsWith(",")) res.append(",");
-                res.append(node.left.value);
+                res.append(node.left.val);
                 queue.offer(node.left);
             } else {
                 if (node != null && node.right != null) {
@@ -85,7 +85,7 @@ public class BinaryTreeUtil {
 
             if (node != null && node.right != null) {
                 if (!res.toString().endsWith(",")) res.append(",");
-                res.append(node.right.value);
+                res.append(node.right.val);
                 queue.offer(node.right);
             } else {
                 if (node != null && node.left != null) {

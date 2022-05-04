@@ -33,7 +33,7 @@ public class BinaryTreeTraverse {
         if (head == null) {
             return;
         }
-        System.out.print(head.value + " ");
+        System.out.print(head.val + " ");
         preOrderRecur(head.left);
         preOrderRecur(head.right);
     }
@@ -44,7 +44,7 @@ public class BinaryTreeTraverse {
             return;
         }
         inOrderRecur(head.left);
-        System.out.print(head.value + " ");
+        System.out.print(head.val + " ");
         inOrderRecur(head.right);
     }
 
@@ -55,7 +55,7 @@ public class BinaryTreeTraverse {
         }
         posOrderRecur(head.left);
         posOrderRecur(head.right);
-        System.out.print(head.value + " ");
+        System.out.print(head.val + " ");
     }
 
     // 非递归实现先序遍历
@@ -68,7 +68,7 @@ public class BinaryTreeTraverse {
         stack.push(head);
         while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
-            System.out.print(cur.value + " ");
+            System.out.print(cur.val + " ");
 
             if (cur.right != null) {
                 stack.push(cur.right);
@@ -93,7 +93,7 @@ public class BinaryTreeTraverse {
                 head = head.left;
             } else {
                 TreeNode node = stack.pop();
-                System.out.print(node.value + " ");
+                System.out.print(node.val + " ");
                 head = node.right;
             }
         }
@@ -124,7 +124,7 @@ public class BinaryTreeTraverse {
         }
 
         while (!s2.isEmpty()) {
-            System.out.print(s2.pop().value + " ");
+            System.out.print(s2.pop().val + " ");
         }
     }
 
@@ -145,7 +145,7 @@ public class BinaryTreeTraverse {
             } else if (cur.right != null && head != cur.right) {
                 stack.push(cur.right);
             } else {
-                System.out.print(stack.pop().value + " ");
+                System.out.print(stack.pop().val + " ");
                 head = cur;
             }
         }

@@ -48,7 +48,7 @@ public class PostorderTraversal {
         }
         dfs(node.left, list);
         dfs(node.right, list);
-        list.add(node.value);
+        list.add(node.val);
     }
 
     /**
@@ -75,7 +75,7 @@ public class PostorderTraversal {
                 cur = cur.right;
             } else {
                 stack.pop();
-                res.add(cur.value);
+                res.add(cur.val);
                 prev = cur;
                 cur = null;
             }

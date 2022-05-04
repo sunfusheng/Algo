@@ -56,7 +56,7 @@ public class LevelOrder {
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                list.add(node.value);
+                list.add(node.val);
 
                 if (node.left != null) {
                     queue.add(node.left);
@@ -99,7 +99,7 @@ public class LevelOrder {
             lists.add(new ArrayList<>());
         }
         List<Integer> list = lists.get(level);
-        list.add(root.value);
+        list.add(root.val);
 
         process(root.left, lists, level + 1);
         process(root.right, lists, level + 1);

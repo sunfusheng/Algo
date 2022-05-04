@@ -63,9 +63,9 @@ public class DeleteBinarySearchTreeNode {
             return null;
         }
 
-        if (root.value > key) {
+        if (root.val > key) {
             root.left = deleteNode(root.left, key);
-        } else if (root.value < key) {
+        } else if (root.val < key) {
             root.right = deleteNode(root.right, key);
         } else {
             if (root.left == null) {
