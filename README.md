@@ -232,6 +232,11 @@
 
 <br/>
 
+### 运行Java main
+
+.idea/gradle.xml GradleProjectSettings标签下添加：
+<option name="delegatedBuild" value="false" />
+
 ### 贡献者
 
 [DIY-green](https://github.com/DIY-green)
