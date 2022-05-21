@@ -3,6 +3,7 @@ package com.wangcheng.leetcode.LeetCode.Interview;
 import com.sunfusheng.algo.common.util.AlgoUtil;
 
 import java.util.PriorityQueue;
+import java.util.Random;
 
 /**
  * 【题目】
@@ -26,68 +27,75 @@ public class UnorderedArrayMedian {
 
     /**
      * 方法一：先快排，再拿数
-     *
-     * @param arr
-     * @return
      */
-    public static double median(int[] arr) {
-        if (arr == null || arr.length == 0) {
+    public static double median(int[] nums) {
+        if (nums == null || nums.length == 0) {
             return -1;
         }
-        int len = arr.length;
-        sort(arr, 0, len - 1);
+        int len = nums.length;
+        sort(nums, 0, len - 1);
         if (len % 2 == 1) {
-            return arr[len / 2];
+            return nums[len / 2];
         }
-        return (arr[(len - 1) / 2] + arr[len / 2]) / 2.0;
+        return (nums[(len - 1) / 2] + nums[len / 2]) / 2.0;
     }
 
-    private static void sort(int[] arr, int left, int right) {
-        if (left > right) {
-            return;
+    private static void sort(int[] nums, int start, int end) {
+        if (start < end) {
+            int mid = partition(nums, start, end);
+            sort(nums, start, mid - 1);
+            sort(nums, mid + 1, end);
         }
-        int mid = partition(arr, left, right);
-        sort(arr, left, mid - 1);
-        sort(arr, mid + 1, right);
     }
 
-    private static int partition(int[] arr, int left, int right) {
-        int pivot = arr[left];
-        while (left < right) {
-            while (left < right && arr[right] > pivot) right--;
-            arr[left] = arr[right];
-            while (left < right && arr[left] < pivot) left++;
-            arr[right] = arr[left];
+    private static int partition(int[] nums, int start, int end) {
+        int random = new Random().nextInt(end - start + 1) + start;
+        swap(nums, random, end);
+        int small = start - 1;
+        for (int i = start; i < end; i++) {
+            if (nums[i] < nums[end]) {
+                small++;
+                swap(nums, small, i);
+            }
         }
-        arr[left] = pivot;
-        return left;
+        small++;
+        swap(nums, small, end);
+        return small;
+    }
+
+    private static void swap(int[] nums, int i1, int i2) {
+        if (i1 != i2) {
+            int temp = nums[i1];
+            nums[i1] = nums[i2];
+            nums[i2] = temp;
+        }
     }
 
     /**
      * 方法二：最小堆
-     *
-     * @param arr
-     * @return
      */
-    public static double median2(int[] arr) {
-        if (arr == null || arr.length == 0) {
+    public static double median2(int[] nums) {
+        if (nums == null || nums.length == 0) {
             return -1;
         }
-        int heapSize = arr.length / 2 + 1;
-        PriorityQueue<Integer> heap = new PriorityQueue<>(heapSize);
-        for (int i = 0; i < heapSize; i++) {
-            heap.add(arr[i]);
-        }
-        for (int i = heapSize; i < arr.length; i++) {
-            if (heap.peek() < arr[i]) {
-                heap.poll();
-                heap.add(arr[i]);
+        int heapSize = nums.length / 2 + 1;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        for (int num : nums) {
+            minHeap.offer(num);
+            if (minHeap.size() > heapSize) {
+                minHeap.poll();
             }
         }
-        if (arr.length % 2 == 1) {
-            return heap.peek();
+        if (nums.length % 2 == 1) {
+            Integer res = minHeap.peek();
+            return res == null ? -1 : res;
         }
-        return (heap.poll() + heap.peek()) / 2.0;
+        Integer res1 = minHeap.poll();
+        Integer res2 = minHeap.peek();
+        if (res1 != null && res2 != null) {
+            return (res1 + res2) / 2.0;
+        }
+        return -1;
     }
 
     public static void main(String[] args) {

@@ -26,24 +26,22 @@ import java.util.Random;
 public class FindKthLargest {
 
     /**
-     * 方法一：堆
-     * 思路是创建一个大顶堆，将所有数组中的元素加入堆中，并保持堆的大小小于等于 k。
-     * 这样，堆中就保留了前 k 个最大的元素。这样，堆顶的元素就是正确答案。
+     * 方法一：最小堆
      * <p>
-     * 时间复杂度 : O(Nlogk)。
-     * 空间复杂度 : O(k)，用于存储堆元素。
+     * 时间复杂度 : O(NlogK)
+     * 空间复杂度 : O(K)
      */
     public static int findKthLargest1(int[] nums, int k) {
-        PriorityQueue<Integer> heap = new PriorityQueue<>(k);
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int num : nums) {
-            heap.offer(num);
-            if (heap.size() > k) {
-                heap.poll();
+            minHeap.offer(num);
+            if (minHeap.size() > k) {
+                minHeap.poll();
             }
         }
-        if (heap.size() == k) {
-            Integer res;
-            return (res = heap.poll()) == null ? -1 : res;
+        if (minHeap.size() == k) {
+            Integer res = minHeap.peek();
+            return res == null ? -1 : res;
         }
         return -1;
     }
@@ -51,7 +49,7 @@ public class FindKthLargest {
     /**
      * 方法二：快排思想
      * <p>
-     * 时间复杂度 : O(N)。
+     * 时间复杂度 : O(N)
      * 空间复杂度 : O(1)
      */
     public static int findKthLargest2(int[] nums, int k) {
