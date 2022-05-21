@@ -2,6 +2,8 @@ package com.sunfusheng.algo.Algo.Sort;
 
 import com.sunfusheng.algo.common.util.AlgoUtil;
 
+import java.util.Arrays;
+
 /**
  * 【归并排序】
  * 归并排序(Merge Sort)是建立在归并操作上的一种有效的排序算法，
@@ -20,97 +22,35 @@ import com.sunfusheng.algo.common.util.AlgoUtil;
 public class MergeSort {
 
     /**
-     * 方法一
-     *
-     * @param arr
-     * @return
-     */
-    public static int[] mergeSort(int[] arr) {
-        if (arr == null || arr.length < 2) {
-            return arr;
-        }
-
-        return mergeSortRecur(arr, 0, arr.length - 1);
-    }
-
-    private static int[] mergeSortRecur(int[] arr, int left, int right) {
-        if (left == right) {
-            return new int[]{arr[left]};
-        }
-
-        int mid = left + (right - left) / 2;
-        int[] leftArr = mergeSortRecur(arr, left, mid);
-        int[] rightArr = mergeSortRecur(arr, mid + 1, right);
-
-        int[] res = new int[leftArr.length + rightArr.length];
-        int i = 0, j = 0, k = 0;
-
-        while (i < leftArr.length && j < rightArr.length) {
-            if (leftArr[i] < rightArr[j]) {
-                res[k++] = leftArr[i++];
-            } else {
-                res[k++] = rightArr[j++];
-            }
-        }
-        while (i < leftArr.length) {
-            res[k++] = leftArr[i++];
-        }
-        while (j < rightArr.length) {
-            res[k++] = rightArr[j++];
-        }
-        return res;
-    }
-
-    /**
-     * 方法二
-     * <p>
      * 时间复杂度：O(nlogn)
-     *
-     * @param arr
+     * 空间复杂度：O(n)
      */
-    public static void mergeSort2(int[] arr) {
-        if (arr == null || arr.length < 2) {
-            return;
+    public static int[] mergeSort(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return nums;
         }
-        mergeSortRecur2(arr, 0, arr.length - 1);
+        int[] dst = Arrays.copyOf(nums, nums.length);
+        mergeSortRecur(nums, dst, 0, nums.length);
+        return dst;
     }
 
-    private static void mergeSortRecur2(int[] arr, int left, int right) {
-        if (left == right) {
+    private static void mergeSortRecur(int[] src, int[] dst, int start, int end) {
+        if (start + 1 >= end) {
             return;
         }
-        int mid = left + (right - left) / 2;
-        mergeSortRecur2(arr, left, mid);
-        mergeSortRecur2(arr, mid + 1, right);
-        merge2(arr, left, mid + 1, right);
-    }
+        int mid = start + (end - start) / 2;
+        mergeSortRecur(dst, src, start, mid);
+        mergeSortRecur(dst, src, mid, end);
 
-    private static void merge2(int[] arr, int left, int mid, int right) {
-        int leftSize = mid - left;
-        int rightSize = right - mid + 1;
-        int[] leftArr = new int[leftSize];
-        int[] rightArr = new int[rightSize];
-
-        for (int i = left; i < mid; i++) {
-            leftArr[i - left] = arr[i];
-        }
-        for (int i = mid; i <= right; i++) {
-            rightArr[i - mid] = arr[i];
-        }
-
-        int i = 0, j = 0, k = left;
-        while (i < leftSize && j < rightSize) {
-            if (leftArr[i] < rightArr[j]) {
-                arr[k++] = leftArr[i++];
+        int i = start;
+        int j = mid;
+        int k = start;
+        while (i < mid || j < end) {
+            if (j == end || (i < mid && src[i] < src[j])) {
+                dst[k++] = src[i++];
             } else {
-                arr[k++] = rightArr[j++];
+                dst[k++] = src[j++];
             }
-        }
-        while (i < leftSize) {
-            arr[k++] = leftArr[i++];
-        }
-        while (j < rightSize) {
-            arr[k++] = rightArr[j++];
         }
     }
 
@@ -120,7 +60,6 @@ public class MergeSort {
         System.out.print("输入：");
         AlgoUtil.printlnArray(arr);
         arr = mergeSort(arr);
-//        mergeSort2(arr);
         System.out.print("输出：");
         AlgoUtil.printlnArray(arr);
     }
