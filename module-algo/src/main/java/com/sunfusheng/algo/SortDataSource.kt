@@ -24,6 +24,11 @@ fun sortDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = CountSort::class.simpleName
+            subject = "计数排序"
+            hardLevel = 2
+        }
+        item {
             className = QuickSort::class.simpleName
             subject = "快速排序"
             hardLevel = 3

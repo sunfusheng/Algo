@@ -38,6 +38,7 @@
     * [冒泡排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/BubbleSort.java)
     * [选择排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/SelectionSort.java)
     * [插入排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/InsertionSort.java)
+    * [计数排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/CountSort.java)
     * [快速排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/QuickSort.java)
     * [归并排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/MergeSort.java)
     * [堆排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/HeapSort.java)
