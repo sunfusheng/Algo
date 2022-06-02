@@ -229,6 +229,11 @@ fun arrayDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = SubArraySum::class.simpleName
+            subject = "560.和为K的子数组"
+            hardLevel = 2
+        }
+        item {
             className = ArrayPairSum::class.simpleName
             subject = "561.数组拆分 I"
             hardLevel = 1
