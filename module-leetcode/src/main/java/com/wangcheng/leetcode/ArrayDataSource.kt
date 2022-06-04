@@ -169,6 +169,11 @@ fun arrayDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = TopKFrequent::class.simpleName
+            subject = "347.前 K 个高频元素"
+            hardLevel = 2
+        }
+        item {
             className = Intersection::class.simpleName
             subject = "349.两个数组的交集"
             hardLevel = 1

@@ -37,7 +37,7 @@ public class MergeArrayInterval {
             return intervals;
         }
 
-        Arrays.sort(intervals, ((o1, o2) -> o1[0] - o2[0]));
+        Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
         List<int[]> res = new ArrayList<>();
         int i = 0;
         while (i < intervals.length) {
