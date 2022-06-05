@@ -44,14 +44,19 @@ fun linkedListDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
-            className = MinStack::class.simpleName
-            subject = "155.最小栈"
-            hardLevel = 1
-        }
-        item {
             className = LRUCache::class.simpleName
             subject = "146.LRU缓存机制"
             hardLevel = 2
+        }
+        item {
+            className = SortListNode::class.simpleName
+            subject = "148.排序链表"
+            hardLevel = 2
+        }
+        item {
+            className = MinStack::class.simpleName
+            subject = "155.最小栈"
+            hardLevel = 1
         }
         item {
             className = GetIntersectionNode::class.simpleName
