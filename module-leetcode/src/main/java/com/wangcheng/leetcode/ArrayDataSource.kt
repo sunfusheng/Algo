@@ -79,6 +79,11 @@ fun arrayDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = SubSets::class.simpleName
+            subject = "78.子集"
+            hardLevel = 2
+        }
+        item {
             className = MergeSortedArray::class.simpleName
             subject = "88.合并两个有序数组"
             hardLevel = 1

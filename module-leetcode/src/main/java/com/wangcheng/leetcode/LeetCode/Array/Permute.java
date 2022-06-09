@@ -3,6 +3,8 @@ package com.wangcheng.leetcode.LeetCode.Array;
 import com.sunfusheng.algo.common.util.AlgoUtil;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -33,34 +35,35 @@ public class Permute {
      * <p>
      * 时间复杂度：O(n*n!)
      * 空间复杂度：O(n)
-     *
-     * @param nums
-     * @return
      */
     public static List<List<Integer>> permute(int[] nums) {
-        if (nums == null || nums.length < 2) {
-            return null;
+        List<List<Integer>> res = new LinkedList<>();
+        if (nums == null || nums.length == 0) {
+            return res;
         }
-
-        List<List<Integer>> res = new ArrayList<>();
+        if (nums.length == 1) {
+            List<Integer> list = new LinkedList<>();
+            list.add(nums[0]);
+            res.add(list);
+            return res;
+        }
         LinkedList<Integer> path = new LinkedList<>();
-        backtrack(nums, path, res);
+        helper(nums, path, res);
         return res;
     }
 
-    private static void backtrack(int[] nums, LinkedList<Integer> path, List<List<Integer>> res) {
+    private static void helper(int[] nums, LinkedList<Integer> path, List<List<Integer>> res) {
         if (nums.length == path.size()) {
-            res.add(new ArrayList<>(path));
-            return;
-        }
-
-        for (int num : nums) {
-            if (path.contains(num)) {
-                continue;
+            res.add(new LinkedList<>(path));
+        } else {
+            for (int num : nums) {
+                if (path.contains(num)) {
+                    continue;
+                }
+                path.add(num);
+                helper(nums, path, res);
+                path.removeLast();
             }
-            path.addLast(num);
-            backtrack(nums, path, res);
-            path.removeLast();
         }
     }
 
