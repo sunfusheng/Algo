@@ -130,6 +130,11 @@ fun stringDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = FindAnagrams::class.simpleName
+            subject = "438.找到字符串中所有字母异位词"
+            hardLevel = 2
+        }
+        item {
             className = Compress::class.simpleName
             subject = "443.压缩字符串"
             hardLevel = 2
