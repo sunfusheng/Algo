@@ -115,6 +115,11 @@ fun stringDataSource(dataSource: DataSource) {
             hardLevel = 2
         }
         item {
+            className = DecodeString::class.simpleName
+            subject = "394.字符串解码"
+            hardLevel = 2
+        }
+        item {
             className = BuildLongestPalindrome::class.simpleName
             subject = "409.最长回文串"
             hardLevel = 2

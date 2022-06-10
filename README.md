@@ -142,6 +142,7 @@
     * [387.字符串中的第一个唯一字符](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FirstUniqChar.java)
     * [389.找不同](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/FindTheDifference.java)
     * [392.判断子序列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/IsSubsequence.java)
+    * [394.字符串解码](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/DecodeString.java)
     * [409.最长回文串](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/BuildLongestPalindrome.java)
     * [415.字符串相加](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/AddStrings.java)
     * [434.字符串中的单词数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/String/CountSegments.java)
