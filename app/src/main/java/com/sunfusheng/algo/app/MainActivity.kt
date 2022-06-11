@@ -18,8 +18,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private val TAB_NAMES = intArrayOf(
-        R.string.tab_algo,
-        R.string.tab_leetcode
+        R.string.tab_leetcode,
+        R.string.tab_algo
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragments() {
         val fragments = SparseArray<Fragment>()
-        fragments.put(0, AlgoFragment.getInstance(FromAlgo))
-        fragments.put(1, AlgoFragment.getInstance(FromLeetCode))
+        fragments.put(0, AlgoFragment.getInstance(FromLeetCode))
+        fragments.put(1, AlgoFragment.getInstance(FromAlgo))
 
         val adapter = FragmentViewPager2Adapter(this, fragments)
         vViewPager.adapter = adapter

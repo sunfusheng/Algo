@@ -31,16 +31,16 @@ open class ArrayChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "Array" to "数组"
 }
 
-open class LinkedListChapter : ChapterDataSource() {
-    override fun getChapter(): Pair<String, String> = "LinkedList" to "链表"
+open class NumberChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "Number" to "数字"
 }
 
 open class StringChapter : ChapterDataSource() {
     override fun getChapter(): Pair<String, String> = "String" to "字符串"
 }
 
-open class NumberChapter : ChapterDataSource() {
-    override fun getChapter(): Pair<String, String> = "Number" to "数字"
+open class LinkedListChapter : ChapterDataSource() {
+    override fun getChapter(): Pair<String, String> = "LinkedList" to "链表"
 }
 
 open class BinaryTreeChapter : ChapterDataSource() {
@@ -63,16 +63,16 @@ open class DataSource {
         lists.add(ArrayChapter().apply(init).list)
     }
 
-    fun linkedListChapter(init: LinkedListChapter.() -> Unit) {
-        lists.add(LinkedListChapter().apply(init).list)
+    fun numberChapter(init: NumberChapter.() -> Unit) {
+        lists.add(NumberChapter().apply(init).list)
     }
 
     fun stringChapter(init: StringChapter.() -> Unit) {
         lists.add(StringChapter().apply(init).list)
     }
 
-    fun numberChapter(init: NumberChapter.() -> Unit) {
-        lists.add(NumberChapter().apply(init).list)
+    fun linkedListChapter(init: LinkedListChapter.() -> Unit) {
+        lists.add(LinkedListChapter().apply(init).list)
     }
 
     fun binaryTreeChapter(init: BinaryTreeChapter.() -> Unit) {
@@ -94,16 +94,10 @@ fun dataSource(init: DataSource.() -> Unit): ArrayList<ArrayList<AlgoItem>> {
 
 val leetCodeDataSource = dataSource {
     arrayDataSource(this)
-
-    linkedListDataSource(this)
-
-    stringDataSource(this)
-
     numberDataSource(this)
-
+    stringDataSource(this)
+    linkedListDataSource(this)
     binaryTreeDataSource(this)
-
     findSortDataSource(this)
-
     interviewDataSource(this)
 }
