@@ -32,18 +32,23 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
 public class IsSubsequence {
 
     /**
-     * 如果是匹配一个较短字符串 s ，对于 s 中每一个char 都优先匹配最开始遇到的，直接扫描一遍 t 即可
+     * 算法思想：双指针
+     * <p>
+     * 时间复杂度：O(m+n)
+     * 空间复杂度：O(1)
      */
     public static boolean solution1(String s, String t) {
+        int m = s.length();
+        int n = t.length();
         int i = 0;
-        int tLen = t.length();
-        for (char ch : s.toCharArray()) {
-            while (i < tLen && t.charAt(i) != ch) {
+        int j = 0;
+        while (i < m && j < n) {
+            if (s.charAt(i) == t.charAt(j)) {
                 i++;
             }
-            i++;
+            j++;
         }
-        return i <= tLen;
+        return i == m;
     }
 
     /**
