@@ -5,18 +5,20 @@ import com.sunfusheng.algo.common.util.LeetCodeUtil;
 /**
  * 【题目】
  * 5.最长回文子串
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
  * <p>
- * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
- * <p>
- * 【示例】
  * 示例 1：
- * 输入: "babad"
- * 输出: "bab"
- * 注意: "aba" 也是一个有效答案。
+ * 输入：s = "babad"
+ * 输出："bab"
+ * 解释："aba" 同样是符合题意的答案。
  * <p>
  * 示例 2：
- * 输入: "cbbd"
- * 输出: "bb"
+ * 输入：s = "cbbd"
+ * 输出："bb"
+ * <p>
+ * 提示：
+ * 1 <= s.length <= 1000
+ * s 仅由数字和英文字母组成
  *
  * @author liwangcheng
  * @date 2020/3/14.
@@ -72,13 +74,14 @@ public class LongestPalindrome {
      * 原因在于所含字母数为偶数的回文的中心可以处于两字母之间（例如 “abba” 的中心在两个 ‘b’ 之间）。
      */
     public static String solution2(String s) {
-        if (isEmpty(s)) {
+        if (s == null || s.length() == 0) {
             return "";
         }
-        int start = 0, end = 0;
+        int start = 0;
+        int end = 0;
         for (int i = 0; i < s.length(); i++) {
-            int len1 = expandAroundCenter(s, i, i);
-            int len2 = expandAroundCenter(s, i, i + 1);
+            int len1 = validPalindromeLen(s, i, i);
+            int len2 = validPalindromeLen(s, i, i + 1);
             int len = Math.max(len1, len2);
             if (len > end - start) {
                 start = i - (len - 1) / 2;
@@ -88,13 +91,12 @@ public class LongestPalindrome {
         return s.substring(start, end + 1);
     }
 
-    private static int expandAroundCenter(String s, int left, int right) {
-        int L = left, R = right;
-        while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
-            L--;
-            R++;
+    private static int validPalindromeLen(String s, int start, int end) {
+        while (start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
+            start--;
+            end++;
         }
-        return R - L - 1;
+        return end - start - 1;
     }
 
     public static void main(String[] args) {

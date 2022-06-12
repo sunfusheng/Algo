@@ -1,5 +1,6 @@
 package com.wangcheng.leetcode
 
+import com.wangcheng.leetcode.LeetCode.String.CountPalindrome
 import com.wangcheng.leetcode.LeetCode.String.*
 
 
@@ -183,6 +184,11 @@ fun stringDataSource(dataSource: DataSource) {
             className = ReverseWordsIII::class.simpleName
             subject = "557.反转字符串中的单词 III"
             hardLevel = 1
+        }
+        item {
+            className = CountPalindrome::class.simpleName
+            subject = "647.回文子串"
+            hardLevel = 2
         }
     }
 }
