@@ -1,5 +1,6 @@
 package com.wangcheng.leetcode.LeetCode.LinkedList;
 
+import com.sunfusheng.algo.common.model.ListNode;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
  * 【题目】
  * 234.回文链表
  * 请判断一个链表是否为回文链表。
- * 【示例】
+ * <p>
  * 示例 1:
  * 输入: 1->2
  * 输出: false
@@ -18,21 +19,12 @@ import java.util.List;
  * 输入: 1->2->2->1
  * 输出: true
  * 【进阶】
- * 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
+ * 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
  *
  * @author liwangcheng
  * @date 2020/4/27.
  */
 public class IsPalindrome {
-
-    public static class ListNode {
-        int data;
-        ListNode next;
-
-        public ListNode(int data) {
-            this.data = data;
-        }
-    }
 
     /**
      * 方法一：将值复制到数组中后用双指针法
@@ -52,7 +44,7 @@ public class IsPalindrome {
     public static boolean solution1(ListNode head) {
         List<Integer> list = new ArrayList<>();
         while (head != null) {
-            list.add(head.data);
+            list.add(head.val);
             head = head.next;
         }
         int front = 0;
@@ -89,7 +81,7 @@ public class IsPalindrome {
             if (!recursivelyCheck(currentNode.next)) {
                 return false;
             }
-            if (currentNode.data != frontPointer.data) {
+            if (currentNode.val != frontPointer.val) {
                 return false;
             }
             frontPointer = frontPointer.next;
@@ -125,7 +117,7 @@ public class IsPalindrome {
         ListNode p2 = secondHalfStart;
         boolean result = true;
         while (result && p2 != null) {
-            if (p1.data != p2.data) {
+            if (p1.val != p2.val) {
                 result = false;
             }
             p1 = p1.next;
@@ -136,11 +128,11 @@ public class IsPalindrome {
     }
 
     private static ListNode endOfFirstHalf(ListNode head) {
-        ListNode fast = head;
         ListNode slow = head;
-        while (null != fast.next && null != fast.next.next) {
-            fast = fast.next.next;
+        ListNode fast = head;
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
+            fast = fast.next.next;
         }
         return slow;
     }
@@ -158,12 +150,12 @@ public class IsPalindrome {
     }
 
     public static void main(String[] args) {
-        IsPalindrome.ListNode head = new IsPalindrome.ListNode(1);
-        head.next = new IsPalindrome.ListNode(2);
-        head.next.next = new IsPalindrome.ListNode(2);
-        head.next.next.next = new IsPalindrome.ListNode(1);
-        LeetCodeUtil.logln("solution1() = " + IsPalindrome.solution1(head));
-        LeetCodeUtil.logln("solution2() = " + IsPalindrome.solution2(head));
-        LeetCodeUtil.logln("solution3() = " + IsPalindrome.solution3(head));
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(2);
+        head.next.next.next = new ListNode(1);
+        LeetCodeUtil.logln("solution1() = " + solution1(head));
+        LeetCodeUtil.logln("solution2() = " + solution2(head));
+        LeetCodeUtil.logln("solution3() = " + solution3(head));
     }
 }
