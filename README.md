@@ -101,8 +101,8 @@
     * [581.最短无序连续子数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/FindUnsortedSubArray.java)
 
 * 数字
-    * [7.反转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
-    * [9.回文数判断](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/PalindromeNum.java)
+    * [7.整数反转](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/ReverseInt.java)
+    * [9.回文数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/PalindromeNum.java)
     * [13.罗马数字转整数](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/RomeToInt.java)
     * [67.二进制求和](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/AddBinary.java)
     * [69.x的平方根](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Number/MySqrt.java)

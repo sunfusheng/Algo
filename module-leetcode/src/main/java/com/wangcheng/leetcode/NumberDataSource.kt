@@ -10,12 +10,12 @@ fun numberDataSource(dataSource: DataSource) {
     dataSource.numberChapter {
         item {
             className = ReverseInt::class.simpleName
-            subject = "7.反转整数"
+            subject = "7.整数反转"
             hardLevel = 1
         }
         item {
             className = PalindromeNum::class.simpleName
-            subject = "9.回文数判断"
+            subject = "9.回文数"
             hardLevel = 1
         }
         item {

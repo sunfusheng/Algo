@@ -3,48 +3,49 @@ package com.wangcheng.leetcode.LeetCode.Number;
 import com.sunfusheng.algo.common.util.LeetCodeUtil;
 
 /**
- * 【题目】
  * 7.整数反转
- * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
- * 【示例】
- * 示例 1:
- * 输入: 123
- * 输出: 321
+ * 给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。
  * <p>
- * 示例 2:
- * 输入: -123
- * 输出: -321
+ * 如果反转后整数超过 32 位的有符号整数的范围 [−2^31,  2^31 − 1] ，就返回 0。
+ * 假设环境不允许存储 64 位整数（有符号或无符号）。
  * <p>
- * 示例 3:
- * 输入: 120
- * 输出: 21
+ * 示例 1：
+ * 输入：x = 123
+ * 输出：321
  * <p>
- * 【注意】
- * 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 
- * [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
+ * 示例 2：
+ * 输入：x = -123
+ * 输出：-321
+ * <p>
+ * 示例 3：
+ * 输入：x = 120
+ * 输出：21
+ * <p>
+ * 示例 4：
+ * 输入：x = 0
+ * 输出：0
+ * <p>
+ * 提示：
+ * -2^31 <= x <= 2^31 - 1
  *
  * @author liwangcheng
  * @date 2020/3/17.
  */
 public class ReverseInt {
 
-    private static final int MAX = Integer.MAX_VALUE / 10;
-    private static final int MIN = Integer.MIN_VALUE / 10;
-    private static final int MAX_LAST = Integer.MAX_VALUE % 10;
-    private static final int MIN_LAST = Integer.MIN_VALUE % 10;
-
+    /**
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
+     */
     public static int solution(int x) {
         int rev = 0;
         while (x != 0) {
-            int pop = x % 10;
+            if (rev > Integer.MAX_VALUE / 10 || rev < Integer.MIN_VALUE / 10) {
+                return 0;
+            }
+            int num = x % 10;
+            rev = rev * 10 + num;
             x /= 10;
-            if (rev > MAX || (rev == MAX && pop > MAX_LAST)) {
-                return 0;
-            }
-            if (rev < MIN || (rev == MIN && pop < MIN_LAST)) {
-                return 0;
-            }
-            rev = rev * 10 + pop;
         }
         return rev;
     }
