@@ -36,6 +36,11 @@ fun stringDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = LetterCombinations::class.simpleName
+            subject = "17.电话号码的字母组合"
+            hardLevel = 2
+        }
+        item {
             className = ValidBrackets::class.simpleName
             subject = "20.有效的括号"
             hardLevel = 1
