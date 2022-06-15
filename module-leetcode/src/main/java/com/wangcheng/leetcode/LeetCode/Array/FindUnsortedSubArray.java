@@ -194,16 +194,16 @@ public class FindUnsortedSubArray {
 
     public static void main(String[] args) {
         int[] nums = new int[]{2, 6, 4, 8, 10, 9, 15};
-        LeetCodeUtil.logln("solution1() = " + FindUnsortedSubArray.solution1(nums));
-        LeetCodeUtil.logln("solution2() = " + FindUnsortedSubArray.solution2(nums));
-        LeetCodeUtil.logln("solution3() = " + FindUnsortedSubArray.solution3(nums));
-        LeetCodeUtil.logln("solution4() = " + FindUnsortedSubArray.solution4(nums));
-        LeetCodeUtil.logln("solution5() = " + FindUnsortedSubArray.solution5(nums));
+        LeetCodeUtil.logln("solution1() = " + solution1(nums));
+        LeetCodeUtil.logln("solution2() = " + solution2(nums));
+        LeetCodeUtil.logln("solution3() = " + solution3(nums));
+        LeetCodeUtil.logln("solution4() = " + solution4(nums));
+        LeetCodeUtil.logln("solution5() = " + solution5(nums));
         nums = new int[]{5, 2, 6, 4, 8, 10, 9, 15, 1};
-        LeetCodeUtil.logln("solution1() = " + FindUnsortedSubArray.solution1(nums));
-        LeetCodeUtil.logln("solution2() = " + FindUnsortedSubArray.solution2(nums));
-        LeetCodeUtil.logln("solution3() = " + FindUnsortedSubArray.solution3(nums));
-        LeetCodeUtil.logln("solution4() = " + FindUnsortedSubArray.solution4(nums));
-        LeetCodeUtil.logln("solution5() = " + FindUnsortedSubArray.solution5(nums));
+        LeetCodeUtil.logln("solution1() = " + solution1(nums));
+        LeetCodeUtil.logln("solution2() = " + solution2(nums));
+        LeetCodeUtil.logln("solution3() = " + solution3(nums));
+        LeetCodeUtil.logln("solution4() = " + solution4(nums));
+        LeetCodeUtil.logln("solution5() = " + solution5(nums));
     }
 }

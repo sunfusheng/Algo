@@ -263,5 +263,10 @@ fun arrayDataSource(dataSource: DataSource) {
             subject = "581.最短无序连续子数组"
             hardLevel = 1
         }
+        item {
+            className = DailyTemperatures::class.simpleName
+            subject = "739.每日温度"
+            hardLevel = 2
+        }
     }
 }
