@@ -109,6 +109,11 @@ fun arrayDataSource(dataSource: DataSource) {
             hardLevel = 1
         }
         item {
+            className = LongestConsecutive::class.simpleName
+            subject = "128.最长连续序列"
+            hardLevel = 2
+        }
+        item {
             className = DistributeCandy::class.simpleName
             subject = "135.分发糖果"
             hardLevel = 3

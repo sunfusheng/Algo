@@ -19,10 +19,6 @@ import java.util.Stack;
  * 示例 3:
  * 输入: temperatures = [30,60,90]
  * 输出: [1,1,0]
- * <p>
- * 提示：
- * 1 <= temperatures.length <= 105
- * 30 <= temperatures[i] <= 100
  *
  * @author sunfusheng
  * @since 2022/06/15

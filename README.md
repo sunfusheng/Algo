@@ -2,49 +2,6 @@
 
 这是一款 Kotlin 语言版本的 Android 客户端本地化展示 Java 语言编写的面试算法 ( Algorithm )，会持续更新！
 
-# IT名企算法与数据结构题目最优解
-
-* 栈和队列问题
-    * [设计一个有getMin功能的栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MinStack.java)
-    * [用两个栈实现队列](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/TwoStacksQueue.java)
-    * [如何仅用递归函数和栈操作逆序一个栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/RecursionReverseStack.java)
-    * [猫狗队列](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/CatDogQueue.java)
-    * [用一个栈实现另一个栈的排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/SortStackByStack.java)
-    * [用栈来求解汉诺塔问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/Hanoi.java)
-    * [生成窗口最大值数组](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
-    * [单调栈结构](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/NearLessNum.java)
-    * [求最大子矩阵的大小](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxRecSize.java)
-
-* 链表问题
-    * [打印两个有序链表的公共部分](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/PrintCommonPart.java)
-    * [删除单链表和双链表倒数第K个节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/RemoveLastKthNode.java)
-    * [删除链表的中间节点和a/b处的节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/RemoveMidNode.java)
-    * [反转单向链表和双向链](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseLinkedList.java)
-    * [反转部分单向链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)
-    * [环形单链表的约瑟夫问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)
-    * [判断一个链表是否为回文结构](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/LinkedListPalindrome.java)
-    * [将单向链表按某值划分成左边小、中间相等、右边大的形式](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Partition.java)
-    * [复制含有随机指针节点的链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/CopyRandomLinkedList.java)
-    * [两个单链表生成相加链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/AddTwoLinkedList.java)
-    * [两个单链表相交的一系列问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/IntersectNode.java)
-    * [将单链表的每K个节点之间逆序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseKNodes.java)
-
-* 二叉树问题
-    * [用递归和非递归方式实现二叉树先序、中序、后序遍历](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/BinaryTreeTraverse.java)
-    * [打印二叉树的边界节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/PrintEdgeNodes.java)
-    * [二叉树的序列化和反序列化](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/SerializeDeserializeBinaryTree.java)
-
-* 排序算法
-    * [冒泡排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/BubbleSort.java)
-    * [选择排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/SelectionSort.java)
-    * [插入排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/InsertionSort.java)
-    * [计数排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/CountSort.java)
-    * [快速排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/QuickSort.java)
-    * [归并排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/MergeSort.java)
-    * [堆排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/HeapSort.java)
-
-<br/>
-
 # LeetCode算法
 
 * 数组
@@ -68,6 +25,7 @@
     * [119.杨辉三角 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/YangHuiTriangleII.java)
     * [121.买卖股票的最佳时机](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxProfit.java)
     * [122.买卖股票的最佳时机 II](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/MaxProfitII.java)
+    * [128.最长连续序列](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/LongestConsecutive.java)
     * [135.分发糖果](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/DistributeCandy.java)
     * [136.只出现一次的数字](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/SingleNumber.java)
     * [167.两数之和 II - 输入有序数组](/module-leetcode/src/main/java/com/wangcheng/leetcode/LeetCode/Array/TwoSumII.java)
@@ -242,6 +200,49 @@
 
 <br/>
 
+# IT名企算法与数据结构题目最优解
+
+* 栈和队列问题
+    * [设计一个有getMin功能的栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MinStack.java)
+    * [用两个栈实现队列](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/TwoStacksQueue.java)
+    * [如何仅用递归函数和栈操作逆序一个栈](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/RecursionReverseStack.java)
+    * [猫狗队列](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/CatDogQueue.java)
+    * [用一个栈实现另一个栈的排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/SortStackByStack.java)
+    * [用栈来求解汉诺塔问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/Hanoi.java)
+    * [生成窗口最大值数组](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxWindow.java)
+    * [单调栈结构](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/NearLessNum.java)
+    * [求最大子矩阵的大小](/module-algo/src/main/java/com/sunfusheng/algo/Algo/StackQueue/MaxRecSize.java)
+
+* 链表问题
+    * [打印两个有序链表的公共部分](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/PrintCommonPart.java)
+    * [删除单链表和双链表倒数第K个节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/RemoveLastKthNode.java)
+    * [删除链表的中间节点和a/b处的节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/RemoveMidNode.java)
+    * [反转单向链表和双向链](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseLinkedList.java)
+    * [反转部分单向链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReversePartLinkedList.java)
+    * [环形单链表的约瑟夫问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Josephus.java)
+    * [判断一个链表是否为回文结构](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/LinkedListPalindrome.java)
+    * [将单向链表按某值划分成左边小、中间相等、右边大的形式](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/Partition.java)
+    * [复制含有随机指针节点的链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/CopyRandomLinkedList.java)
+    * [两个单链表生成相加链表](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/AddTwoLinkedList.java)
+    * [两个单链表相交的一系列问题](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/IntersectNode.java)
+    * [将单链表的每K个节点之间逆序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/LinkedList/ReverseKNodes.java)
+
+* 二叉树问题
+    * [用递归和非递归方式实现二叉树先序、中序、后序遍历](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/BinaryTreeTraverse.java)
+    * [打印二叉树的边界节点](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/PrintEdgeNodes.java)
+    * [二叉树的序列化和反序列化](/module-algo/src/main/java/com/sunfusheng/algo/Algo/BinaryTree/SerializeDeserializeBinaryTree.java)
+
+* 排序算法
+    * [冒泡排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/BubbleSort.java)
+    * [选择排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/SelectionSort.java)
+    * [插入排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/InsertionSort.java)
+    * [计数排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/CountSort.java)
+    * [快速排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/QuickSort.java)
+    * [归并排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/MergeSort.java)
+    * [堆排序](/module-algo/src/main/java/com/sunfusheng/algo/Algo/Sort/HeapSort.java)
+
+<br/>
+
 ### 运行Java main
 
 .idea/gradle.xml GradleProjectSettings标签下添加：
@@ -255,11 +256,11 @@
 
 以上数据仅用于个人学习，严禁商业转载，如需使用请联系官方授权！
 
-IT名企算法与数据结构题目最优解  
-【程序员代码面试指南：IT名企算法与数据结构题目最优解】第二版 作者：左程云
-
 LeetCode算法  
 链接：[https://leetcode-cn.com/problemset/all/](https://leetcode-cn.com/problemset/all/)
+
+IT名企算法与数据结构题目最优解
+【程序员代码面试指南：IT名企算法与数据结构题目最优解】第二版 作者：左程云
 
 ### 关于作者
 
